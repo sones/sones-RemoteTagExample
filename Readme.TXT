@@ -12,9 +12,9 @@ The GraphMappingFramework lies on top of the remote API.
 
 
 !!!Important!!!
-These examples comes with full generated 'Client Stubs' (including network settings). It could be, that this code is not up-to-date 
-related to the current GraphDB. You are able to generate you client stub by your own. A WSDL (Web Service Description Language; 
-see: http://www.w3.org/TR/wsdl) will be exported by the GRaphDB.
+These examples comes with full generated 'Client Stubs' (including network settings). It could be, that this code is not
+up-to-date related to the current GraphDB. You are able to generate you client stub by your own.
+A WSDL (Web Service Description Language; see: http://www.w3.org/TR/wsdl) will be exported by the GraphDB.
 
 -------------------------
 
