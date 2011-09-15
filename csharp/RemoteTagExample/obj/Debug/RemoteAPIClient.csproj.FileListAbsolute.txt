@@ -1,0 +1,6 @@
+H:\Local_Projects\RemoteAPIClient\RemoteAPIClient\bin\Debug\RemoteAPIClient.exe.config
+H:\Local_Projects\RemoteAPIClient\RemoteAPIClient\obj\Debug\ResolveAssemblyReference.cache
+H:\Local_Projects\RemoteAPIClient\RemoteAPIClient\bin\Debug\RemoteAPIClient.exe
+H:\Local_Projects\RemoteAPIClient\RemoteAPIClient\bin\Debug\RemoteAPIClient.pdb
+H:\Local_Projects\RemoteAPIClient\RemoteAPIClient\obj\Debug\RemoteAPIClient.exe
+H:\Local_Projects\RemoteAPIClient\RemoteAPIClient\obj\Debug\RemoteAPIClient.pdb
