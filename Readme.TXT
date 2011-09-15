@@ -29,9 +29,14 @@ This repository contains RemoteTagExample in the following programming languages
 				Features:	- Create VertexTypes (Website, Tag) with TypePredefinitions
 						- Insert Data (Values, Edges)
 						- Gather data by several ways (including by ids, Expressions, ...)
+				
+				Service Reference: by Visual Studio 2010 
 
 	-> Java (JDK 7EE)
 		History:	initial release 2011-09-15
 				Features:	- Create VertexTypes (Website, Tag) with TypePredefinitions
 						- Insert Data (Values, Edges)
 						- Gather data by several ways (including by ids, Expressions, ...)
+				
+				Service Reference: generated with WS-Import Script by Glasfish (metro) - axis(v1/v2) leads to unrecognized errors at runtime
+				(further information about Client stub generation in java take a glance at the manual inside the java folder)			
