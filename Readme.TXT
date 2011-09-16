@@ -38,5 +38,6 @@ This repository contains RemoteTagExample in the following programming languages
 						- Insert Data (Values, Edges)
 						- Gather data by several ways (including by ids, Expressions, ...)
 				
-				Service Reference: generated with WS-Import Script by Glasfish (metro) - axis(v1/v2) leads to unrecognized errors at runtime
-				(further information about Client stub generation in java take a glance at the manual inside the java folder)			
+
+Service Reference: generated with WS-Import Script by Glasfish (metro) - axis(v1/v2) leads to unrecognized errors at runtime
+(further information about Client stub generation in java take a glance at the manual inside the java folder)			
