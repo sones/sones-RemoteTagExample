@@ -45,13 +45,13 @@ namespace RemoteAPIClient
        
 
         public RemoteTagExample()
-            {
-                GraphDS_API =  new GraphDSClient();
-                _VertexInstanceService = new VertexInstanceServiceClient();
-                _VertexTypeService = new VertexTypeServiceClient();
-                _EdgeInstanceService = new EdgeInstanceServiceClient();
-                _EdgeTypeService = new EdgeTypeServiceClient();
-            }
+        {
+            GraphDS_API =  new GraphDSClient();
+            _VertexInstanceService = new VertexInstanceServiceClient();
+            _VertexTypeService = new VertexTypeServiceClient();
+            _EdgeInstanceService = new EdgeInstanceServiceClient();
+            _EdgeTypeService = new EdgeTypeServiceClient();
+        }
 
 
         public void Run()
@@ -435,7 +435,16 @@ namespace RemoteAPIClient
             #region Get all instances of the VertexTypes
             
             //how to get all instances of a type  from the DB
+            Stopwatch watch1 = Stopwatch.StartNew();
             var TagInstances = GraphDS_API.GetVerticesByType(SecToken, TransToken,TagDBType);
+            watch1.Stop();
+            Console.WriteLine(watch1.Elapsed.TotalMilliseconds);
+
+            watch1.Reset();
+            watch1.Start();
+            TagInstances = GraphDS_API.GetVerticesByType(SecToken, TransToken, TagDBType);
+            watch1.Stop();
+            Console.WriteLine(watch1.Elapsed.TotalMilliseconds);
             var WebsiteInstances = GraphDS_API.GetVerticesByType(SecToken, TransToken, WebsiteDBType);
             
             #endregion
