@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
 
 
 /**
@@ -18,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="mySecToken" type="{http://www.sones.com}ServiceSecurityToken" minOccurs="0"/>
+ *         &lt;element name="mySecurityToken" type="{http://schemas.datacontract.org/2004/07/sones.Library.Commons.Security}SecurityToken" minOccurs="0"/>
  *         &lt;element name="myTransToken" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="myGraphElement" type="{http://www.sones.com}ServiceVertexInstance" minOccurs="0"/>
  *         &lt;element name="myPropertyID" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
@@ -32,7 +33,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "mySecToken",
+    "mySecurityToken",
     "myTransToken",
     "myGraphElement",
     "myPropertyID"
@@ -41,34 +42,34 @@ import javax.xml.bind.annotation.XmlType;
 public class GetPropertyAsStringByVertexInstance {
 
     @XmlElement(nillable = true)
-    protected ServiceSecurityToken mySecToken;
+    protected SecurityToken mySecurityToken;
     protected Long myTransToken;
     @XmlElement(nillable = true)
     protected ServiceVertexInstance myGraphElement;
     protected Long myPropertyID;
 
     /**
-     * Gets the value of the mySecToken property.
+     * Gets the value of the mySecurityToken property.
      * 
      * @return
      *     possible object is
-     *     {@link ServiceSecurityToken }
+     *     {@link SecurityToken }
      *     
      */
-    public ServiceSecurityToken getMySecToken() {
-        return mySecToken;
+    public SecurityToken getMySecurityToken() {
+        return mySecurityToken;
     }
 
     /**
-     * Sets the value of the mySecToken property.
+     * Sets the value of the mySecurityToken property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ServiceSecurityToken }
+     *     {@link SecurityToken }
      *     
      */
-    public void setMySecToken(ServiceSecurityToken value) {
-        this.mySecToken = value;
+    public void setMySecurityToken(SecurityToken value) {
+        this.mySecurityToken = value;
     }
 
     /**

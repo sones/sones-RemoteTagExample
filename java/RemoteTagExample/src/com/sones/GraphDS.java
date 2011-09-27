@@ -12,6 +12,7 @@ import javax.xml.ws.ResponseWrapper;
 import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfKeyValueOflongstring;
 import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOflong;
 import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
+import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
 
 
 /**
@@ -25,6 +26,7 @@ import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
     com.microsoft.schemas._2003._10.serialization.arrays.ObjectFactory.class,
     com.microsoft.schemas._2003._10.serialization.ObjectFactory.class,
     com.sones.ObjectFactory.class,
+    org.datacontract.schemas._2004._07.sones_library_commons.ObjectFactory.class,
     org.datacontract.schemas._2004._07.system.ObjectFactory.class
 })
 public interface GraphDS {
@@ -44,7 +46,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "CreateVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.CreateVertexTypeResponse")
     public ServiceVertexType createVertexType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexTypePreDef", targetNamespace = "http://www.sones.com")
@@ -65,7 +67,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "AlterVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.AlterVertexTypeResponse")
     public ServiceVertexType alterVertexType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexType", targetNamespace = "http://www.sones.com")
@@ -88,7 +90,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "AlterEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.AlterEdgeTypeResponse")
     public ServiceEdgeType alterEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myEdgeType", targetNamespace = "http://www.sones.com")
@@ -110,7 +112,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "GetVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetVertexTypeResponse")
     public ServiceVertexType getVertexType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexTypeName", targetNamespace = "http://www.sones.com")
@@ -128,7 +130,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "BeginTransactionResponse", targetNamespace = "http://www.sones.com", className = "com.sones.BeginTransactionResponse")
     public Long beginTransaction(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken);
+        SecurityToken mySecurityToken);
 
     /**
      * 
@@ -140,7 +142,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "CommitTransactionResponse", targetNamespace = "http://www.sones.com", className = "com.sones.CommitTransactionResponse")
     public void commitTransaction(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken);
 
@@ -154,7 +156,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "RollbackTransactionResponse", targetNamespace = "http://www.sones.com", className = "com.sones.RollbackTransactionResponse")
     public void rollbackTransaction(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken);
 
@@ -167,7 +169,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "ShutdownResponse", targetNamespace = "http://www.sones.com", className = "com.sones.ShutdownResponse")
     public void shutdown(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken);
+        SecurityToken mySecurityToken);
 
     /**
      * 
@@ -182,7 +184,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "ClearResponse", targetNamespace = "http://www.sones.com", className = "com.sones.ClearResponse")
     public ArrayOflong clear(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken);
 
@@ -200,7 +202,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "CreateEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.CreateEdgeTypeResponse")
     public ServiceEdgeType createEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransactionToken", targetNamespace = "http://www.sones.com")
         Long myTransactionToken,
         @WebParam(name = "myEdgeTypePreDef", targetNamespace = "http://www.sones.com")
@@ -220,7 +222,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "CreateIndexResponse", targetNamespace = "http://www.sones.com", className = "com.sones.CreateIndexResponse")
     public ServiceIndexDefinition createIndex(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexTypePreDef", targetNamespace = "http://www.sones.com")
@@ -240,7 +242,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "CreateVertexTypesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.CreateVertexTypesResponse")
     public ArrayOfServiceVertexType createVertexTypes(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexTypePreDef", targetNamespace = "http://www.sones.com")
@@ -262,7 +264,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "DeleteResponse", targetNamespace = "http://www.sones.com", className = "com.sones.DeleteResponse")
     public ArrayOflong delete(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransactionToken", targetNamespace = "http://www.sones.com")
         Long myTransactionToken,
         @WebParam(name = "myVertexType", targetNamespace = "http://www.sones.com")
@@ -287,7 +289,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "DescribeIndexResponse", targetNamespace = "http://www.sones.com", className = "com.sones.DescribeIndexResponse")
     public ServiceIndexDefinition describeIndex(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexType", targetNamespace = "http://www.sones.com")
@@ -309,7 +311,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "DescribeIndicesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.DescribeIndicesResponse")
     public ArrayOfServiceIndexDefinition describeIndices(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexType", targetNamespace = "http://www.sones.com")
@@ -329,7 +331,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "DropEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.DropEdgeTypeResponse")
     public ArrayOfKeyValueOflongstring dropEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myEdgeType", targetNamespace = "http://www.sones.com")
@@ -348,7 +350,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "DropIndexResponse", targetNamespace = "http://www.sones.com", className = "com.sones.DropIndexResponse")
     public void dropIndex(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexType", targetNamespace = "http://www.sones.com")
@@ -372,7 +374,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "DropVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.DropVertexTypeResponse")
     public ArrayOfKeyValueOflongstring dropVertexType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexType", targetNamespace = "http://www.sones.com")
@@ -392,7 +394,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "GetAllEdgeTypesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAllEdgeTypesResponse")
     public ArrayOfServiceEdgeType getAllEdgeTypes(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myEdition", targetNamespace = "http://www.sones.com")
@@ -412,7 +414,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "GetAllVertexTypesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAllVertexTypesResponse")
     public ArrayOfServiceVertexType getAllVertexTypes(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myEdition", targetNamespace = "http://www.sones.com")
@@ -433,7 +435,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "GetEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetEdgeTypeResponse")
     public ServiceEdgeType getEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myEdgeTypeName", targetNamespace = "http://www.sones.com")
@@ -456,7 +458,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "GetVertexResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetVertexResponse")
     public ServiceVertexInstance getVertex(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexType", targetNamespace = "http://www.sones.com")
@@ -478,7 +480,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "GetVertexCountResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetVertexCountResponse")
     public BigInteger getVertexCount(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexType", targetNamespace = "http://www.sones.com")
@@ -498,7 +500,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "GetVerticesByTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetVerticesByTypeResponse")
     public ArrayOfServiceVertexInstance getVerticesByType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexType", targetNamespace = "http://www.sones.com")
@@ -518,7 +520,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "GetVerticesByExpressionResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetVerticesByExpressionResponse")
     public ArrayOfServiceVertexInstance getVerticesByExpression(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexType", targetNamespace = "http://www.sones.com")
@@ -539,7 +541,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "InsertResponse", targetNamespace = "http://www.sones.com", className = "com.sones.InsertResponse")
     public ServiceVertexInstance insert(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexTypeName", targetNamespace = "http://www.sones.com")
@@ -556,24 +558,47 @@ public interface GraphDS {
     @ResponseWrapper(localName = "LogOffResponse", targetNamespace = "http://www.sones.com", className = "com.sones.LogOffResponse")
     public void logOff(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken);
+        SecurityToken mySecurityToken);
 
     /**
      * 
      * @param myPassword
      * @param myLogin
      * @return
-     *     returns com.sones.ServiceSecurityToken
+     *     returns org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken
      */
     @WebMethod(operationName = "LogOn", action = "http://www.sones.com/GraphDS/LogOn")
     @WebResult(name = "LogOnResult", targetNamespace = "http://www.sones.com")
     @RequestWrapper(localName = "LogOn", targetNamespace = "http://www.sones.com", className = "com.sones.LogOn")
     @ResponseWrapper(localName = "LogOnResponse", targetNamespace = "http://www.sones.com", className = "com.sones.LogOnResponse")
-    public ServiceSecurityToken logOn(
+    public SecurityToken logOn(
         @WebParam(name = "myLogin", targetNamespace = "http://www.sones.com")
         String myLogin,
         @WebParam(name = "myPassword", targetNamespace = "http://www.sones.com")
         String myPassword);
+
+    /**
+     * 
+     * @param myTransToken
+     * @param mySecToken
+     * @param myLanguage
+     * @param myQueryString
+     * @return
+     *     returns com.sones.ServiceQueryResult
+     */
+    @WebMethod(operationName = "Query", action = "http://www.sones.com/GraphDS/Query")
+    @WebResult(name = "QueryResult", targetNamespace = "http://www.sones.com")
+    @RequestWrapper(localName = "Query", targetNamespace = "http://www.sones.com", className = "com.sones.Query")
+    @ResponseWrapper(localName = "QueryResponse", targetNamespace = "http://www.sones.com", className = "com.sones.QueryResponse")
+    public ServiceQueryResult query(
+        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecToken,
+        @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
+        Long myTransToken,
+        @WebParam(name = "myQueryString", targetNamespace = "http://www.sones.com")
+        String myQueryString,
+        @WebParam(name = "myLanguage", targetNamespace = "http://www.sones.com")
+        String myLanguage);
 
     /**
      * 
@@ -591,7 +616,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "UpdateResponse", targetNamespace = "http://www.sones.com", className = "com.sones.UpdateResponse")
     public ArrayOfServiceVertexInstance update(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexType", targetNamespace = "http://www.sones.com")
@@ -612,7 +637,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "RebuildIndicesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.RebuildIndicesResponse")
     public void rebuildIndices(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexTypeNames", targetNamespace = "http://www.sones.com")
@@ -629,7 +654,7 @@ public interface GraphDS {
     @ResponseWrapper(localName = "TruncateVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.TruncateVertexTypeResponse")
     public void truncateVertexType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myVertexTypeNames", targetNamespace = "http://www.sones.com")

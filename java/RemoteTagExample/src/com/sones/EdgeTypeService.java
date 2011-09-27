@@ -9,6 +9,7 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
 import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
+import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
 
 
 /**
@@ -22,6 +23,7 @@ import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
     com.microsoft.schemas._2003._10.serialization.arrays.ObjectFactory.class,
     com.microsoft.schemas._2003._10.serialization.ObjectFactory.class,
     com.sones.ObjectFactory.class,
+    org.datacontract.schemas._2004._07.sones_library_commons.ObjectFactory.class,
     org.datacontract.schemas._2004._07.system.ObjectFactory.class
 })
 public interface EdgeTypeService {
@@ -41,7 +43,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "GetDescendantEdgeTypesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetDescendantEdgeTypesResponse")
     public ArrayOfServiceEdgeType getDescendantEdgeTypes(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -61,7 +63,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "GetDescendantEdgeTypesAndSelfResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetDescendantEdgeTypesAndSelfResponse")
     public ArrayOfServiceEdgeType getDescendantEdgeTypesAndSelf(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -81,7 +83,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "GetAncestorEdgeTypesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAncestorEdgeTypesResponse")
     public ArrayOfServiceEdgeType getAncestorEdgeTypes(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -101,7 +103,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "GetAncestorEdgeTypesAndSelfResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAncestorEdgeTypesAndSelfResponse")
     public ArrayOfServiceEdgeType getAncestorEdgeTypesAndSelf(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -121,7 +123,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "GetKinsmenEdgeTypesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetKinsmenEdgeTypesResponse")
     public ArrayOfServiceEdgeType getKinsmenEdgeTypes(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -141,7 +143,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "GetKinsmenEdgeTypesAndSelfResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetKinsmenEdgeTypesAndSelfResponse")
     public ArrayOfServiceEdgeType getKinsmenEdgeTypesAndSelf(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -161,7 +163,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "ChildrenEdgeTypesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.ChildrenEdgeTypesResponse")
     public ArrayOfServiceEdgeType childrenEdgeTypes(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -181,7 +183,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "ParentEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.ParentEdgeTypeResponse")
     public ServiceEdgeType parentEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -201,7 +203,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "IsSealedByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.IsSealedByEdgeTypeResponse")
     public Boolean isSealedByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -221,7 +223,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "HasParentTypeByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasParentTypeByEdgeTypeResponse")
     public Boolean hasParentTypeByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -241,7 +243,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "HasChildTypesByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasChildTypesByEdgeTypeResponse")
     public Boolean hasChildTypesByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -262,7 +264,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "IsAncestorByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.IsAncestorByEdgeTypeResponse")
     public Boolean isAncestorByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -285,7 +287,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "IsAncestorOrSelfByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.IsAncestorOrSelfByEdgeTypeResponse")
     public Boolean isAncestorOrSelfByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -308,7 +310,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "IsDescendantByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.IsDescendantByEdgeTypeResponse")
     public Boolean isDescendantByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -331,7 +333,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "IsDescendantOrSelfByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.IsDescendantOrSelfByEdgeTypeResponse")
     public Boolean isDescendantOrSelfByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -354,7 +356,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "HasAttributeByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasAttributeByEdgeTypeResponse")
     public Boolean hasAttributeByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -377,7 +379,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "GetAttributeDefinitionByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAttributeDefinitionByEdgeTypeResponse")
     public ServiceAttributeDefinition getAttributeDefinitionByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -400,7 +402,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "GetAttributeDefinitionByIDByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAttributeDefinitionByIDByEdgeTypeResponse")
     public ServiceAttributeDefinition getAttributeDefinitionByIDByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -423,7 +425,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "HasAttributesByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasAttributesByEdgeTypeResponse")
     public Boolean hasAttributesByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -446,7 +448,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "GetAttributeDefinitionsByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAttributeDefinitionsByEdgeTypeResponse")
     public ArrayOfServiceAttributeDefinition getAttributeDefinitionsByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -469,7 +471,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "HasProprtyByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasProprtyByEdgeTypeResponse")
     public Boolean hasProprtyByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -492,7 +494,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "GetPropertyDefinitionByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetPropertyDefinitionByEdgeTypeResponse")
     public ServicePropertyDefinition getPropertyDefinitionByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -515,7 +517,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "GetPropertyDefinitionByIDByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetPropertyDefinitionByIDByEdgeTypeResponse")
     public ServicePropertyDefinition getPropertyDefinitionByIDByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -538,7 +540,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "HasPropertiesByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasPropertiesByEdgeTypeResponse")
     public Boolean hasPropertiesByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -561,7 +563,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "GetPropertyDefinitionsByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetPropertyDefinitionsByEdgeTypeResponse")
     public ArrayOfServicePropertyDefinition getPropertyDefinitionsByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
@@ -584,7 +586,7 @@ public interface EdgeTypeService {
     @ResponseWrapper(localName = "GetPropertyDefinitionsByNameListByEdgeTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetPropertyDefinitionsByNameListByEdgeTypeResponse")
     public ArrayOfServicePropertyDefinition getPropertyDefinitionsByNameListByEdgeType(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecurityToken,
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")

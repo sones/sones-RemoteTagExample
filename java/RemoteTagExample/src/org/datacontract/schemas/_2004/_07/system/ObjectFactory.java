@@ -24,9 +24,11 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _ArrayOfTupleOfstringServiceHyperEdgeView7AF3F8R2_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "ArrayOfTupleOfstringServiceHyperEdgeView7AF3f8r2");
     private final static QName _ArrayOfTupleOflonglongArrayOfServiceVertexInstancegXhDpTc1_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "ArrayOfTupleOflonglongArrayOfServiceVertexInstancegXhDpTc1");
     private final static QName _ArrayOfTupleOflonganyType_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "ArrayOfTupleOflonganyType");
     private final static QName _TupleOflongServiceEdgeInstance7AF3F8R2_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "TupleOflongServiceEdgeInstance7AF3f8r2");
+    private final static QName _TupleOfstringServiceSingleEdgeView7AF3F8R2_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "TupleOfstringServiceSingleEdgeView7AF3f8r2");
     private final static QName _TupleOfstringanyType_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "TupleOfstringanyType");
     private final static QName _ArrayOfTupleOfstringanyType_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "ArrayOfTupleOfstringanyType");
     private final static QName _ArrayOfTupleOflongServiceSingleEdgeInstance7AF3F8R2_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "ArrayOfTupleOflongServiceSingleEdgeInstance7AF3f8r2");
@@ -35,13 +37,15 @@ public class ObjectFactory {
     private final static QName _ArrayOfTupleOflongServiceHyperEdgeInstance7AF3F8R2_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "ArrayOfTupleOflongServiceHyperEdgeInstance7AF3f8r2");
     private final static QName _ArrayOfTupleOflongServiceEdgeInstance7AF3F8R2_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "ArrayOfTupleOflongServiceEdgeInstance7AF3f8r2");
     private final static QName _Stream_QNAME = new QName("http://schemas.datacontract.org/2004/07/System.IO", "Stream");
+    private final static QName _TupleOfstringServiceHyperEdgeView7AF3F8R2_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "TupleOfstringServiceHyperEdgeView7AF3f8r2");
     private final static QName _MarshalByRefObject_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "MarshalByRefObject");
     private final static QName _TupleOflongStreampETKBXRm_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "TupleOflongStreampETKBXRm");
     private final static QName _TupleOflonganyType_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "TupleOflonganyType");
-    private final static QName _ArrayOfTupleOflonglong_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "ArrayOfTupleOflonglong");
     private final static QName _TupleOflonglong_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "TupleOflonglong");
+    private final static QName _ArrayOfTupleOflonglong_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "ArrayOfTupleOflonglong");
     private final static QName _TupleOflongServiceHyperEdgeInstance7AF3F8R2_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "TupleOflongServiceHyperEdgeInstance7AF3f8r2");
     private final static QName _TupleOflonglongArrayOfServiceVertexInstancegXhDpTc1_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "TupleOflonglongArrayOfServiceVertexInstancegXhDpTc1");
+    private final static QName _ArrayOfTupleOfstringServiceSingleEdgeView7AF3F8R2_QNAME = new QName("http://schemas.datacontract.org/2004/07/System", "ArrayOfTupleOfstringServiceSingleEdgeView7AF3f8r2");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.datacontract.schemas._2004._07.system
@@ -51,27 +55,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ArrayOfTupleOflongServiceHyperEdgeInstance7AF3F8R2 }
+     * Create an instance of {@link Stream }
      * 
      */
-    public ArrayOfTupleOflongServiceHyperEdgeInstance7AF3F8R2 createArrayOfTupleOflongServiceHyperEdgeInstance7AF3F8R2() {
-        return new ArrayOfTupleOflongServiceHyperEdgeInstance7AF3F8R2();
-    }
-
-    /**
-     * Create an instance of {@link ArrayOfTupleOflonglongArrayOfServiceVertexInstancegXhDpTc1 }
-     * 
-     */
-    public ArrayOfTupleOflonglongArrayOfServiceVertexInstancegXhDpTc1 createArrayOfTupleOflonglongArrayOfServiceVertexInstancegXhDpTc1() {
-        return new ArrayOfTupleOflonglongArrayOfServiceVertexInstancegXhDpTc1();
-    }
-
-    /**
-     * Create an instance of {@link ArrayOfTupleOflonganyType }
-     * 
-     */
-    public ArrayOfTupleOflonganyType createArrayOfTupleOflonganyType() {
-        return new ArrayOfTupleOflonganyType();
+    public Stream createStream() {
+        return new Stream();
     }
 
     /**
@@ -83,11 +71,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ArrayOfTupleOflongServiceEdgeInstance7AF3F8R2 }
+     * Create an instance of {@link TupleOflonganyType }
      * 
      */
-    public ArrayOfTupleOflongServiceEdgeInstance7AF3F8R2 createArrayOfTupleOflongServiceEdgeInstance7AF3F8R2() {
-        return new ArrayOfTupleOflongServiceEdgeInstance7AF3F8R2();
+    public TupleOflonganyType createTupleOflonganyType() {
+        return new TupleOflonganyType();
     }
 
     /**
@@ -99,19 +87,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ArrayOfTupleOflongStreampETKBXRm }
+     * Create an instance of {@link ArrayOfTupleOfstringServiceSingleEdgeView7AF3F8R2 }
      * 
      */
-    public ArrayOfTupleOflongStreampETKBXRm createArrayOfTupleOflongStreampETKBXRm() {
-        return new ArrayOfTupleOflongStreampETKBXRm();
-    }
-
-    /**
-     * Create an instance of {@link TupleOflonganyType }
-     * 
-     */
-    public TupleOflonganyType createTupleOflonganyType() {
-        return new TupleOflonganyType();
+    public ArrayOfTupleOfstringServiceSingleEdgeView7AF3F8R2 createArrayOfTupleOfstringServiceSingleEdgeView7AF3F8R2() {
+        return new ArrayOfTupleOfstringServiceSingleEdgeView7AF3F8R2();
     }
 
     /**
@@ -139,11 +119,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ArrayOfTupleOflonglongArrayOfServiceVertexInstancegXhDpTc1 }
+     * 
+     */
+    public ArrayOfTupleOflonglongArrayOfServiceVertexInstancegXhDpTc1 createArrayOfTupleOflonglongArrayOfServiceVertexInstancegXhDpTc1() {
+        return new ArrayOfTupleOflonglongArrayOfServiceVertexInstancegXhDpTc1();
+    }
+
+    /**
      * Create an instance of {@link TupleOflonglongArrayOfServiceVertexInstancegXhDpTc1 }
      * 
      */
     public TupleOflonglongArrayOfServiceVertexInstancegXhDpTc1 createTupleOflonglongArrayOfServiceVertexInstancegXhDpTc1() {
         return new TupleOflonglongArrayOfServiceVertexInstancegXhDpTc1();
+    }
+
+    /**
+     * Create an instance of {@link TupleOfstringServiceHyperEdgeView7AF3F8R2 }
+     * 
+     */
+    public TupleOfstringServiceHyperEdgeView7AF3F8R2 createTupleOfstringServiceHyperEdgeView7AF3F8R2() {
+        return new TupleOfstringServiceHyperEdgeView7AF3F8R2();
     }
 
     /**
@@ -155,11 +151,43 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link TupleOfstringanyType }
+     * Create an instance of {@link ArrayOfTupleOflongStreampETKBXRm }
      * 
      */
-    public TupleOfstringanyType createTupleOfstringanyType() {
-        return new TupleOfstringanyType();
+    public ArrayOfTupleOflongStreampETKBXRm createArrayOfTupleOflongStreampETKBXRm() {
+        return new ArrayOfTupleOflongStreampETKBXRm();
+    }
+
+    /**
+     * Create an instance of {@link TupleOfstringServiceSingleEdgeView7AF3F8R2 }
+     * 
+     */
+    public TupleOfstringServiceSingleEdgeView7AF3F8R2 createTupleOfstringServiceSingleEdgeView7AF3F8R2() {
+        return new TupleOfstringServiceSingleEdgeView7AF3F8R2();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfTupleOflonganyType }
+     * 
+     */
+    public ArrayOfTupleOflonganyType createArrayOfTupleOflonganyType() {
+        return new ArrayOfTupleOflonganyType();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfTupleOfstringServiceHyperEdgeView7AF3F8R2 }
+     * 
+     */
+    public ArrayOfTupleOfstringServiceHyperEdgeView7AF3F8R2 createArrayOfTupleOfstringServiceHyperEdgeView7AF3F8R2() {
+        return new ArrayOfTupleOfstringServiceHyperEdgeView7AF3F8R2();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfTupleOflongServiceEdgeInstance7AF3F8R2 }
+     * 
+     */
+    public ArrayOfTupleOflongServiceEdgeInstance7AF3F8R2 createArrayOfTupleOflongServiceEdgeInstance7AF3F8R2() {
+        return new ArrayOfTupleOflongServiceEdgeInstance7AF3F8R2();
     }
 
     /**
@@ -171,11 +199,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link TupleOflongServiceSingleEdgeInstance7AF3F8R2 }
+     * Create an instance of {@link TupleOfstringanyType }
      * 
      */
-    public TupleOflongServiceSingleEdgeInstance7AF3F8R2 createTupleOflongServiceSingleEdgeInstance7AF3F8R2() {
-        return new TupleOflongServiceSingleEdgeInstance7AF3F8R2();
+    public TupleOfstringanyType createTupleOfstringanyType() {
+        return new TupleOfstringanyType();
     }
 
     /**
@@ -187,11 +215,28 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Stream }
+     * Create an instance of {@link TupleOflongServiceSingleEdgeInstance7AF3F8R2 }
      * 
      */
-    public Stream createStream() {
-        return new Stream();
+    public TupleOflongServiceSingleEdgeInstance7AF3F8R2 createTupleOflongServiceSingleEdgeInstance7AF3F8R2() {
+        return new TupleOflongServiceSingleEdgeInstance7AF3F8R2();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfTupleOflongServiceHyperEdgeInstance7AF3F8R2 }
+     * 
+     */
+    public ArrayOfTupleOflongServiceHyperEdgeInstance7AF3F8R2 createArrayOfTupleOflongServiceHyperEdgeInstance7AF3F8R2() {
+        return new ArrayOfTupleOflongServiceHyperEdgeInstance7AF3F8R2();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfTupleOfstringServiceHyperEdgeView7AF3F8R2 }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/System", name = "ArrayOfTupleOfstringServiceHyperEdgeView7AF3f8r2")
+    public JAXBElement<ArrayOfTupleOfstringServiceHyperEdgeView7AF3F8R2> createArrayOfTupleOfstringServiceHyperEdgeView7AF3F8R2(ArrayOfTupleOfstringServiceHyperEdgeView7AF3F8R2 value) {
+        return new JAXBElement<ArrayOfTupleOfstringServiceHyperEdgeView7AF3F8R2>(_ArrayOfTupleOfstringServiceHyperEdgeView7AF3F8R2_QNAME, ArrayOfTupleOfstringServiceHyperEdgeView7AF3F8R2 .class, null, value);
     }
 
     /**
@@ -219,6 +264,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/System", name = "TupleOflongServiceEdgeInstance7AF3f8r2")
     public JAXBElement<TupleOflongServiceEdgeInstance7AF3F8R2> createTupleOflongServiceEdgeInstance7AF3F8R2(TupleOflongServiceEdgeInstance7AF3F8R2 value) {
         return new JAXBElement<TupleOflongServiceEdgeInstance7AF3F8R2>(_TupleOflongServiceEdgeInstance7AF3F8R2_QNAME, TupleOflongServiceEdgeInstance7AF3F8R2 .class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link TupleOfstringServiceSingleEdgeView7AF3F8R2 }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/System", name = "TupleOfstringServiceSingleEdgeView7AF3f8r2")
+    public JAXBElement<TupleOfstringServiceSingleEdgeView7AF3F8R2> createTupleOfstringServiceSingleEdgeView7AF3F8R2(TupleOfstringServiceSingleEdgeView7AF3F8R2 value) {
+        return new JAXBElement<TupleOfstringServiceSingleEdgeView7AF3F8R2>(_TupleOfstringServiceSingleEdgeView7AF3F8R2_QNAME, TupleOfstringServiceSingleEdgeView7AF3F8R2 .class, null, value);
     }
 
     /**
@@ -294,6 +348,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link TupleOfstringServiceHyperEdgeView7AF3F8R2 }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/System", name = "TupleOfstringServiceHyperEdgeView7AF3f8r2")
+    public JAXBElement<TupleOfstringServiceHyperEdgeView7AF3F8R2> createTupleOfstringServiceHyperEdgeView7AF3F8R2(TupleOfstringServiceHyperEdgeView7AF3F8R2 value) {
+        return new JAXBElement<TupleOfstringServiceHyperEdgeView7AF3F8R2>(_TupleOfstringServiceHyperEdgeView7AF3F8R2_QNAME, TupleOfstringServiceHyperEdgeView7AF3F8R2 .class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link MarshalByRefObject }{@code >}}
      * 
      */
@@ -321,21 +384,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfTupleOflonglong }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/System", name = "ArrayOfTupleOflonglong")
-    public JAXBElement<ArrayOfTupleOflonglong> createArrayOfTupleOflonglong(ArrayOfTupleOflonglong value) {
-        return new JAXBElement<ArrayOfTupleOflonglong>(_ArrayOfTupleOflonglong_QNAME, ArrayOfTupleOflonglong.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link TupleOflonglong }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/System", name = "TupleOflonglong")
     public JAXBElement<TupleOflonglong> createTupleOflonglong(TupleOflonglong value) {
         return new JAXBElement<TupleOflonglong>(_TupleOflonglong_QNAME, TupleOflonglong.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfTupleOflonglong }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/System", name = "ArrayOfTupleOflonglong")
+    public JAXBElement<ArrayOfTupleOflonglong> createArrayOfTupleOflonglong(ArrayOfTupleOflonglong value) {
+        return new JAXBElement<ArrayOfTupleOflonglong>(_ArrayOfTupleOflonglong_QNAME, ArrayOfTupleOflonglong.class, null, value);
     }
 
     /**
@@ -354,6 +417,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/System", name = "TupleOflonglongArrayOfServiceVertexInstancegXhDpTc1")
     public JAXBElement<TupleOflonglongArrayOfServiceVertexInstancegXhDpTc1> createTupleOflonglongArrayOfServiceVertexInstancegXhDpTc1(TupleOflonglongArrayOfServiceVertexInstancegXhDpTc1 value) {
         return new JAXBElement<TupleOflonglongArrayOfServiceVertexInstancegXhDpTc1>(_TupleOflonglongArrayOfServiceVertexInstancegXhDpTc1_QNAME, TupleOflonglongArrayOfServiceVertexInstancegXhDpTc1 .class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfTupleOfstringServiceSingleEdgeView7AF3F8R2 }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/System", name = "ArrayOfTupleOfstringServiceSingleEdgeView7AF3f8r2")
+    public JAXBElement<ArrayOfTupleOfstringServiceSingleEdgeView7AF3F8R2> createArrayOfTupleOfstringServiceSingleEdgeView7AF3F8R2(ArrayOfTupleOfstringServiceSingleEdgeView7AF3F8R2 value) {
+        return new JAXBElement<ArrayOfTupleOfstringServiceSingleEdgeView7AF3F8R2>(_ArrayOfTupleOfstringServiceSingleEdgeView7AF3F8R2_QNAME, ArrayOfTupleOfstringServiceSingleEdgeView7AF3F8R2 .class, null, value);
     }
 
 }

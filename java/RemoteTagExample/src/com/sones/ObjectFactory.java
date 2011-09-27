@@ -25,9 +25,11 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _ServiceDeletePayload_QNAME = new QName("http://www.sones.com", "ServiceDeletePayload");
+    private final static QName _ServiceSingleEdgeView_QNAME = new QName("http://www.sones.com", "ServiceSingleEdgeView");
     private final static QName _ServiceUniqueDefinition_QNAME = new QName("http://www.sones.com", "ServiceUniqueDefinition");
     private final static QName _ServiceSingleLiteralExpression_QNAME = new QName("http://www.sones.com", "ServiceSingleLiteralExpression");
     private final static QName _ServiceCollectionLiteralExpression_QNAME = new QName("http://www.sones.com", "ServiceCollectionLiteralExpression");
+    private final static QName _ServiceVertexView_QNAME = new QName("http://www.sones.com", "ServiceVertexView");
     private final static QName _ServiceEdgeType_QNAME = new QName("http://www.sones.com", "ServiceEdgeType");
     private final static QName _ArrayOfServicePropertyPredefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServicePropertyPredefinition");
     private final static QName _ServiceBinaryOperator_QNAME = new QName("http://www.sones.com", "ServiceBinaryOperator");
@@ -41,26 +43,30 @@ public class ObjectFactory {
     private final static QName _ArrayOfServiceOutgoingEdgeDefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceOutgoingEdgeDefinition");
     private final static QName _ServiceEdgeInstance_QNAME = new QName("http://www.sones.com", "ServiceEdgeInstance");
     private final static QName _ArrayOfServiceVertexType_QNAME = new QName("http://www.sones.com", "ArrayOfServiceVertexType");
-    private final static QName _ServiceSecurityToken_QNAME = new QName("http://www.sones.com", "ServiceSecurityToken");
     private final static QName _ServiceEdgeTypePredefinition_QNAME = new QName("http://www.sones.com", "ServiceEdgeTypePredefinition");
     private final static QName _ArrayOfServiceIndexPredefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceIndexPredefinition");
     private final static QName _ServiceIncomingEdgePredefinition_QNAME = new QName("http://www.sones.com", "ServiceIncomingEdgePredefinition");
     private final static QName _ArrayOfServiceSingleEdgeInstance_QNAME = new QName("http://www.sones.com", "ArrayOfServiceSingleEdgeInstance");
     private final static QName _ArrayOfServiceEdgeType_QNAME = new QName("http://www.sones.com", "ArrayOfServiceEdgeType");
     private final static QName _ServiceAlterEdgeChangeset_QNAME = new QName("http://www.sones.com", "ServiceAlterEdgeChangeset");
+    private final static QName _ArrayOfServiceSingleEdgeView_QNAME = new QName("http://www.sones.com", "ArrayOfServiceSingleEdgeView");
     private final static QName _ServiceIndexDefinition_QNAME = new QName("http://www.sones.com", "ServiceIndexDefinition");
+    private final static QName _ServiceHyperEdgeView_QNAME = new QName("http://www.sones.com", "ServiceHyperEdgeView");
     private final static QName _ServiceEdgeMultiplicity_QNAME = new QName("http://www.sones.com", "ServiceEdgeMultiplicity");
     private final static QName _ServiceAlterVertexChangeset_QNAME = new QName("http://www.sones.com", "ServiceAlterVertexChangeset");
     private final static QName _ServiceIncomingEdgeDefinition_QNAME = new QName("http://www.sones.com", "ServiceIncomingEdgeDefinition");
     private final static QName _ArrayOfUnstructuredProperty_QNAME = new QName("http://www.sones.com", "ArrayOfUnstructuredProperty");
+    private final static QName _ServiceEdgeView_QNAME = new QName("http://www.sones.com", "ServiceEdgeView");
     private final static QName _ServiceOutgoingEdgeDefinition_QNAME = new QName("http://www.sones.com", "ServiceOutgoingEdgeDefinition");
     private final static QName _AGraphElement_QNAME = new QName("http://www.sones.com", "AGraphElement");
     private final static QName _ServiceAttributeDefinition_QNAME = new QName("http://www.sones.com", "ServiceAttributeDefinition");
     private final static QName _ServiceUpdateChangeset_QNAME = new QName("http://www.sones.com", "ServiceUpdateChangeset");
     private final static QName _ServiceVertexType_QNAME = new QName("http://www.sones.com", "ServiceVertexType");
     private final static QName _ServicePropertyExpression_QNAME = new QName("http://www.sones.com", "ServicePropertyExpression");
+    private final static QName _ArrayOfServiceVertexView_QNAME = new QName("http://www.sones.com", "ArrayOfServiceVertexView");
     private final static QName _ArrayOfServiceEdgePredefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceEdgePredefinition");
     private final static QName _StructuredProperty_QNAME = new QName("http://www.sones.com", "StructuredProperty");
+    private final static QName _ServiceQueryResult_QNAME = new QName("http://www.sones.com", "ServiceQueryResult");
     private final static QName _ServiceEdgePredefinition_QNAME = new QName("http://www.sones.com", "ServiceEdgePredefinition");
     private final static QName _ServiceUnaryExpression_QNAME = new QName("http://www.sones.com", "ServiceUnaryExpression");
     private final static QName _ServiceHyperEdgeInstance_QNAME = new QName("http://www.sones.com", "ServiceHyperEdgeInstance");
@@ -72,8 +78,8 @@ public class ObjectFactory {
     private final static QName _ArrayOfServiceIndexDefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceIndexDefinition");
     private final static QName _ServicePropertyDefinition_QNAME = new QName("http://www.sones.com", "ServicePropertyDefinition");
     private final static QName _ServiceUniquePredefinition_QNAME = new QName("http://www.sones.com", "ServiceUniquePredefinition");
-    private final static QName _ArrayOfServiceEdgeInstance_QNAME = new QName("http://www.sones.com", "ArrayOfServiceEdgeInstance");
     private final static QName _UnstructuredProperty_QNAME = new QName("http://www.sones.com", "UnstructuredProperty");
+    private final static QName _ArrayOfServiceEdgeInstance_QNAME = new QName("http://www.sones.com", "ArrayOfServiceEdgeInstance");
     private final static QName _ArrayOfServiceVertexInstance_QNAME = new QName("http://www.sones.com", "ArrayOfServiceVertexInstance");
     private final static QName _ServiceMandatoryPredefinition_QNAME = new QName("http://www.sones.com", "ServiceMandatoryPredefinition");
     private final static QName _ArrayOfServicePropertyDefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServicePropertyDefinition");
@@ -81,11 +87,11 @@ public class ObjectFactory {
     private final static QName _ServiceSingleEdgeInstance_QNAME = new QName("http://www.sones.com", "ServiceSingleEdgeInstance");
     private final static QName _ServiceBaseType_QNAME = new QName("http://www.sones.com", "ServiceBaseType");
     private final static QName _ServiceBinaryExpression_QNAME = new QName("http://www.sones.com", "ServiceBinaryExpression");
-    private final static QName _ServiceVertexTypePredefinition_QNAME = new QName("http://www.sones.com", "ServiceVertexTypePredefinition");
     private final static QName _ServiceRangeLiteralExpression_QNAME = new QName("http://www.sones.com", "ServiceRangeLiteralExpression");
+    private final static QName _ServiceVertexTypePredefinition_QNAME = new QName("http://www.sones.com", "ServiceVertexTypePredefinition");
     private final static QName _ArrayOfServiceIncomingEdgePredefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceIncomingEdgePredefinition");
-    private final static QName _ArrayOfServiceAttributeDefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceAttributeDefinition");
     private final static QName _ServiceVertexInstance_QNAME = new QName("http://www.sones.com", "ServiceVertexInstance");
+    private final static QName _ArrayOfServiceAttributeDefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceAttributeDefinition");
     private final static QName _ServiceUnaryLogicOperator_QNAME = new QName("http://www.sones.com", "ServiceUnaryLogicOperator");
     private final static QName _ArrayOfServiceUniquePredefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceUniquePredefinition");
     private final static QName _ArrayOfServiceVertexTypePredefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceVertexTypePredefinition");
@@ -103,14 +109,6 @@ public class ObjectFactory {
      */
     public GetPropertyDefinitionsByVertexType createGetPropertyDefinitionsByVertexType() {
         return new GetPropertyDefinitionsByVertexType();
-    }
-
-    /**
-     * Create an instance of {@link ServiceSecurityToken }
-     * 
-     */
-    public ServiceSecurityToken createServiceSecurityToken() {
-        return new ServiceSecurityToken();
     }
 
     /**
@@ -207,6 +205,14 @@ public class ObjectFactory {
      */
     public IsAncestorOrSelfByVertexTypeResponse createIsAncestorOrSelfByVertexTypeResponse() {
         return new IsAncestorOrSelfByVertexTypeResponse();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfServiceVertexView }
+     * 
+     */
+    public ArrayOfServiceVertexView createArrayOfServiceVertexView() {
+        return new ArrayOfServiceVertexView();
     }
 
     /**
@@ -375,6 +381,14 @@ public class ObjectFactory {
      */
     public GetIncomingEdgeDefinition createGetIncomingEdgeDefinition() {
         return new GetIncomingEdgeDefinition();
+    }
+
+    /**
+     * Create an instance of {@link ServiceEdgeView }
+     * 
+     */
+    public ServiceEdgeView createServiceEdgeView() {
+        return new ServiceEdgeView();
     }
 
     /**
@@ -994,6 +1008,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ServiceSingleEdgeView }
+     * 
+     */
+    public ServiceSingleEdgeView createServiceSingleEdgeView() {
+        return new ServiceSingleEdgeView();
+    }
+
+    /**
      * Create an instance of {@link HasUnstructuredPropertyByVertexInstanceResponse }
      * 
      */
@@ -1066,6 +1088,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ServiceVertexView }
+     * 
+     */
+    public ServiceVertexView createServiceVertexView() {
+        return new ServiceVertexView();
+    }
+
+    /**
      * Create an instance of {@link DescribeIndex }
      * 
      */
@@ -1119,6 +1149,14 @@ public class ObjectFactory {
      */
     public ServiceIndexDefinition createServiceIndexDefinition() {
         return new ServiceIndexDefinition();
+    }
+
+    /**
+     * Create an instance of {@link Query }
+     * 
+     */
+    public Query createQuery() {
+        return new Query();
     }
 
     /**
@@ -1415,6 +1453,14 @@ public class ObjectFactory {
      */
     public AlterEdgeType createAlterEdgeType() {
         return new AlterEdgeType();
+    }
+
+    /**
+     * Create an instance of {@link ServiceQueryResult }
+     * 
+     */
+    public ServiceQueryResult createServiceQueryResult() {
+        return new ServiceQueryResult();
     }
 
     /**
@@ -1778,14 +1824,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Ping }
-     * 
-     */
-    public Ping createPing() {
-        return new Ping();
-    }
-
-    /**
      * Create an instance of {@link GetPropertyByEdgeInstance }
      * 
      */
@@ -2082,6 +2120,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetOutgoingEdgeDefinitionsByVertexType }
+     * 
+     */
+    public GetOutgoingEdgeDefinitionsByVertexType createGetOutgoingEdgeDefinitionsByVertexType() {
+        return new GetOutgoingEdgeDefinitionsByVertexType();
+    }
+
+    /**
      * Create an instance of {@link ArrayOfServiceMandatoryPredefinition }
      * 
      */
@@ -2095,14 +2141,6 @@ public class ObjectFactory {
      */
     public BeginTransactionResponse createBeginTransactionResponse() {
         return new BeginTransactionResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetOutgoingEdgeDefinitionsByVertexType }
-     * 
-     */
-    public GetOutgoingEdgeDefinitionsByVertexType createGetOutgoingEdgeDefinitionsByVertexType() {
-        return new GetOutgoingEdgeDefinitionsByVertexType();
     }
 
     /**
@@ -2370,6 +2408,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ServiceHyperEdgeView }
+     * 
+     */
+    public ServiceHyperEdgeView createServiceHyperEdgeView() {
+        return new ServiceHyperEdgeView();
+    }
+
+    /**
      * Create an instance of {@link HasOutgoingEdgeByVertexInstance }
      * 
      */
@@ -2415,6 +2461,14 @@ public class ObjectFactory {
      */
     public HasIncomingEdges createHasIncomingEdges() {
         return new HasIncomingEdges();
+    }
+
+    /**
+     * Create an instance of {@link QueryResponse }
+     * 
+     */
+    public QueryResponse createQueryResponse() {
+        return new QueryResponse();
     }
 
     /**
@@ -2506,6 +2560,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ArrayOfServiceSingleEdgeView }
+     * 
+     */
+    public ArrayOfServiceSingleEdgeView createArrayOfServiceSingleEdgeView() {
+        return new ArrayOfServiceSingleEdgeView();
+    }
+
+    /**
      * Create an instance of {@link GetPropertyAsStringByEdgeInstanceResponse }
      * 
      */
@@ -2535,14 +2597,6 @@ public class ObjectFactory {
      */
     public IsDescendantByEdgeTypeResponse createIsDescendantByEdgeTypeResponse() {
         return new IsDescendantByEdgeTypeResponse();
-    }
-
-    /**
-     * Create an instance of {@link PingResponse }
-     * 
-     */
-    public PingResponse createPingResponse() {
-        return new PingResponse();
     }
 
     /**
@@ -2731,6 +2785,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceSingleEdgeView }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceSingleEdgeView")
+    public JAXBElement<ServiceSingleEdgeView> createServiceSingleEdgeView(ServiceSingleEdgeView value) {
+        return new JAXBElement<ServiceSingleEdgeView>(_ServiceSingleEdgeView_QNAME, ServiceSingleEdgeView.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ServiceUniqueDefinition }{@code >}}
      * 
      */
@@ -2755,6 +2818,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceCollectionLiteralExpression")
     public JAXBElement<ServiceCollectionLiteralExpression> createServiceCollectionLiteralExpression(ServiceCollectionLiteralExpression value) {
         return new JAXBElement<ServiceCollectionLiteralExpression>(_ServiceCollectionLiteralExpression_QNAME, ServiceCollectionLiteralExpression.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceVertexView }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceVertexView")
+    public JAXBElement<ServiceVertexView> createServiceVertexView(ServiceVertexView value) {
+        return new JAXBElement<ServiceVertexView>(_ServiceVertexView_QNAME, ServiceVertexView.class, null, value);
     }
 
     /**
@@ -2875,15 +2947,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceSecurityToken }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceSecurityToken")
-    public JAXBElement<ServiceSecurityToken> createServiceSecurityToken(ServiceSecurityToken value) {
-        return new JAXBElement<ServiceSecurityToken>(_ServiceSecurityToken_QNAME, ServiceSecurityToken.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ServiceEdgeTypePredefinition }{@code >}}
      * 
      */
@@ -2938,12 +3001,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfServiceSingleEdgeView }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ArrayOfServiceSingleEdgeView")
+    public JAXBElement<ArrayOfServiceSingleEdgeView> createArrayOfServiceSingleEdgeView(ArrayOfServiceSingleEdgeView value) {
+        return new JAXBElement<ArrayOfServiceSingleEdgeView>(_ArrayOfServiceSingleEdgeView_QNAME, ArrayOfServiceSingleEdgeView.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ServiceIndexDefinition }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceIndexDefinition")
     public JAXBElement<ServiceIndexDefinition> createServiceIndexDefinition(ServiceIndexDefinition value) {
         return new JAXBElement<ServiceIndexDefinition>(_ServiceIndexDefinition_QNAME, ServiceIndexDefinition.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceHyperEdgeView }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceHyperEdgeView")
+    public JAXBElement<ServiceHyperEdgeView> createServiceHyperEdgeView(ServiceHyperEdgeView value) {
+        return new JAXBElement<ServiceHyperEdgeView>(_ServiceHyperEdgeView_QNAME, ServiceHyperEdgeView.class, null, value);
     }
 
     /**
@@ -2980,6 +3061,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.sones.com", name = "ArrayOfUnstructuredProperty")
     public JAXBElement<ArrayOfUnstructuredProperty> createArrayOfUnstructuredProperty(ArrayOfUnstructuredProperty value) {
         return new JAXBElement<ArrayOfUnstructuredProperty>(_ArrayOfUnstructuredProperty_QNAME, ArrayOfUnstructuredProperty.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceEdgeView }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceEdgeView")
+    public JAXBElement<ServiceEdgeView> createServiceEdgeView(ServiceEdgeView value) {
+        return new JAXBElement<ServiceEdgeView>(_ServiceEdgeView_QNAME, ServiceEdgeView.class, null, value);
     }
 
     /**
@@ -3037,6 +3127,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfServiceVertexView }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ArrayOfServiceVertexView")
+    public JAXBElement<ArrayOfServiceVertexView> createArrayOfServiceVertexView(ArrayOfServiceVertexView value) {
+        return new JAXBElement<ArrayOfServiceVertexView>(_ArrayOfServiceVertexView_QNAME, ArrayOfServiceVertexView.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfServiceEdgePredefinition }{@code >}}
      * 
      */
@@ -3052,6 +3151,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.sones.com", name = "StructuredProperty")
     public JAXBElement<StructuredProperty> createStructuredProperty(StructuredProperty value) {
         return new JAXBElement<StructuredProperty>(_StructuredProperty_QNAME, StructuredProperty.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceQueryResult }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceQueryResult")
+    public JAXBElement<ServiceQueryResult> createServiceQueryResult(ServiceQueryResult value) {
+        return new JAXBElement<ServiceQueryResult>(_ServiceQueryResult_QNAME, ServiceQueryResult.class, null, value);
     }
 
     /**
@@ -3154,21 +3262,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfServiceEdgeInstance }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sones.com", name = "ArrayOfServiceEdgeInstance")
-    public JAXBElement<ArrayOfServiceEdgeInstance> createArrayOfServiceEdgeInstance(ArrayOfServiceEdgeInstance value) {
-        return new JAXBElement<ArrayOfServiceEdgeInstance>(_ArrayOfServiceEdgeInstance_QNAME, ArrayOfServiceEdgeInstance.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UnstructuredProperty }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.sones.com", name = "UnstructuredProperty")
     public JAXBElement<UnstructuredProperty> createUnstructuredProperty(UnstructuredProperty value) {
         return new JAXBElement<UnstructuredProperty>(_UnstructuredProperty_QNAME, UnstructuredProperty.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfServiceEdgeInstance }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ArrayOfServiceEdgeInstance")
+    public JAXBElement<ArrayOfServiceEdgeInstance> createArrayOfServiceEdgeInstance(ArrayOfServiceEdgeInstance value) {
+        return new JAXBElement<ArrayOfServiceEdgeInstance>(_ArrayOfServiceEdgeInstance_QNAME, ArrayOfServiceEdgeInstance.class, null, value);
     }
 
     /**
@@ -3235,21 +3343,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceVertexTypePredefinition }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceVertexTypePredefinition")
-    public JAXBElement<ServiceVertexTypePredefinition> createServiceVertexTypePredefinition(ServiceVertexTypePredefinition value) {
-        return new JAXBElement<ServiceVertexTypePredefinition>(_ServiceVertexTypePredefinition_QNAME, ServiceVertexTypePredefinition.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ServiceRangeLiteralExpression }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceRangeLiteralExpression")
     public JAXBElement<ServiceRangeLiteralExpression> createServiceRangeLiteralExpression(ServiceRangeLiteralExpression value) {
         return new JAXBElement<ServiceRangeLiteralExpression>(_ServiceRangeLiteralExpression_QNAME, ServiceRangeLiteralExpression.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceVertexTypePredefinition }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceVertexTypePredefinition")
+    public JAXBElement<ServiceVertexTypePredefinition> createServiceVertexTypePredefinition(ServiceVertexTypePredefinition value) {
+        return new JAXBElement<ServiceVertexTypePredefinition>(_ServiceVertexTypePredefinition_QNAME, ServiceVertexTypePredefinition.class, null, value);
     }
 
     /**
@@ -3262,21 +3370,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfServiceAttributeDefinition }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sones.com", name = "ArrayOfServiceAttributeDefinition")
-    public JAXBElement<ArrayOfServiceAttributeDefinition> createArrayOfServiceAttributeDefinition(ArrayOfServiceAttributeDefinition value) {
-        return new JAXBElement<ArrayOfServiceAttributeDefinition>(_ArrayOfServiceAttributeDefinition_QNAME, ArrayOfServiceAttributeDefinition.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ServiceVertexInstance }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceVertexInstance")
     public JAXBElement<ServiceVertexInstance> createServiceVertexInstance(ServiceVertexInstance value) {
         return new JAXBElement<ServiceVertexInstance>(_ServiceVertexInstance_QNAME, ServiceVertexInstance.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfServiceAttributeDefinition }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ArrayOfServiceAttributeDefinition")
+    public JAXBElement<ArrayOfServiceAttributeDefinition> createArrayOfServiceAttributeDefinition(ArrayOfServiceAttributeDefinition value) {
+        return new JAXBElement<ArrayOfServiceAttributeDefinition>(_ArrayOfServiceAttributeDefinition_QNAME, ArrayOfServiceAttributeDefinition.class, null, value);
     }
 
     /**

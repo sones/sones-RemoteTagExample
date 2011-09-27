@@ -9,6 +9,7 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
 import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
+import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
 
 
 /**
@@ -22,6 +23,7 @@ import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
     com.microsoft.schemas._2003._10.serialization.arrays.ObjectFactory.class,
     com.microsoft.schemas._2003._10.serialization.ObjectFactory.class,
     com.sones.ObjectFactory.class,
+    org.datacontract.schemas._2004._07.sones_library_commons.ObjectFactory.class,
     org.datacontract.schemas._2004._07.system.ObjectFactory.class
 })
 public interface VertexTypeService {
@@ -30,7 +32,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns com.sones.ArrayOfServiceVertexType
@@ -40,8 +42,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetDescendantVertexTypes", targetNamespace = "http://www.sones.com", className = "com.sones.GetDescendantVertexTypes")
     @ResponseWrapper(localName = "GetDescendantVertexTypesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetDescendantVertexTypesResponse")
     public ArrayOfServiceVertexType getDescendantVertexTypes(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -50,7 +52,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns com.sones.ArrayOfServiceVertexType
@@ -60,8 +62,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetDescendantVertexTypesAndSelf", targetNamespace = "http://www.sones.com", className = "com.sones.GetDescendantVertexTypesAndSelf")
     @ResponseWrapper(localName = "GetDescendantVertexTypesAndSelfResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetDescendantVertexTypesAndSelfResponse")
     public ArrayOfServiceVertexType getDescendantVertexTypesAndSelf(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -70,7 +72,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns com.sones.ArrayOfServiceVertexType
@@ -80,8 +82,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetAncestorVertexTypes", targetNamespace = "http://www.sones.com", className = "com.sones.GetAncestorVertexTypes")
     @ResponseWrapper(localName = "GetAncestorVertexTypesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAncestorVertexTypesResponse")
     public ArrayOfServiceVertexType getAncestorVertexTypes(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -90,7 +92,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns com.sones.ArrayOfServiceVertexType
@@ -100,8 +102,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetAncestorVertexTypesAndSelf", targetNamespace = "http://www.sones.com", className = "com.sones.GetAncestorVertexTypesAndSelf")
     @ResponseWrapper(localName = "GetAncestorVertexTypesAndSelfResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAncestorVertexTypesAndSelfResponse")
     public ArrayOfServiceVertexType getAncestorVertexTypesAndSelf(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -110,7 +112,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns com.sones.ArrayOfServiceVertexType
@@ -120,8 +122,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetKinsmenVertexTypes", targetNamespace = "http://www.sones.com", className = "com.sones.GetKinsmenVertexTypes")
     @ResponseWrapper(localName = "GetKinsmenVertexTypesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetKinsmenVertexTypesResponse")
     public ArrayOfServiceVertexType getKinsmenVertexTypes(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -130,7 +132,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns com.sones.ArrayOfServiceVertexType
@@ -140,8 +142,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetKinsmenVertexTypesAndSelf", targetNamespace = "http://www.sones.com", className = "com.sones.GetKinsmenVertexTypesAndSelf")
     @ResponseWrapper(localName = "GetKinsmenVertexTypesAndSelfResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetKinsmenVertexTypesAndSelfResponse")
     public ArrayOfServiceVertexType getKinsmenVertexTypesAndSelf(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -150,7 +152,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns com.sones.ArrayOfServiceVertexType
@@ -160,8 +162,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "ChildrenVertexTypes", targetNamespace = "http://www.sones.com", className = "com.sones.ChildrenVertexTypes")
     @ResponseWrapper(localName = "ChildrenVertexTypesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.ChildrenVertexTypesResponse")
     public ArrayOfServiceVertexType childrenVertexTypes(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -170,7 +172,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns com.sones.ServiceVertexType
@@ -180,8 +182,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "ParentVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.ParentVertexType")
     @ResponseWrapper(localName = "ParentVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.ParentVertexTypeResponse")
     public ServiceVertexType parentVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -190,7 +192,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns java.lang.Boolean
@@ -200,8 +202,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "IsSealedByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.IsSealedByVertexType")
     @ResponseWrapper(localName = "IsSealedByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.IsSealedByVertexTypeResponse")
     public Boolean isSealedByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -210,7 +212,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns java.lang.Boolean
@@ -220,8 +222,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "HasParentTypeByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.HasParentTypeByVertexType")
     @ResponseWrapper(localName = "HasParentTypeByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasParentTypeByVertexTypeResponse")
     public Boolean hasParentTypeByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -230,7 +232,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns java.lang.Boolean
@@ -240,8 +242,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "HasChildTypeByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.HasChildTypeByVertexType")
     @ResponseWrapper(localName = "HasChildTypeByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasChildTypeByVertexTypeResponse")
     public Boolean hasChildTypeByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -251,7 +253,7 @@ public interface VertexTypeService {
      * 
      * @param myOtherType
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns java.lang.Boolean
@@ -261,8 +263,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "IsAncestorByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.IsAncestorByVertexType")
     @ResponseWrapper(localName = "IsAncestorByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.IsAncestorByVertexTypeResponse")
     public Boolean isAncestorByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -274,7 +276,7 @@ public interface VertexTypeService {
      * 
      * @param myOtherType
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns java.lang.Boolean
@@ -284,8 +286,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "IsAncestorOrSelfByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.IsAncestorOrSelfByVertexType")
     @ResponseWrapper(localName = "IsAncestorOrSelfByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.IsAncestorOrSelfByVertexTypeResponse")
     public Boolean isAncestorOrSelfByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -297,7 +299,7 @@ public interface VertexTypeService {
      * 
      * @param myOtherType
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns java.lang.Boolean
@@ -307,8 +309,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "IsDescendantByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.IsDescendantByVertexType")
     @ResponseWrapper(localName = "IsDescendantByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.IsDescendantByVertexTypeResponse")
     public Boolean isDescendantByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -320,7 +322,7 @@ public interface VertexTypeService {
      * 
      * @param myOtherType
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns java.lang.Boolean
@@ -330,8 +332,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "IsDescendantOrSelfByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.IsDescendantOrSelfByVertexType")
     @ResponseWrapper(localName = "IsDescendantOrSelfByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.IsDescendantOrSelfByVertexTypeResponse")
     public Boolean isDescendantOrSelfByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -343,7 +345,7 @@ public interface VertexTypeService {
      * 
      * @param myTransToken
      * @param myAttributeName
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns java.lang.Boolean
@@ -353,8 +355,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "HasAttributeByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.HasAttributeByVertexType")
     @ResponseWrapper(localName = "HasAttributeByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasAttributeByVertexTypeResponse")
     public Boolean hasAttributeByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -366,7 +368,7 @@ public interface VertexTypeService {
      * 
      * @param myTransToken
      * @param myAttributeName
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns com.sones.ServiceAttributeDefinition
@@ -376,8 +378,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetAttributeDefinitionByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.GetAttributeDefinitionByVertexType")
     @ResponseWrapper(localName = "GetAttributeDefinitionByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAttributeDefinitionByVertexTypeResponse")
     public ServiceAttributeDefinition getAttributeDefinitionByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -389,7 +391,7 @@ public interface VertexTypeService {
      * 
      * @param myTransToken
      * @param myAttributeID
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns com.sones.ServiceAttributeDefinition
@@ -399,8 +401,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetAttributeDefinitionByIDByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.GetAttributeDefinitionByIDByVertexType")
     @ResponseWrapper(localName = "GetAttributeDefinitionByIDByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAttributeDefinitionByIDByVertexTypeResponse")
     public ServiceAttributeDefinition getAttributeDefinitionByIDByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -411,7 +413,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @param myIncludeAncestorDefinitions
      * @return
@@ -422,8 +424,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "HasAttributesByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.HasAttributesByVertexType")
     @ResponseWrapper(localName = "HasAttributesByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasAttributesByVertexTypeResponse")
     public Boolean hasAttributesByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -434,7 +436,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @param myIncludeAncestorDefinitions
      * @return
@@ -445,8 +447,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetAttributeDefinitionsByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.GetAttributeDefinitionsByVertexType")
     @ResponseWrapper(localName = "GetAttributeDefinitionsByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAttributeDefinitionsByVertexTypeResponse")
     public ArrayOfServiceAttributeDefinition getAttributeDefinitionsByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -458,7 +460,7 @@ public interface VertexTypeService {
      * 
      * @param myTransToken
      * @param myAttributeName
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @return
      *     returns java.lang.Boolean
@@ -468,8 +470,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "HasPropertyByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.HasPropertyByVertexType")
     @ResponseWrapper(localName = "HasPropertyByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasPropertyByVertexTypeResponse")
     public Boolean hasPropertyByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -480,7 +482,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myPropertyName
      * @param myServiceVertexType
      * @return
@@ -491,8 +493,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetPropertyDefinitionByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.GetPropertyDefinitionByVertexType")
     @ResponseWrapper(localName = "GetPropertyDefinitionByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetPropertyDefinitionByVertexTypeResponse")
     public ServicePropertyDefinition getPropertyDefinitionByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -503,7 +505,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myPropertyID
      * @param myServiceVertexType
      * @return
@@ -514,8 +516,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetPropertyDefinitionByIDByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.GetPropertyDefinitionByIDByVertexType")
     @ResponseWrapper(localName = "GetPropertyDefinitionByIDByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetPropertyDefinitionByIDByVertexTypeResponse")
     public ServicePropertyDefinition getPropertyDefinitionByIDByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -526,7 +528,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @param myIncludeAncestorDefinitions
      * @return
@@ -537,8 +539,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "HasPropertiesByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.HasPropertiesByVertexType")
     @ResponseWrapper(localName = "HasPropertiesByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasPropertiesByVertexTypeResponse")
     public Boolean hasPropertiesByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -549,7 +551,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @param myIncludeAncestorDefinitions
      * @return
@@ -560,8 +562,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetPropertyDefinitionsByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.GetPropertyDefinitionsByVertexType")
     @ResponseWrapper(localName = "GetPropertyDefinitionsByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetPropertyDefinitionsByVertexTypeResponse")
     public ArrayOfServicePropertyDefinition getPropertyDefinitionsByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -572,7 +574,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myPropertyNames
      * @param myServiceVertexType
      * @return
@@ -583,8 +585,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetPropertyDefinitionsByNameListByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.GetPropertyDefinitionsByNameListByVertexType")
     @ResponseWrapper(localName = "GetPropertyDefinitionsByNameListByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetPropertyDefinitionsByNameListByVertexTypeResponse")
     public ArrayOfServicePropertyDefinition getPropertyDefinitionsByNameListByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -595,7 +597,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myEdgeName
      * @param myServiceVertexType
      * @return
@@ -606,8 +608,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "HasIncomingEdge", targetNamespace = "http://www.sones.com", className = "com.sones.HasIncomingEdge")
     @ResponseWrapper(localName = "HasIncomingEdgeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasIncomingEdgeResponse")
     public Boolean hasIncomingEdge(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -618,7 +620,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myEdgeName
      * @param myServiceVertexType
      * @return
@@ -629,8 +631,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetIncomingEdgeDefinition", targetNamespace = "http://www.sones.com", className = "com.sones.GetIncomingEdgeDefinition")
     @ResponseWrapper(localName = "GetIncomingEdgeDefinitionResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetIncomingEdgeDefinitionResponse")
     public ServiceIncomingEdgeDefinition getIncomingEdgeDefinition(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -641,7 +643,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @param myIncludeAncestorDefinitions
      * @return
@@ -652,8 +654,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "HasIncomingEdges", targetNamespace = "http://www.sones.com", className = "com.sones.HasIncomingEdges")
     @ResponseWrapper(localName = "HasIncomingEdgesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasIncomingEdgesResponse")
     public Boolean hasIncomingEdges(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -664,7 +666,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @param myIncludeAncestorDefinitions
      * @return
@@ -675,8 +677,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetIncomingEdgeDefinitions", targetNamespace = "http://www.sones.com", className = "com.sones.GetIncomingEdgeDefinitions")
     @ResponseWrapper(localName = "GetIncomingEdgeDefinitionsResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetIncomingEdgeDefinitionsResponse")
     public ArrayOfServiceIncomingEdgeDefinition getIncomingEdgeDefinitions(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -687,7 +689,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myEdgeName
      * @param myServiceVertexType
      * @return
@@ -698,8 +700,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "HasOutgoingEdgeByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.HasOutgoingEdgeByVertexType")
     @ResponseWrapper(localName = "HasOutgoingEdgeByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasOutgoingEdgeByVertexTypeResponse")
     public Boolean hasOutgoingEdgeByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -710,7 +712,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myEdgeName
      * @param myServiceVertexType
      * @return
@@ -721,8 +723,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetOutgoingEdgeDefinitionByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.GetOutgoingEdgeDefinitionByVertexType")
     @ResponseWrapper(localName = "GetOutgoingEdgeDefinitionByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetOutgoingEdgeDefinitionByVertexTypeResponse")
     public ServiceOutgoingEdgeDefinition getOutgoingEdgeDefinitionByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -733,7 +735,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @param myIncludeAncestorDefinitions
      * @return
@@ -744,8 +746,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "HasOutgoingEdgesByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.HasOutgoingEdgesByVertexType")
     @ResponseWrapper(localName = "HasOutgoingEdgesByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasOutgoingEdgesByVertexTypeResponse")
     public Boolean hasOutgoingEdgesByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -756,7 +758,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @param myIncludeAncestorDefinitions
      * @return
@@ -767,8 +769,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetOutgoingEdgeDefinitionsByVertexType", targetNamespace = "http://www.sones.com", className = "com.sones.GetOutgoingEdgeDefinitionsByVertexType")
     @ResponseWrapper(localName = "GetOutgoingEdgeDefinitionsByVertexTypeResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetOutgoingEdgeDefinitionsByVertexTypeResponse")
     public ArrayOfServiceOutgoingEdgeDefinition getOutgoingEdgeDefinitionsByVertexType(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -779,7 +781,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @param myIncludeAncestorDefinitions
      * @return
@@ -790,8 +792,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "HasUniqueDefinitions", targetNamespace = "http://www.sones.com", className = "com.sones.HasUniqueDefinitions")
     @ResponseWrapper(localName = "HasUniqueDefinitionsResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasUniqueDefinitionsResponse")
     public Boolean hasUniqueDefinitions(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -802,7 +804,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @param myIncludeAncestorDefinitions
      * @return
@@ -813,8 +815,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetUniqueDefinitions", targetNamespace = "http://www.sones.com", className = "com.sones.GetUniqueDefinitions")
     @ResponseWrapper(localName = "GetUniqueDefinitionsResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetUniqueDefinitionsResponse")
     public ArrayOfServiceUniqueDefinition getUniqueDefinitions(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -825,7 +827,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @param myIncludeAncestorDefinitions
      * @return
@@ -836,8 +838,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "HasIndexDefinitions", targetNamespace = "http://www.sones.com", className = "com.sones.HasIndexDefinitions")
     @ResponseWrapper(localName = "HasIndexDefinitionsResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasIndexDefinitionsResponse")
     public Boolean hasIndexDefinitions(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
@@ -848,7 +850,7 @@ public interface VertexTypeService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myServiceVertexType
      * @param myIncludeAncestorDefinitions
      * @return
@@ -859,8 +861,8 @@ public interface VertexTypeService {
     @RequestWrapper(localName = "GetIndexDefinitions", targetNamespace = "http://www.sones.com", className = "com.sones.GetIndexDefinitions")
     @ResponseWrapper(localName = "GetIndexDefinitionsResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetIndexDefinitionsResponse")
     public ArrayOfServiceIndexDefinition getIndexDefinitions(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")

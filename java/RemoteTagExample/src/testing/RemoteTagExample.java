@@ -22,6 +22,7 @@ package testing;
 
 import java.rmi.RemoteException;
 
+import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
 import org.datacontract.schemas._2004._07.system.ArrayOfTupleOflonglong;
 import org.datacontract.schemas._2004._07.system.TupleOflonglong;
 
@@ -54,7 +55,6 @@ import com.sones.ServiceOutgoingEdgePredefinition;
 import com.sones.ServicePropertyDefinition;
 import com.sones.ServicePropertyExpression;
 import com.sones.ServicePropertyPredefinition;
-import com.sones.ServiceSecurityToken;
 import com.sones.ServiceSingleEdgeInstance;
 import com.sones.ServiceSingleLiteralExpression;
 import com.sones.ServiceVertexInstance;
@@ -73,7 +73,7 @@ public class RemoteTagExample {
     private EdgeInstanceService _EdgeInstanceService;
     private EdgeTypeService _EdgeTypeService;
 
-    private ServiceSecurityToken _SecToken;
+    private SecurityToken _SecToken;
     private long _TransToken;
 	
 	public RemoteTagExample()

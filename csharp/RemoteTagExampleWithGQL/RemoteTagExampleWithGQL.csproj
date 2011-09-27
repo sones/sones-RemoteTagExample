@@ -59,6 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Service References\sones.GraphDS\RemoteAPIClient.sones.GraphDS.SecurityToken.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\sones.GraphDS\RemoteAPIClient.sones.GraphDS.ServiceAttributeDefinition.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -84,9 +87,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\sones.GraphDS\RemoteAPIClient.sones.GraphDS.ServiceQueryResult.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\sones.GraphDS\RemoteAPIClient.sones.GraphDS.ServiceSecurityToken.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\sones.GraphDS\RemoteAPIClient.sones.GraphDS.ServiceSingleEdgeInstance.datasource">

@@ -7,6 +7,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
+import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
 
 
 /**
@@ -19,7 +20,7 @@ import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="mySecurityToken" type="{http://www.sones.com}ServiceSecurityToken" minOccurs="0"/>
+ *         &lt;element name="mySecurityToken" type="{http://schemas.datacontract.org/2004/07/sones.Library.Commons.Security}SecurityToken" minOccurs="0"/>
  *         &lt;element name="myTransToken" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="myServiceEdgeType" type="{http://www.sones.com}ServiceEdgeType" minOccurs="0"/>
  *         &lt;element name="myPropertyNames" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfstring" minOccurs="0"/>
@@ -42,7 +43,7 @@ import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
 public class GetPropertyDefinitionsByNameListByEdgeType {
 
     @XmlElement(nillable = true)
-    protected ServiceSecurityToken mySecurityToken;
+    protected SecurityToken mySecurityToken;
     protected Long myTransToken;
     @XmlElement(nillable = true)
     protected ServiceEdgeType myServiceEdgeType;
@@ -54,10 +55,10 @@ public class GetPropertyDefinitionsByNameListByEdgeType {
      * 
      * @return
      *     possible object is
-     *     {@link ServiceSecurityToken }
+     *     {@link SecurityToken }
      *     
      */
-    public ServiceSecurityToken getMySecurityToken() {
+    public SecurityToken getMySecurityToken() {
         return mySecurityToken;
     }
 
@@ -66,10 +67,10 @@ public class GetPropertyDefinitionsByNameListByEdgeType {
      * 
      * @param value
      *     allowed object is
-     *     {@link ServiceSecurityToken }
+     *     {@link SecurityToken }
      *     
      */
-    public void setMySecurityToken(ServiceSecurityToken value) {
+    public void setMySecurityToken(SecurityToken value) {
         this.mySecurityToken = value;
     }
 

@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
 
 
 /**
@@ -18,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="LogOnResult" type="{http://www.sones.com}ServiceSecurityToken" minOccurs="0"/>
+ *         &lt;element name="LogOnResult" type="{http://schemas.datacontract.org/2004/07/sones.Library.Commons.Security}SecurityToken" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,17 +36,17 @@ import javax.xml.bind.annotation.XmlType;
 public class LogOnResponse {
 
     @XmlElement(name = "LogOnResult", nillable = true)
-    protected ServiceSecurityToken logOnResult;
+    protected SecurityToken logOnResult;
 
     /**
      * Gets the value of the logOnResult property.
      * 
      * @return
      *     possible object is
-     *     {@link ServiceSecurityToken }
+     *     {@link SecurityToken }
      *     
      */
-    public ServiceSecurityToken getLogOnResult() {
+    public SecurityToken getLogOnResult() {
         return logOnResult;
     }
 
@@ -54,10 +55,10 @@ public class LogOnResponse {
      * 
      * @param value
      *     allowed object is
-     *     {@link ServiceSecurityToken }
+     *     {@link SecurityToken }
      *     
      */
-    public void setLogOnResult(ServiceSecurityToken value) {
+    public void setLogOnResult(SecurityToken value) {
         this.logOnResult = value;
     }
 

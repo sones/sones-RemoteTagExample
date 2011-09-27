@@ -8,6 +8,7 @@ import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
+import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
 import org.datacontract.schemas._2004._07.system.ArrayOfTupleOflonganyType;
 import org.datacontract.schemas._2004._07.system.ArrayOfTupleOfstringanyType;
 
@@ -23,6 +24,7 @@ import org.datacontract.schemas._2004._07.system.ArrayOfTupleOfstringanyType;
     com.microsoft.schemas._2003._10.serialization.arrays.ObjectFactory.class,
     com.microsoft.schemas._2003._10.serialization.ObjectFactory.class,
     com.sones.ObjectFactory.class,
+    org.datacontract.schemas._2004._07.sones_library_commons.ObjectFactory.class,
     org.datacontract.schemas._2004._07.system.ObjectFactory.class
 })
 public interface EdgeInstanceService {
@@ -31,7 +33,7 @@ public interface EdgeInstanceService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myPropertyID
      * @param myGraphElement
      * @return
@@ -42,8 +44,8 @@ public interface EdgeInstanceService {
     @RequestWrapper(localName = "GetPropertyByEdgeInstance", targetNamespace = "http://www.sones.com", className = "com.sones.GetPropertyByEdgeInstance")
     @ResponseWrapper(localName = "GetPropertyByEdgeInstanceResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetPropertyByEdgeInstanceResponse")
     public Object getPropertyByEdgeInstance(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myGraphElement", targetNamespace = "http://www.sones.com")
@@ -54,7 +56,7 @@ public interface EdgeInstanceService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myPropertyID
      * @param myGraphElement
      * @return
@@ -65,8 +67,8 @@ public interface EdgeInstanceService {
     @RequestWrapper(localName = "HasPropertyByEdgeInstance", targetNamespace = "http://www.sones.com", className = "com.sones.HasPropertyByEdgeInstance")
     @ResponseWrapper(localName = "HasPropertyByEdgeInstanceResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasPropertyByEdgeInstanceResponse")
     public Boolean hasPropertyByEdgeInstance(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myGraphElement", targetNamespace = "http://www.sones.com")
@@ -77,7 +79,7 @@ public interface EdgeInstanceService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myGraphElement
      * @return
      *     returns java.lang.Integer
@@ -87,8 +89,8 @@ public interface EdgeInstanceService {
     @RequestWrapper(localName = "GetCountOfPropertiesByEdgeInstance", targetNamespace = "http://www.sones.com", className = "com.sones.GetCountOfPropertiesByEdgeInstance")
     @ResponseWrapper(localName = "GetCountOfPropertiesByEdgeInstanceResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetCountOfPropertiesByEdgeInstanceResponse")
     public Integer getCountOfPropertiesByEdgeInstance(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myGraphElement", targetNamespace = "http://www.sones.com")
@@ -97,7 +99,7 @@ public interface EdgeInstanceService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myGraphElement
      * @return
      *     returns org.datacontract.schemas._2004._07.system.ArrayOfTupleOflonganyType
@@ -107,8 +109,8 @@ public interface EdgeInstanceService {
     @RequestWrapper(localName = "GetAllPropertiesByEdgeInstance", targetNamespace = "http://www.sones.com", className = "com.sones.GetAllPropertiesByEdgeInstance")
     @ResponseWrapper(localName = "GetAllPropertiesByEdgeInstanceResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAllPropertiesByEdgeInstanceResponse")
     public ArrayOfTupleOflonganyType getAllPropertiesByEdgeInstance(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myGraphElement", targetNamespace = "http://www.sones.com")
@@ -117,7 +119,7 @@ public interface EdgeInstanceService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myPropertyID
      * @param myGraphElement
      * @return
@@ -128,8 +130,8 @@ public interface EdgeInstanceService {
     @RequestWrapper(localName = "GetPropertyAsStringByEdgeInstance", targetNamespace = "http://www.sones.com", className = "com.sones.GetPropertyAsStringByEdgeInstance")
     @ResponseWrapper(localName = "GetPropertyAsStringByEdgeInstanceResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetPropertyAsStringByEdgeInstanceResponse")
     public String getPropertyAsStringByEdgeInstance(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myGraphElement", targetNamespace = "http://www.sones.com")
@@ -140,7 +142,7 @@ public interface EdgeInstanceService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myPropertyName
      * @param myGraphElement
      * @return
@@ -151,8 +153,8 @@ public interface EdgeInstanceService {
     @RequestWrapper(localName = "GetUnstructuredPropertyByEdgeInstance", targetNamespace = "http://www.sones.com", className = "com.sones.GetUnstructuredPropertyByEdgeInstance")
     @ResponseWrapper(localName = "GetUnstructuredPropertyByEdgeInstanceResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetUnstructuredPropertyByEdgeInstanceResponse")
     public Object getUnstructuredPropertyByEdgeInstance(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myGraphElement", targetNamespace = "http://www.sones.com")
@@ -163,7 +165,7 @@ public interface EdgeInstanceService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myPropertyName
      * @param myGraphElement
      * @return
@@ -174,8 +176,8 @@ public interface EdgeInstanceService {
     @RequestWrapper(localName = "HasUnstructuredPropertyByEdgeInstance", targetNamespace = "http://www.sones.com", className = "com.sones.HasUnstructuredPropertyByEdgeInstance")
     @ResponseWrapper(localName = "HasUnstructuredPropertyByEdgeInstanceResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasUnstructuredPropertyByEdgeInstanceResponse")
     public Boolean hasUnstructuredPropertyByEdgeInstance(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myGraphElement", targetNamespace = "http://www.sones.com")
@@ -186,7 +188,7 @@ public interface EdgeInstanceService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myGraphElement
      * @return
      *     returns java.lang.Integer
@@ -196,8 +198,8 @@ public interface EdgeInstanceService {
     @RequestWrapper(localName = "GetCountOfUnstructuredPropertiesByEdgeInstance", targetNamespace = "http://www.sones.com", className = "com.sones.GetCountOfUnstructuredPropertiesByEdgeInstance")
     @ResponseWrapper(localName = "GetCountOfUnstructuredPropertiesByEdgeInstanceResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetCountOfUnstructuredPropertiesByEdgeInstanceResponse")
     public Integer getCountOfUnstructuredPropertiesByEdgeInstance(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myGraphElement", targetNamespace = "http://www.sones.com")
@@ -206,7 +208,7 @@ public interface EdgeInstanceService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myGraphElement
      * @return
      *     returns org.datacontract.schemas._2004._07.system.ArrayOfTupleOfstringanyType
@@ -216,8 +218,8 @@ public interface EdgeInstanceService {
     @RequestWrapper(localName = "GetAllUnstructuredPropertiesByEdgeInstance", targetNamespace = "http://www.sones.com", className = "com.sones.GetAllUnstructuredPropertiesByEdgeInstance")
     @ResponseWrapper(localName = "GetAllUnstructuredPropertiesByEdgeInstanceResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAllUnstructuredPropertiesByEdgeInstanceResponse")
     public ArrayOfTupleOfstringanyType getAllUnstructuredPropertiesByEdgeInstance(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myGraphElement", targetNamespace = "http://www.sones.com")
@@ -226,7 +228,7 @@ public interface EdgeInstanceService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myPropertyName
      * @param myGraphElement
      * @return
@@ -237,8 +239,8 @@ public interface EdgeInstanceService {
     @RequestWrapper(localName = "GetUnstructuredPropertyAsStringByEdgeInstance", targetNamespace = "http://www.sones.com", className = "com.sones.GetUnstructuredPropertyAsStringByEdgeInstance")
     @ResponseWrapper(localName = "GetUnstructuredPropertyAsStringByEdgeInstanceResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetUnstructuredPropertyAsStringByEdgeInstanceResponse")
     public String getUnstructuredPropertyAsStringByEdgeInstance(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myGraphElement", targetNamespace = "http://www.sones.com")
@@ -249,7 +251,7 @@ public interface EdgeInstanceService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myGraphElement
      * @return
      *     returns java.lang.String
@@ -259,8 +261,8 @@ public interface EdgeInstanceService {
     @RequestWrapper(localName = "CommentByEdgeInstance", targetNamespace = "http://www.sones.com", className = "com.sones.CommentByEdgeInstance")
     @ResponseWrapper(localName = "CommentByEdgeInstanceResponse", targetNamespace = "http://www.sones.com", className = "com.sones.CommentByEdgeInstanceResponse")
     public String commentByEdgeInstance(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myGraphElement", targetNamespace = "http://www.sones.com")
@@ -269,7 +271,7 @@ public interface EdgeInstanceService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myGraphElement
      * @return
      *     returns java.lang.Long
@@ -279,8 +281,8 @@ public interface EdgeInstanceService {
     @RequestWrapper(localName = "CreationDateByEdgeInstance", targetNamespace = "http://www.sones.com", className = "com.sones.CreationDateByEdgeInstance")
     @ResponseWrapper(localName = "CreationDateByEdgeInstanceResponse", targetNamespace = "http://www.sones.com", className = "com.sones.CreationDateByEdgeInstanceResponse")
     public Long creationDateByEdgeInstance(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myGraphElement", targetNamespace = "http://www.sones.com")
@@ -289,7 +291,7 @@ public interface EdgeInstanceService {
     /**
      * 
      * @param myTransToken
-     * @param mySecToken
+     * @param mySecurityToken
      * @param myGraphElement
      * @return
      *     returns java.lang.Long
@@ -299,8 +301,8 @@ public interface EdgeInstanceService {
     @RequestWrapper(localName = "ModificationDateByEdgeInstance", targetNamespace = "http://www.sones.com", className = "com.sones.ModificationDateByEdgeInstance")
     @ResponseWrapper(localName = "ModificationDateByEdgeInstanceResponse", targetNamespace = "http://www.sones.com", className = "com.sones.ModificationDateByEdgeInstanceResponse")
     public Long modificationDateByEdgeInstance(
-        @WebParam(name = "mySecToken", targetNamespace = "http://www.sones.com")
-        ServiceSecurityToken mySecToken,
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
         @WebParam(name = "myGraphElement", targetNamespace = "http://www.sones.com")

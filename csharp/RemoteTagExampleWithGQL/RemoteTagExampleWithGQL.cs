@@ -37,7 +37,7 @@ namespace RemoteTagExampleWithGQL
         private EdgeInstanceServiceClient _EdgeInstanceService;
         private EdgeTypeServiceClient _EdgeTypeService;
 
-        private ServiceSecurityToken SecToken;
+        private SecurityToken SecToken;
         private Int64 TransToken;
 
         #endregion
