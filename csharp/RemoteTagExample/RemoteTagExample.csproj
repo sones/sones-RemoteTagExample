@@ -64,6 +64,9 @@
     <None Include="Service References\sones.GraphDS\RemoteAPIClient.sones.GraphDS.ServiceAttributeDefinition.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\sones.GraphDS\RemoteAPIClient.sones.GraphDS.ServiceBinaryPropertyDefinition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\sones.GraphDS\RemoteAPIClient.sones.GraphDS.ServiceEdgeInstance.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -97,10 +100,13 @@
     <None Include="Service References\sones.GraphDS\RemoteAPIClient.sones.GraphDS.ServiceVertexInstance.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\sones.GraphDS\RemoteAPIClient.sones.GraphDS.ServiceVertexStatistics.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\sones.GraphDS\RemoteAPIClient.sones.GraphDS.ServiceVertexType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\sones.GraphDS\RPCServiceContract1.wsdl" />
+    <None Include="Service References\sones.GraphDS\RPCServiceContract.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\sones.GraphDS\" />

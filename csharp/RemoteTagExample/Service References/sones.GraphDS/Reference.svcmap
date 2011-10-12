@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e2dc862d-0aa4-4bef-82e6-90c34fd8a117" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0251ad27-dabf-4471-8622-3faa65c37aba" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -20,10 +20,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:9970/wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:9970/rpc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="RPCServiceContract1.wsdl" MetadataType="Wsdl" ID="024bcf17-2ab2-4917-9854-94e1eb3d218a" SourceId="1" SourceUrl="http://localhost:9970/wsdl" />
+    <MetadataFile FileName="RPCServiceContract.wsdl" MetadataType="Wsdl" ID="cc4a2e16-2cf1-49b2-a226-e24e449f0e8f" SourceId="1" SourceUrl="http://localhost:9970/rpc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

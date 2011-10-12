@@ -31,9 +31,9 @@ namespace RemoteAPIClient
     {
         #region Data
 
-        private GraphDSClient GraphDS_API;
-        private VertexInstanceServiceClient _VertexInstanceService;
-        private VertexTypeServiceClient _VertexTypeService;
+        private GraphDSServiceClient _GraphDS_Service;
+        private VertexInstanceService _VertexInstanceService;
+        private VertexTypeService _VertexTypeService;
         private EdgeInstanceServiceClient _EdgeInstanceService;
         private EdgeTypeServiceClient _EdgeTypeService;
 
@@ -46,7 +46,7 @@ namespace RemoteAPIClient
 
         public RemoteTagExample()
         {
-            GraphDS_API =  new GraphDSClient();
+            _GraphDS_Service = new GraphDSServiceClient();
             _VertexInstanceService = new VertexInstanceServiceClient();
             _VertexTypeService = new VertexTypeServiceClient();
             _EdgeInstanceService = new EdgeInstanceServiceClient();
@@ -57,8 +57,11 @@ namespace RemoteAPIClient
         public void Run()
         {
             //for each request, you need an SecurityToken and a Int64
-            SecToken = GraphDS_API.LogOn("test", "test");
-            TransToken = GraphDS_API.BeginTransaction(SecToken);
+            var cred = new ServiceUserPasswordCredentials();
+            cred._login = "test";
+            cred._passwordHash = "test".GetHashCode();
+            SecToken = _GraphDS_Service.LogOn(cred);
+            TransToken = _GraphDS_Service.BeginTransaction(SecToken);
 
             Stopwatch RunningTime = new Stopwatch();
 
@@ -86,7 +89,7 @@ namespace RemoteAPIClient
             switch (Console.ReadLine())
             {
                 case "y":
-                    GraphDS_API.Clear(SecToken, TransToken);
+                    _GraphDS_Service.Clear(SecToken, TransToken);
                     Console.WriteLine("GraphDB successful cleared!");
                     break;
                 default:
@@ -202,7 +205,7 @@ namespace RemoteAPIClient
 
             //create the types "Tag" and "Website"
 
-            var DBTypes = GraphDS_API.CreateVertexTypes(SecToken, TransToken, new List<ServiceVertexTypePredefinition>(){Tag_VertexTypePredefinition,
+            var DBTypes = _GraphDS_Service.CreateVertexTypes(SecToken, TransToken, new List<ServiceVertexTypePredefinition>(){Tag_VertexTypePredefinition,
                     Website_VertexTypePredefinition});
             Console.WriteLine("CreateVertexTypes ('Websites', 'Tag') successful executed!");
 
@@ -228,7 +231,7 @@ namespace RemoteAPIClient
             Property.PropertyValue = "http://cnn.com/";
             Insert.StructuredProperties.Add(Property);
 
-            var cnn = GraphDS_API.Insert(SecToken, TransToken, "Website", Insert);
+            var cnn = _GraphDS_Service.Insert(SecToken, TransToken, "Website", Insert);
             Console.WriteLine("Insert into 'Websites' successful executed!");
 
             Insert = new ServiceInsertPayload();
@@ -243,7 +246,7 @@ namespace RemoteAPIClient
             Property.PropertyValue = "http://xkcd.com/";
             Insert.StructuredProperties.Add(Property);
 
-            var xkcd = GraphDS_API.Insert(SecToken, TransToken, "Website", Insert);
+            var xkcd = _GraphDS_Service.Insert(SecToken, TransToken, "Website", Insert);
             Console.WriteLine("Insert into 'Websites' successful executed!");
 
             Insert = new ServiceInsertPayload();
@@ -259,7 +262,7 @@ namespace RemoteAPIClient
             Insert.StructuredProperties.Add(Property);
 
 
-            var onion = GraphDS_API.Insert(SecToken, TransToken, "Website", Insert);
+            var onion = _GraphDS_Service.Insert(SecToken, TransToken, "Website", Insert);
             Console.WriteLine("Insert into 'Websites' successful executed!");
 
             Insert = new ServiceInsertPayload();
@@ -280,7 +283,7 @@ namespace RemoteAPIClient
 
 
             //adding an unstructured property means the property isn't defined before
-            var test = GraphDS_API.Insert(SecToken, TransToken, "Website", Insert);
+            var test = _GraphDS_Service.Insert(SecToken, TransToken, "Website", Insert);
             Console.WriteLine("Insert into 'Websites' successful executed!");
 
             #endregion
@@ -305,21 +308,18 @@ namespace RemoteAPIClient
             Edge.ContainedEdges = new List<ServiceEdgePredefinition>();
 
             ServiceEdgePredefinition InnerEdge = new ServiceEdgePredefinition();
-            InnerEdge.VertexIDsByID = new List<Tuple<long, long>>();
-            InnerEdge.VertexIDsByID.Add(new Tuple<long, long>(Website.ID, cnn.VertexID));
+            InnerEdge.VertexIDsByID = new List<Tuple<long, List<long>>>();
+            var VertexIDs = new List<long>();
+            VertexIDs.Add(cnn.VertexID);
+            VertexIDs.Add(xkcd.VertexID);
 
-            Edge.ContainedEdges.Add(InnerEdge);
-
-            InnerEdge = new ServiceEdgePredefinition();
-            InnerEdge.VertexIDsByID = new List<Tuple<long, long>>();
-            InnerEdge.VertexIDsByID.Add(new Tuple<long, long>(Website.ID, xkcd.VertexID));
-
+            InnerEdge.VertexIDsByID.Add(new Tuple<long, List<long>>(Website.ID, VertexIDs));
             Edge.ContainedEdges.Add(InnerEdge);
 
             Insert.Edges.Add(Edge);
 
 
-            var good = GraphDS_API.Insert(SecToken, TransToken, "Tag", Insert);
+            var good = _GraphDS_Service.Insert(SecToken, TransToken, "Tag", Insert);
             Console.WriteLine("Insert into 'Tag' successful executed!");
 
             Insert = new ServiceInsertPayload();
@@ -337,20 +337,18 @@ namespace RemoteAPIClient
             Edge.ContainedEdges = new List<ServiceEdgePredefinition>();
 
             InnerEdge = new ServiceEdgePredefinition();
-            InnerEdge.VertexIDsByID = new List<Tuple<long, long>>();
-            InnerEdge.VertexIDsByID.Add(new Tuple<long, long>(Website.ID, xkcd.VertexID));
+            InnerEdge.VertexIDsByID = new List<Tuple<long, List<long>>>();
+            VertexIDs = new List<long>();
+            VertexIDs.Add(xkcd.VertexID);
+            VertexIDs.Add(onion.VertexID);
 
-            Edge.ContainedEdges.Add(InnerEdge);
-
-            InnerEdge = new ServiceEdgePredefinition();
-            InnerEdge.VertexIDsByID = new List<Tuple<long, long>>();
-            InnerEdge.VertexIDsByID.Add(new Tuple<long, long>(Website.ID, onion.VertexID));
+            InnerEdge.VertexIDsByID.Add(new Tuple<long, List<long>>(Website.ID, VertexIDs));
 
             Edge.ContainedEdges.Add(InnerEdge);
 
             Insert.Edges.Add(Edge);
 
-            var funny = GraphDS_API.Insert(SecToken, TransToken, "Tag", Insert);
+            var funny = _GraphDS_Service.Insert(SecToken, TransToken, "Tag", Insert);
             Console.WriteLine("Insert into 'Tag' successful executed!");
 
 
@@ -367,8 +365,8 @@ namespace RemoteAPIClient
             #region Get VertexType from DB by Name
             
             //how to get a type from the DB
-            var TagDBType = GraphDS_API.GetVertexType(SecToken, TransToken,"Tag");
-            var WebsiteDBType = GraphDS_API.GetVertexType(SecToken, TransToken, "Website");
+            var TagDBType = _GraphDS_Service.GetVertexTypeByName(SecToken, TransToken, "Tag");
+            var WebsiteDBType = _GraphDS_Service.GetVertexTypeByName(SecToken, TransToken, "Website");
 
             #endregion
 
@@ -388,8 +386,8 @@ namespace RemoteAPIClient
 
             #region collect all Properties on VertexType "Tag" and "Website"
 
-            var TagPropertyList = _VertexTypeService.GetPropertyDefinitionsByVertexType(SecToken, TransToken,TagDBType, false);
-            var WebsitePropertyList = _VertexTypeService.GetPropertyDefinitionsByVertexType(SecToken, TransToken, WebsiteDBType, false);
+            var TagPropertyList = _VertexTypeService.GetPropertyDefinitionsByVertexType(SecToken, TransToken,TagDBType.Name, false);
+            var WebsitePropertyList = _VertexTypeService.GetPropertyDefinitionsByVertexType(SecToken, TransToken, WebsiteDBType.Name, false);
             
             Console.WriteLine(Environment.NewLine);
             Console.WriteLine("Properties of VertexType 'Tag'");
@@ -426,26 +424,26 @@ namespace RemoteAPIClient
             #region Get Vertex Instance information with VertexInstanceService
             
             //get a specific property definition
-            var TagPropName = _VertexTypeService.GetPropertyDefinitionByVertexType(SecToken, TransToken, TagDBType, "Name");
-            var WebPropName = _VertexTypeService.GetPropertyDefinitionByVertexType(SecToken, TransToken, WebsiteDBType, "Name");
+            var TagPropName = _VertexTypeService.GetPropertyDefinitionByVertexType(SecToken, TransToken, TagDBType.Name, "Name");
+            var WebPropName = _VertexTypeService.GetPropertyDefinitionByVertexType(SecToken, TransToken, WebsiteDBType.Name, "Name");
                       
-            var WebPropURL = _VertexTypeService.GetPropertyDefinitionByVertexType(SecToken, TransToken, WebsiteDBType, "URL");
+            var WebPropURL = _VertexTypeService.GetPropertyDefinitionByVertexType(SecToken, TransToken, WebsiteDBType.Name, "URL");
             var TagWebsite = _VertexTypeService.GetOutgoingEdgeDefinitionByVertexType(SecToken, TransToken, TagDBType, "TaggedWebsites");
 
             #region Get all instances of the VertexTypes
             
             //how to get all instances of a type  from the DB
             Stopwatch watch1 = Stopwatch.StartNew();
-            var TagInstances = GraphDS_API.GetVerticesByType(SecToken, TransToken,TagDBType);
+            var TagInstances = _GraphDS_Service.GetVerticesByType(SecToken, TransToken, TagDBType);
             watch1.Stop();
             Console.WriteLine(watch1.Elapsed.TotalMilliseconds);
 
             watch1.Reset();
             watch1.Start();
-            TagInstances = GraphDS_API.GetVerticesByType(SecToken, TransToken, TagDBType);
+            TagInstances = _GraphDS_Service.GetVerticesByType(SecToken, TransToken, TagDBType);
             watch1.Stop();
             Console.WriteLine(watch1.Elapsed.TotalMilliseconds);
-            var WebsiteInstances = GraphDS_API.GetVerticesByType(SecToken, TransToken, WebsiteDBType);
+            var WebsiteInstances = _GraphDS_Service.GetVerticesByType(SecToken, TransToken, WebsiteDBType);
             
             #endregion
 
@@ -502,7 +500,7 @@ namespace RemoteAPIClient
             BinExpression.Operator = ServiceBinaryOperator.Equals;
 
             //In this case we query the Vertices "Where Name = 'CNN'". That's just one vertex ;)
-            var a = GraphDS_API.GetVerticesByExpression(SecToken, TransToken, BinExpression);
+            var a = _GraphDS_Service.GetVerticesByExpression(SecToken, TransToken, BinExpression);
             Console.WriteLine("\r\nExpression was: Name(Property) = (Equals) 'CNN'");
             Console.WriteLine("Expression Result: " + a.Count + " affected Vertices");
 
