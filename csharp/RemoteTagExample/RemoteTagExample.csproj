@@ -106,7 +106,7 @@
     <None Include="Service References\sones.GraphDS\RemoteAPIClient.sones.GraphDS.ServiceVertexType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\sones.GraphDS\RPCServiceContract.wsdl" />
+    <None Include="Service References\sones.GraphDS\RPCServiceContract1.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\sones.GraphDS\" />

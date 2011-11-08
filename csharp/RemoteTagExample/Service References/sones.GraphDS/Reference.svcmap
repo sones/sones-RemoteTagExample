@@ -20,10 +20,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:9970/rpc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:9971/rpc/wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="RPCServiceContract.wsdl" MetadataType="Wsdl" ID="cc4a2e16-2cf1-49b2-a226-e24e449f0e8f" SourceId="1" SourceUrl="http://localhost:9970/rpc?wsdl" />
+    <MetadataFile FileName="RPCServiceContract1.wsdl" MetadataType="Wsdl" ID="d42e0e07-ec91-4337-b96a-7d15cca3338f" SourceId="1" SourceUrl="http://localhost:9971/rpc/wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

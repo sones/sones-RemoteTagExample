@@ -24,6 +24,7 @@ using System.Linq;
 using System.Text;
 using RemoteAPIClient.sones.GraphDS;
 using System.Diagnostics;
+using System.ServiceModel;
 
 namespace RemoteAPIClient
 {
@@ -31,26 +32,34 @@ namespace RemoteAPIClient
     {
         #region Data
 
-        private GraphDSServiceClient _GraphDS_Service;
+        private GraphDSService _GraphDS_Service;
         private VertexInstanceService _VertexInstanceService;
         private VertexTypeService _VertexTypeService;
-        private EdgeInstanceServiceClient _EdgeInstanceService;
-        private EdgeTypeServiceClient _EdgeTypeService;
+        private EdgeInstanceService _EdgeInstanceService;
+        private EdgeTypeService _EdgeTypeService;
 
         private SecurityToken SecToken;
         private Int64 TransToken;
 
-
         #endregion
-       
 
-        public RemoteTagExample()
+        public static void Main()
         {
-            _GraphDS_Service = new GraphDSServiceClient();
-            _VertexInstanceService = new VertexInstanceServiceClient();
-            _VertexTypeService = new VertexTypeServiceClient();
-            _EdgeInstanceService = new EdgeInstanceServiceClient();
-            _EdgeTypeService = new EdgeTypeServiceClient();
+            RemoteTagExample Example = new RemoteTagExample("http://localhost:9970/rpc");
+            Example.Run();
+        }
+
+        public RemoteTagExample(String myUri)
+        {
+            var Binding = new BasicHttpBinding();
+            Binding.Name = "sonesBasic";
+            var Uri = new EndpointAddress(myUri);
+
+            _GraphDS_Service = ChannelFactory<GraphDSService>.CreateChannel(Binding, Uri);
+            _VertexInstanceService = ChannelFactory<VertexInstanceService>.CreateChannel(Binding, Uri);
+            _VertexTypeService = ChannelFactory<VertexTypeService>.CreateChannel(Binding, Uri);
+            _EdgeInstanceService = ChannelFactory<EdgeInstanceService>.CreateChannel(Binding, Uri);
+            _EdgeTypeService = ChannelFactory<EdgeTypeService>.CreateChannel(Binding, Uri);
         }
 
 
@@ -101,17 +110,6 @@ namespace RemoteAPIClient
             Console.ReadLine();
                       
 
-        }
-
-
-
-
-        public static void Main()
-        {
-
-            RemoteTagExample Example = new RemoteTagExample();
-            Example.Run();
-           
         }
 
         #region How to: Create Vertex Types / Insert Data into Vertices

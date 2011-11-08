@@ -24,6 +24,7 @@ using System.Linq;
 using System.Text;
 using RemoteAPIClient.sones.GraphDS;
 using System.Diagnostics;
+using System.ServiceModel;
 
 namespace RemoteTagExampleWithGQL
 {
@@ -31,31 +32,44 @@ namespace RemoteTagExampleWithGQL
     {
         #region Data
 
-        private GraphDSClient GraphDS_API;
-        private VertexInstanceServiceClient _VertexInstanceService;
-        private VertexTypeServiceClient _VertexTypeService;
-        private EdgeInstanceServiceClient _EdgeInstanceService;
-        private EdgeTypeServiceClient _EdgeTypeService;
+        private GraphDSService _GraphDS_Service;
+        private VertexInstanceService _VertexInstanceService;
+        private VertexTypeService _VertexTypeService;
+        private EdgeInstanceService _EdgeInstanceService;
+        private EdgeTypeService _EdgeTypeService;
 
         private SecurityToken SecToken;
         private Int64 TransToken;
 
         #endregion
 
-        public RemoteTagExampleWithGQL()
+        static void Main(string[] args)
         {
-            GraphDS_API = new GraphDSClient();
-            _VertexInstanceService = new VertexInstanceServiceClient();
-            _VertexTypeService = new VertexTypeServiceClient();
-            _EdgeInstanceService = new EdgeInstanceServiceClient();
-            _EdgeTypeService = new EdgeTypeServiceClient();
+            RemoteTagExampleWithGQL example = new RemoteTagExampleWithGQL("http://localhost:9970/rpc");
+            example.run();
+        }
+
+        public RemoteTagExampleWithGQL(String myUri)
+        {
+            var Binding = new BasicHttpBinding();
+            Binding.Name = "sonesBasic";
+            var Uri = new EndpointAddress(myUri);
+
+            _GraphDS_Service = ChannelFactory<GraphDSService>.CreateChannel(Binding, Uri);
+            _VertexInstanceService = ChannelFactory<VertexInstanceService>.CreateChannel(Binding, Uri);
+            _VertexTypeService = ChannelFactory<VertexTypeService>.CreateChannel(Binding, Uri);
+            _EdgeInstanceService = ChannelFactory<EdgeInstanceService>.CreateChannel(Binding, Uri);
+            _EdgeTypeService = ChannelFactory<EdgeTypeService>.CreateChannel(Binding, Uri);
         }
 
         public void run()
         {
             //for each request, you need an SecurityToken and a Int64
-            SecToken = GraphDS_API.LogOn("test", "test");
-            TransToken = GraphDS_API.BeginTransaction(SecToken);
+            var cred = new ServiceUserPasswordCredentials();
+            cred._login = "test";
+            cred._passwordHash = "test".GetHashCode();
+            SecToken = _GraphDS_Service.LogOn(cred);
+            TransToken = _GraphDS_Service.BeginTransaction(SecToken);
 
             Stopwatch RunningTime = new Stopwatch();
             RunningTime.Start();
@@ -80,7 +94,7 @@ namespace RemoteTagExampleWithGQL
             switch (Console.ReadLine())
             {
                 case "y":
-                    GraphDS_API.Clear(SecToken, TransToken);
+                    _GraphDS_Service.Clear(SecToken, TransToken);
                     Console.WriteLine("GraphDB successful cleared!");
                     break;
                 default:
@@ -117,44 +131,44 @@ namespace RemoteTagExampleWithGQL
             //create types at the same time, because of the circular dependencies (Tag has OutgoingEdge to Website, Website has IncomingEdge from Tag)
             //like shown before, using the GraphQL there are also three different ways to create create an index on property "Name" of type "Website"
             //1. create an index definition and specifie the property name and index type
-            var Types = GraphDS_API.Query(SecToken, TransToken, @"CREATE VERTEX TYPES Tag ATTRIBUTES (String Name, SET<Website> TaggedWebsites), 
+            var Types = _GraphDS_Service.Query(SecToken, TransToken, @"CREATE VERTEX TYPES Tag ATTRIBUTES (String Name, SET<Website> TaggedWebsites), 
                                                                                 Website ATTRIBUTES (String Name, String URL) INCOMINGEDGES (Tag.TaggedWebsites Tags) 
                                                                                     INDICES (MyIndex INDEXTYPE SonesIndex ON ATTRIBUTES Name)", "sones.gql");
 
             //2. on creating the type with the property "Name", just define the property "Name" under INDICES
-            //var Types = GraphDS_API.Query(SecToken, TransToken, @"CREATE VERTEX TYPES Tag ATTRIBUTES (String Name, SET<Website> TaggedWebsites), 
+            //var Types = _GraphDS_Service.Query(SecToken, TransToken, @"CREATE VERTEX TYPES Tag ATTRIBUTES (String Name, SET<Website> TaggedWebsites), 
             //                                                                    Website ATTRIBUTES (String Name, String URL) INCOMINGEDGES (Tag.TaggedWebsites Tags) INDICES (Name)");
 
             //3. make a create index query
-            //var Types = GraphDS_API.Query(SecToken, TransToken, @"CREATE VERTEX TYPES Tag ATTRIBUTES (String Name, SET<Website> TaggedWebsites), 
+            //var Types = _GraphDS_Service.Query(SecToken, TransToken, @"CREATE VERTEX TYPES Tag ATTRIBUTES (String Name, SET<Website> TaggedWebsites), 
             //                                                                    Website ATTRIBUTES (String Name, String URL) INCOMINGEDGES (Tag.TaggedWebsites Tags)");
-            //var MyIndex = GraphDS_API.Query(SecToken, TransToken, "CREATE INDEX MyIndex ON VERTEX TYPE Website (Name) INDEXTYPE SonesIndex");            
+            //var MyIndex = _GraphDS_Service.Query(SecToken, TransToken, "CREATE INDEX MyIndex ON VERTEX TYPE Website (Name) INDEXTYPE SonesIndex");            
             CheckResult(Types);
             #endregion
 
             #region create instances of type "Website"
 
-            var cnnResult = GraphDS_API.Query(SecToken, TransToken, "INSERT INTO Website VALUES (Name = 'CNN', URL = 'http://cnn.com/')", "sones.gql");
+            var cnnResult = _GraphDS_Service.Query(SecToken, TransToken, "INSERT INTO Website VALUES (Name = 'CNN', URL = 'http://cnn.com/')", "sones.gql");
             CheckResult(cnnResult);
 
-            var xkcdResult = GraphDS_API.Query(SecToken, TransToken, "INSERT INTO Website VALUES (Name = 'xkcd', URL = 'http://xkcd.com/')", "sones.gql");
+            var xkcdResult = _GraphDS_Service.Query(SecToken, TransToken, "INSERT INTO Website VALUES (Name = 'xkcd', URL = 'http://xkcd.com/')", "sones.gql");
             CheckResult(xkcdResult);
 
-            var onionResult = GraphDS_API.Query(SecToken, TransToken, "INSERT INTO Website VALUES (Name = 'onion', URL = 'http://theonion.com/')", "sones.gql");
+            var onionResult = _GraphDS_Service.Query(SecToken, TransToken, "INSERT INTO Website VALUES (Name = 'onion', URL = 'http://theonion.com/')", "sones.gql");
             CheckResult(onionResult);
 
             //adding an unknown property ("Unknown") means the property isn't defined before
-            var unknown = GraphDS_API.Query(SecToken, TransToken, "INSERT INTO Website VALUES (Name = 'Test', URL = '', Unknown = 'unknown property')", "sones.gql");
+            var unknown = _GraphDS_Service.Query(SecToken, TransToken, "INSERT INTO Website VALUES (Name = 'Test', URL = '', Unknown = 'unknown property')", "sones.gql");
             CheckResult(onionResult);
 
             #endregion
 
             #region create instances of type "Tag"
 
-            var goodResult = GraphDS_API.Query(SecToken, TransToken, "INSERT INTO Tag VALUES (Name = 'good', TaggedWebsites = SETOF(Name = 'CNN', Name = 'xkcd'))", "sones.gql");
+            var goodResult = _GraphDS_Service.Query(SecToken, TransToken, "INSERT INTO Tag VALUES (Name = 'good', TaggedWebsites = SETOF(Name = 'CNN', Name = 'xkcd'))", "sones.gql");
             CheckResult(goodResult);
 
-            var funnyResult = GraphDS_API.Query(SecToken, TransToken, "INSERT INTO Tag VALUES (Name = 'funny', TaggedWebsites = SETOF(Name = 'xkcd', Name = 'onion'))", "sones.gql");
+            var funnyResult = _GraphDS_Service.Query(SecToken, TransToken, "INSERT INTO Tag VALUES (Name = 'funny', TaggedWebsites = SETOF(Name = 'xkcd', Name = 'onion'))", "sones.gql");
             CheckResult(funnyResult);
 
             #endregion
@@ -169,7 +183,7 @@ namespace RemoteTagExampleWithGQL
             #region Get VertexType from DB by Name
 
             // find out which tags xkcd is tagged with
-            var _xkcdtags = GraphDS_API.Query(SecToken, TransToken, "FROM Website w SELECT w.Tags WHERE w.Name = 'xkcd' DEPTH 1", "sones.gql");
+            var _xkcdtags = _GraphDS_Service.Query(SecToken, TransToken, "FROM Website w SELECT w.Tags WHERE w.Name = 'xkcd' DEPTH 1", "sones.gql");
 
             CheckResult(_xkcdtags);
 
@@ -182,7 +196,7 @@ namespace RemoteTagExampleWithGQL
                                     Console.WriteLine(_property.Item2.ToString());
 
             // List tagged sites names and the count of there tags
-            var _taggedsites = GraphDS_API.Query(SecToken, TransToken, "FROM Website w SELECT w.Name, w.Tags.Count() AS Counter", "sones.gql");
+            var _taggedsites = _GraphDS_Service.Query(SecToken, TransToken, "FROM Website w SELECT w.Name, w.Tags.Count() AS Counter", "sones.gql");
 
             CheckResult(_taggedsites);
 
@@ -200,7 +214,7 @@ namespace RemoteTagExampleWithGQL
             }
 
             // find out the URL's of the website of each Tag
-            var _urls = GraphDS_API.Query(SecToken, TransToken, "FROM Tag t SELECT t.Name, t.TaggedWebsites.URL", "sones.gql");
+            var _urls = _GraphDS_Service.Query(SecToken, TransToken, "FROM Tag t SELECT t.Name, t.TaggedWebsites.URL", "sones.gql");
 
             CheckResult(_urls);
 
@@ -226,10 +240,5 @@ namespace RemoteTagExampleWithGQL
         }
         #endregion
 
-        static void Main(string[] args)
-        {
-            RemoteTagExampleWithGQL example = new RemoteTagExampleWithGQL();
-            example.run();
-        }
     }
 }
