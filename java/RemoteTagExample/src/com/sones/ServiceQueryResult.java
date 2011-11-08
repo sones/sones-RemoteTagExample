@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="NameOfQueryLanguage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="NumberOfAffectedVertices" type="{http://www.w3.org/2001/XMLSchema}unsignedLong" minOccurs="0"/>
  *         &lt;element name="Query" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="TypeOfResult" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="TypeOfResult" type="{http://www.sones.com}ServiceQueryResult.ServiceResultType" minOccurs="0"/>
  *         &lt;element name="Vertices" type="{http://www.sones.com}ArrayOfServiceVertexView" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -58,8 +58,8 @@ public class ServiceQueryResult {
     protected BigInteger numberOfAffectedVertices;
     @XmlElement(name = "Query", nillable = true)
     protected String query;
-    @XmlElement(name = "TypeOfResult", nillable = true)
-    protected String typeOfResult;
+    @XmlElement(name = "TypeOfResult")
+    protected ServiceQueryResultServiceResultType typeOfResult;
     @XmlElement(name = "Vertices", nillable = true)
     protected ArrayOfServiceVertexView vertices;
 
@@ -188,10 +188,10 @@ public class ServiceQueryResult {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link ServiceQueryResultServiceResultType }
      *     
      */
-    public String getTypeOfResult() {
+    public ServiceQueryResultServiceResultType getTypeOfResult() {
         return typeOfResult;
     }
 
@@ -200,10 +200,10 @@ public class ServiceQueryResult {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link ServiceQueryResultServiceResultType }
      *     
      */
-    public void setTypeOfResult(String value) {
+    public void setTypeOfResult(ServiceQueryResultServiceResultType value) {
         this.typeOfResult = value;
     }
 

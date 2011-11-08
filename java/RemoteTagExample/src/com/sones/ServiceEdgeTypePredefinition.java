@@ -19,12 +19,9 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="Comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="EdgeTypeName" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="IncomingEdges" type="{http://www.sones.com}ArrayOfServiceIncomingEdgePredefinition" minOccurs="0"/>
- *         &lt;element name="IsAbstract" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="IsSealed" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *         &lt;element name="OutgoingEdges" type="{http://www.sones.com}ArrayOfServiceOutgoingEdgePredefinition" minOccurs="0"/>
  *         &lt;element name="Properties" type="{http://www.sones.com}ArrayOfServicePropertyPredefinition" minOccurs="0"/>
- *         &lt;element name="SuperVertexTypeName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="SuperEdgeTypeName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,12 +34,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ServiceEdgeTypePredefinition", propOrder = {
     "comment",
     "edgeTypeName",
-    "incomingEdges",
-    "isAbstract",
     "isSealed",
-    "outgoingEdges",
     "properties",
-    "superVertexTypeName"
+    "superEdgeTypeName"
 })
 public class ServiceEdgeTypePredefinition {
 
@@ -50,18 +44,12 @@ public class ServiceEdgeTypePredefinition {
     protected String comment;
     @XmlElement(name = "EdgeTypeName", required = true, nillable = true)
     protected String edgeTypeName;
-    @XmlElement(name = "IncomingEdges", nillable = true)
-    protected ArrayOfServiceIncomingEdgePredefinition incomingEdges;
-    @XmlElement(name = "IsAbstract")
-    protected Boolean isAbstract;
     @XmlElement(name = "IsSealed")
     protected Boolean isSealed;
-    @XmlElement(name = "OutgoingEdges", nillable = true)
-    protected ArrayOfServiceOutgoingEdgePredefinition outgoingEdges;
     @XmlElement(name = "Properties", nillable = true)
     protected ArrayOfServicePropertyPredefinition properties;
-    @XmlElement(name = "SuperVertexTypeName", nillable = true)
-    protected String superVertexTypeName;
+    @XmlElement(name = "SuperEdgeTypeName", nillable = true)
+    protected String superEdgeTypeName;
 
     /**
      * Gets the value of the comment property.
@@ -112,54 +100,6 @@ public class ServiceEdgeTypePredefinition {
     }
 
     /**
-     * Gets the value of the incomingEdges property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ArrayOfServiceIncomingEdgePredefinition }
-     *     
-     */
-    public ArrayOfServiceIncomingEdgePredefinition getIncomingEdges() {
-        return incomingEdges;
-    }
-
-    /**
-     * Sets the value of the incomingEdges property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ArrayOfServiceIncomingEdgePredefinition }
-     *     
-     */
-    public void setIncomingEdges(ArrayOfServiceIncomingEdgePredefinition value) {
-        this.incomingEdges = value;
-    }
-
-    /**
-     * Gets the value of the isAbstract property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isIsAbstract() {
-        return isAbstract;
-    }
-
-    /**
-     * Sets the value of the isAbstract property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setIsAbstract(Boolean value) {
-        this.isAbstract = value;
-    }
-
-    /**
      * Gets the value of the isSealed property.
      * 
      * @return
@@ -181,30 +121,6 @@ public class ServiceEdgeTypePredefinition {
      */
     public void setIsSealed(Boolean value) {
         this.isSealed = value;
-    }
-
-    /**
-     * Gets the value of the outgoingEdges property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ArrayOfServiceOutgoingEdgePredefinition }
-     *     
-     */
-    public ArrayOfServiceOutgoingEdgePredefinition getOutgoingEdges() {
-        return outgoingEdges;
-    }
-
-    /**
-     * Sets the value of the outgoingEdges property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ArrayOfServiceOutgoingEdgePredefinition }
-     *     
-     */
-    public void setOutgoingEdges(ArrayOfServiceOutgoingEdgePredefinition value) {
-        this.outgoingEdges = value;
     }
 
     /**
@@ -232,27 +148,27 @@ public class ServiceEdgeTypePredefinition {
     }
 
     /**
-     * Gets the value of the superVertexTypeName property.
+     * Gets the value of the superEdgeTypeName property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getSuperVertexTypeName() {
-        return superVertexTypeName;
+    public String getSuperEdgeTypeName() {
+        return superEdgeTypeName;
     }
 
     /**
-     * Sets the value of the superVertexTypeName property.
+     * Sets the value of the superEdgeTypeName property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setSuperVertexTypeName(String value) {
-        this.superVertexTypeName = value;
+    public void setSuperEdgeTypeName(String value) {
+        this.superEdgeTypeName = value;
     }
 
 }

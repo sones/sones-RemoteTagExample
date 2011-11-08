@@ -9,10 +9,6 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
 import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
-import org.datacontract.schemas._2004._07.system.ArrayOfTupleOflongServiceEdgeInstance7AF3F8R2;
-import org.datacontract.schemas._2004._07.system.ArrayOfTupleOflongServiceHyperEdgeInstance7AF3F8R2;
-import org.datacontract.schemas._2004._07.system.ArrayOfTupleOflongServiceSingleEdgeInstance7AF3F8R2;
-import org.datacontract.schemas._2004._07.system.ArrayOfTupleOflongStreampETKBXRm;
 import org.datacontract.schemas._2004._07.system.ArrayOfTupleOflonganyType;
 import org.datacontract.schemas._2004._07.system.ArrayOfTupleOflonglongArrayOfServiceVertexInstancegXhDpTc1;
 import org.datacontract.schemas._2004._07.system.ArrayOfTupleOfstringanyType;
@@ -54,10 +50,10 @@ public interface VertexInstanceService {
         SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
-        @WebParam(name = "myVertexTypeID", targetNamespace = "http://www.sones.com")
-        Long myVertexTypeID,
         @WebParam(name = "myVertex", targetNamespace = "http://www.sones.com")
         ServiceVertexInstance myVertex,
+        @WebParam(name = "myVertexTypeID", targetNamespace = "http://www.sones.com")
+        Long myVertexTypeID,
         @WebParam(name = "myEdgePropertyID", targetNamespace = "http://www.sones.com")
         Long myEdgePropertyID);
 
@@ -100,10 +96,10 @@ public interface VertexInstanceService {
         SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
-        @WebParam(name = "myVertexTypeID", targetNamespace = "http://www.sones.com")
-        Long myVertexTypeID,
         @WebParam(name = "myVertex", targetNamespace = "http://www.sones.com")
         ServiceVertexInstance myVertex,
+        @WebParam(name = "myVertexTypeID", targetNamespace = "http://www.sones.com")
+        Long myVertexTypeID,
         @WebParam(name = "myEdgePropertyID", targetNamespace = "http://www.sones.com")
         Long myEdgePropertyID);
 
@@ -136,13 +132,13 @@ public interface VertexInstanceService {
      * @param myVertex
      * @param mySecurityToken
      * @return
-     *     returns org.datacontract.schemas._2004._07.system.ArrayOfTupleOflongServiceEdgeInstance7AF3F8R2
+     *     returns com.sones.ArrayOfServiceEdgeInstance
      */
     @WebMethod(operationName = "GetAllOutgoingEdges", action = "http://www.sones.com/VertexInstanceService/GetAllOutgoingEdges")
     @WebResult(name = "GetAllOutgoingEdgesResult", targetNamespace = "http://www.sones.com")
     @RequestWrapper(localName = "GetAllOutgoingEdges", targetNamespace = "http://www.sones.com", className = "com.sones.GetAllOutgoingEdges")
     @ResponseWrapper(localName = "GetAllOutgoingEdgesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAllOutgoingEdgesResponse")
-    public ArrayOfTupleOflongServiceEdgeInstance7AF3F8R2 getAllOutgoingEdges(
+    public ArrayOfServiceEdgeInstance getAllOutgoingEdges(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
         SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
@@ -156,13 +152,13 @@ public interface VertexInstanceService {
      * @param myVertex
      * @param mySecurityToken
      * @return
-     *     returns org.datacontract.schemas._2004._07.system.ArrayOfTupleOflongServiceHyperEdgeInstance7AF3F8R2
+     *     returns com.sones.ArrayOfServiceHyperEdgeInstance
      */
     @WebMethod(operationName = "GetAllOutgoingHyperEdges", action = "http://www.sones.com/VertexInstanceService/GetAllOutgoingHyperEdges")
     @WebResult(name = "GetAllOutgoingHyperEdgesResult", targetNamespace = "http://www.sones.com")
     @RequestWrapper(localName = "GetAllOutgoingHyperEdges", targetNamespace = "http://www.sones.com", className = "com.sones.GetAllOutgoingHyperEdges")
     @ResponseWrapper(localName = "GetAllOutgoingHyperEdgesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAllOutgoingHyperEdgesResponse")
-    public ArrayOfTupleOflongServiceHyperEdgeInstance7AF3F8R2 getAllOutgoingHyperEdges(
+    public ArrayOfServiceHyperEdgeInstance getAllOutgoingHyperEdges(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
         SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
@@ -176,13 +172,13 @@ public interface VertexInstanceService {
      * @param myVertex
      * @param mySecurityToken
      * @return
-     *     returns org.datacontract.schemas._2004._07.system.ArrayOfTupleOflongServiceSingleEdgeInstance7AF3F8R2
+     *     returns com.sones.ArrayOfServiceSingleEdgeInstance
      */
     @WebMethod(operationName = "GetAllOutgoingSingleEdges", action = "http://www.sones.com/VertexInstanceService/GetAllOutgoingSingleEdges")
     @WebResult(name = "GetAllOutgoingSingleEdgesResult", targetNamespace = "http://www.sones.com")
     @RequestWrapper(localName = "GetAllOutgoingSingleEdges", targetNamespace = "http://www.sones.com", className = "com.sones.GetAllOutgoingSingleEdges")
     @ResponseWrapper(localName = "GetAllOutgoingSingleEdgesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAllOutgoingSingleEdgesResponse")
-    public ArrayOfTupleOflongServiceSingleEdgeInstance7AF3F8R2 getAllOutgoingSingleEdges(
+    public ArrayOfServiceSingleEdgeInstance getAllOutgoingSingleEdges(
         @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
         SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
@@ -258,49 +254,6 @@ public interface VertexInstanceService {
         ServiceVertexInstance myVertex,
         @WebParam(name = "myEdgePropertyID", targetNamespace = "http://www.sones.com")
         Long myEdgePropertyID);
-
-    /**
-     * 
-     * @param myTransToken
-     * @param myVertex
-     * @param mySecurityToken
-     * @param myPropertyID
-     * @return
-     *     returns byte[]
-     */
-    @WebMethod(operationName = "GetBinaryProperty", action = "http://www.sones.com/VertexInstanceService/GetBinaryProperty")
-    @WebResult(name = "GetBinaryPropertyResult", targetNamespace = "http://www.sones.com")
-    @RequestWrapper(localName = "GetBinaryProperty", targetNamespace = "http://www.sones.com", className = "com.sones.GetBinaryProperty")
-    @ResponseWrapper(localName = "GetBinaryPropertyResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetBinaryPropertyResponse")
-    public byte[] getBinaryProperty(
-        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        SecurityToken mySecurityToken,
-        @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
-        Long myTransToken,
-        @WebParam(name = "myVertex", targetNamespace = "http://www.sones.com")
-        ServiceVertexInstance myVertex,
-        @WebParam(name = "myPropertyID", targetNamespace = "http://www.sones.com")
-        Long myPropertyID);
-
-    /**
-     * 
-     * @param myTransToken
-     * @param myVertex
-     * @param mySecurityToken
-     * @return
-     *     returns org.datacontract.schemas._2004._07.system.ArrayOfTupleOflongStreampETKBXRm
-     */
-    @WebMethod(operationName = "GetAllBinaryProperties", action = "http://www.sones.com/VertexInstanceService/GetAllBinaryProperties")
-    @WebResult(name = "GetAllBinaryPropertiesResult", targetNamespace = "http://www.sones.com")
-    @RequestWrapper(localName = "GetAllBinaryProperties", targetNamespace = "http://www.sones.com", className = "com.sones.GetAllBinaryProperties")
-    @ResponseWrapper(localName = "GetAllBinaryPropertiesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetAllBinaryPropertiesResponse")
-    public ArrayOfTupleOflongStreampETKBXRm getAllBinaryProperties(
-        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
-        SecurityToken mySecurityToken,
-        @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
-        Long myTransToken,
-        @WebParam(name = "myVertex", targetNamespace = "http://www.sones.com")
-        ServiceVertexInstance myVertex);
 
     /**
      * 
@@ -563,8 +516,8 @@ public interface VertexInstanceService {
     /**
      * 
      * @param myTransToken
+     * @param myVertex
      * @param mySecurityToken
-     * @param myGraphElement
      * @return
      *     returns java.lang.Long
      */
@@ -577,7 +530,47 @@ public interface VertexInstanceService {
         SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
-        @WebParam(name = "myGraphElement", targetNamespace = "http://www.sones.com")
-        ServiceVertexInstance myGraphElement);
+        @WebParam(name = "myVertex", targetNamespace = "http://www.sones.com")
+        ServiceVertexInstance myVertex);
+
+    /**
+     * 
+     * @param myTransToken
+     * @param myVertex
+     * @param mySecurityToken
+     * @return
+     *     returns com.sones.ServiceVertexStatistics
+     */
+    @WebMethod(operationName = "VertexStatistics", action = "http://www.sones.com/VertexInstanceService/VertexStatistics")
+    @WebResult(name = "VertexStatisticsResult", targetNamespace = "http://www.sones.com")
+    @RequestWrapper(localName = "VertexStatistics", targetNamespace = "http://www.sones.com", className = "com.sones.VertexStatistics")
+    @ResponseWrapper(localName = "VertexStatisticsResponse", targetNamespace = "http://www.sones.com", className = "com.sones.VertexStatisticsResponse")
+    public ServiceVertexStatistics vertexStatistics(
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
+        @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
+        Long myTransToken,
+        @WebParam(name = "myVertex", targetNamespace = "http://www.sones.com")
+        ServiceVertexInstance myVertex);
+
+    /**
+     * 
+     * @param myTransToken
+     * @param myVertex
+     * @param mySecurityToken
+     * @return
+     *     returns java.lang.Long
+     */
+    @WebMethod(operationName = "PartitionID", action = "http://www.sones.com/VertexInstanceService/PartitionID")
+    @WebResult(name = "PartitionIDResult", targetNamespace = "http://www.sones.com")
+    @RequestWrapper(localName = "PartitionID", targetNamespace = "http://www.sones.com", className = "com.sones.PartitionID")
+    @ResponseWrapper(localName = "PartitionIDResponse", targetNamespace = "http://www.sones.com", className = "com.sones.PartitionIDResponse")
+    public Long partitionID(
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
+        @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
+        Long myTransToken,
+        @WebParam(name = "myVertex", targetNamespace = "http://www.sones.com")
+        ServiceVertexInstance myVertex);
 
 }

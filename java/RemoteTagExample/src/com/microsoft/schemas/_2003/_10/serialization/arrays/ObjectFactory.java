@@ -24,8 +24,12 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _ArrayOfanyType_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/Arrays", "ArrayOfanyType");
+    private final static QName _ArrayOfKeyValueOflonganyType_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/Arrays", "ArrayOfKeyValueOflonganyType");
     private final static QName _ArrayOfstring_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/Arrays", "ArrayOfstring");
+    private final static QName _ArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/Arrays", "ArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1");
     private final static QName _ArrayOfKeyValueOfstringanyType_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/Arrays", "ArrayOfKeyValueOfstringanyType");
+    private final static QName _ArrayOfKeyValueOfstringServiceEdgePredefinition7AF3F8R2_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/Arrays", "ArrayOfKeyValueOfstringServiceEdgePredefinition7AF3f8r2");
     private final static QName _ArrayOfKeyValueOflongstring_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/Arrays", "ArrayOfKeyValueOflongstring");
     private final static QName _ArrayOflong_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/Arrays", "ArrayOflong");
     private final static QName _ArrayOfKeyValueOfstringstring_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/Arrays", "ArrayOfKeyValueOfstringstring");
@@ -46,6 +50,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ArrayOfKeyValueOfstringServiceEdgePredefinition7AF3F8R2 }
+     * 
+     */
+    public ArrayOfKeyValueOfstringServiceEdgePredefinition7AF3F8R2 createArrayOfKeyValueOfstringServiceEdgePredefinition7AF3F8R2() {
+        return new ArrayOfKeyValueOfstringServiceEdgePredefinition7AF3F8R2();
+    }
+
+    /**
      * Create an instance of {@link ArrayOfKeyValueOfstringstring }
      * 
      */
@@ -62,11 +74,35 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ArrayOfKeyValueOflonganyType }
+     * 
+     */
+    public ArrayOfKeyValueOflonganyType createArrayOfKeyValueOflonganyType() {
+        return new ArrayOfKeyValueOflonganyType();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1 }
+     * 
+     */
+    public ArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1 createArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1() {
+        return new ArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1();
+    }
+
+    /**
      * Create an instance of {@link ArrayOfstring }
      * 
      */
     public ArrayOfstring createArrayOfstring() {
         return new ArrayOfstring();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfanyType }
+     * 
+     */
+    public ArrayOfanyType createArrayOfanyType() {
+        return new ArrayOfanyType();
     }
 
     /**
@@ -86,6 +122,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ArrayOfKeyValueOfstringServiceEdgePredefinition7AF3F8R2 .KeyValueOfstringServiceEdgePredefinition7AF3F8R2 }
+     * 
+     */
+    public ArrayOfKeyValueOfstringServiceEdgePredefinition7AF3F8R2 .KeyValueOfstringServiceEdgePredefinition7AF3F8R2 createArrayOfKeyValueOfstringServiceEdgePredefinition7AF3F8R2KeyValueOfstringServiceEdgePredefinition7AF3F8R2() {
+        return new ArrayOfKeyValueOfstringServiceEdgePredefinition7AF3F8R2 .KeyValueOfstringServiceEdgePredefinition7AF3F8R2();
+    }
+
+    /**
      * Create an instance of {@link ArrayOfKeyValueOfstringstring.KeyValueOfstringstring }
      * 
      */
@@ -102,6 +146,40 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ArrayOfKeyValueOflonganyType.KeyValueOflonganyType }
+     * 
+     */
+    public ArrayOfKeyValueOflonganyType.KeyValueOflonganyType createArrayOfKeyValueOflonganyTypeKeyValueOflonganyType() {
+        return new ArrayOfKeyValueOflonganyType.KeyValueOflonganyType();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1 .KeyValueOfstringArrayOfanyTypety7Ep6D1 }
+     * 
+     */
+    public ArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1 .KeyValueOfstringArrayOfanyTypety7Ep6D1 createArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1KeyValueOfstringArrayOfanyTypety7Ep6D1() {
+        return new ArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1 .KeyValueOfstringArrayOfanyTypety7Ep6D1();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfanyType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/Arrays", name = "ArrayOfanyType")
+    public JAXBElement<ArrayOfanyType> createArrayOfanyType(ArrayOfanyType value) {
+        return new JAXBElement<ArrayOfanyType>(_ArrayOfanyType_QNAME, ArrayOfanyType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfKeyValueOflonganyType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/Arrays", name = "ArrayOfKeyValueOflonganyType")
+    public JAXBElement<ArrayOfKeyValueOflonganyType> createArrayOfKeyValueOflonganyType(ArrayOfKeyValueOflonganyType value) {
+        return new JAXBElement<ArrayOfKeyValueOflonganyType>(_ArrayOfKeyValueOflonganyType_QNAME, ArrayOfKeyValueOflonganyType.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfstring }{@code >}}
      * 
      */
@@ -111,12 +189,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1 }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/Arrays", name = "ArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1")
+    public JAXBElement<ArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1> createArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1(ArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1 value) {
+        return new JAXBElement<ArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1>(_ArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1_QNAME, ArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1 .class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfKeyValueOfstringanyType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/Arrays", name = "ArrayOfKeyValueOfstringanyType")
     public JAXBElement<ArrayOfKeyValueOfstringanyType> createArrayOfKeyValueOfstringanyType(ArrayOfKeyValueOfstringanyType value) {
         return new JAXBElement<ArrayOfKeyValueOfstringanyType>(_ArrayOfKeyValueOfstringanyType_QNAME, ArrayOfKeyValueOfstringanyType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfKeyValueOfstringServiceEdgePredefinition7AF3F8R2 }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/Arrays", name = "ArrayOfKeyValueOfstringServiceEdgePredefinition7AF3f8r2")
+    public JAXBElement<ArrayOfKeyValueOfstringServiceEdgePredefinition7AF3F8R2> createArrayOfKeyValueOfstringServiceEdgePredefinition7AF3F8R2(ArrayOfKeyValueOfstringServiceEdgePredefinition7AF3F8R2 value) {
+        return new JAXBElement<ArrayOfKeyValueOfstringServiceEdgePredefinition7AF3F8R2>(_ArrayOfKeyValueOfstringServiceEdgePredefinition7AF3F8R2_QNAME, ArrayOfKeyValueOfstringServiceEdgePredefinition7AF3F8R2 .class, null, value);
     }
 
     /**

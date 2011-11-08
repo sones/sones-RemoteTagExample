@@ -21,7 +21,7 @@ import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
  *       &lt;sequence>
  *         &lt;element name="mySecurityToken" type="{http://schemas.datacontract.org/2004/07/sones.Library.Commons.Security}SecurityToken" minOccurs="0"/>
  *         &lt;element name="myTransToken" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
- *         &lt;element name="myServiceVertexType" type="{http://www.sones.com}ServiceVertexType" minOccurs="0"/>
+ *         &lt;element name="myServiceVertexTypeName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="myPropertyID" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -35,7 +35,7 @@ import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
 @XmlType(name = "", propOrder = {
     "mySecurityToken",
     "myTransToken",
-    "myServiceVertexType",
+    "myServiceVertexTypeName",
     "myPropertyID"
 })
 @XmlRootElement(name = "GetPropertyDefinitionByIDByVertexType")
@@ -45,7 +45,7 @@ public class GetPropertyDefinitionByIDByVertexType {
     protected SecurityToken mySecurityToken;
     protected Long myTransToken;
     @XmlElement(nillable = true)
-    protected ServiceVertexType myServiceVertexType;
+    protected String myServiceVertexTypeName;
     protected Long myPropertyID;
 
     /**
@@ -97,27 +97,27 @@ public class GetPropertyDefinitionByIDByVertexType {
     }
 
     /**
-     * Gets the value of the myServiceVertexType property.
+     * Gets the value of the myServiceVertexTypeName property.
      * 
      * @return
      *     possible object is
-     *     {@link ServiceVertexType }
+     *     {@link String }
      *     
      */
-    public ServiceVertexType getMyServiceVertexType() {
-        return myServiceVertexType;
+    public String getMyServiceVertexTypeName() {
+        return myServiceVertexTypeName;
     }
 
     /**
-     * Sets the value of the myServiceVertexType property.
+     * Sets the value of the myServiceVertexTypeName property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ServiceVertexType }
+     *     {@link String }
      *     
      */
-    public void setMyServiceVertexType(ServiceVertexType value) {
-        this.myServiceVertexType = value;
+    public void setMyServiceVertexTypeName(String value) {
+        this.myServiceVertexTypeName = value;
     }
 
     /**

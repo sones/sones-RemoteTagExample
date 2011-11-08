@@ -23,9 +23,10 @@ package testing;
 import java.rmi.RemoteException;
 
 import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
-import org.datacontract.schemas._2004._07.system.ArrayOfTupleOflonglong;
-import org.datacontract.schemas._2004._07.system.TupleOflonglong;
+import org.datacontract.schemas._2004._07.system.ArrayOfTupleOflongArrayOflongty7Ep6D1;
+import org.datacontract.schemas._2004._07.system.TupleOflongArrayOflongty7Ep6D1;
 
+import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOflong;
 import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
 import com.sones.ArrayOfServiceEdgePredefinition;
 import com.sones.ArrayOfServiceIncomingEdgePredefinition;
@@ -39,9 +40,7 @@ import com.sones.ArrayOfServiceVertexType;
 import com.sones.ArrayOfServiceVertexTypePredefinition;
 import com.sones.ArrayOfStructuredProperty;
 import com.sones.ArrayOfUnstructuredProperty;
-import com.sones.EdgeInstanceService;
-import com.sones.EdgeTypeService;
-import com.sones.GraphDS;
+import com.sones.GraphDSService;
 import com.sones.RPCServiceContract;
 import com.sones.ServiceBinaryExpression;
 import com.sones.ServiceBinaryOperator;
@@ -57,6 +56,7 @@ import com.sones.ServicePropertyExpression;
 import com.sones.ServicePropertyPredefinition;
 import com.sones.ServiceSingleEdgeInstance;
 import com.sones.ServiceSingleLiteralExpression;
+import com.sones.ServiceUserPasswordCredentials;
 import com.sones.ServiceVertexInstance;
 import com.sones.ServiceVertexType;
 import com.sones.ServiceVertexTypePredefinition;
@@ -67,28 +67,24 @@ import com.sones.VertexTypeService;
 
 public class RemoteTagExample {
 	private RPCServiceContract _ServiceContract;
-	private GraphDS _GraphDS_API;
+	private GraphDSService _GraphDSService;
 	private VertexInstanceService _VertexInstanceService;
     private VertexTypeService _VertexTypeService;
-    private EdgeInstanceService _EdgeInstanceService;
-    private EdgeTypeService _EdgeTypeService;
 
     private SecurityToken _SecToken;
     private long _TransToken;
 	
+    public static void main(String[] args) {
+		RemoteTagExample app = new RemoteTagExample();
+		app.run();
+	}
+    
 	public RemoteTagExample()
 	{
 		_ServiceContract = new RPCServiceContract();
-		_GraphDS_API = _ServiceContract.getSonesBasicGraphDS();
+		_GraphDSService = _ServiceContract.getSonesBasicGraphDSService();
 		_VertexInstanceService = _ServiceContract.getSonesBasicVertexInstanceService();
 		_VertexTypeService = _ServiceContract.getSonesBasicVertexTypeService();
-		_EdgeInstanceService = _ServiceContract.getSonesBasicEdgeInstanceService();
-		_EdgeTypeService = _ServiceContract.getSonesBasicEdgeTypeService();
-	}
-	
-	public static void main(String[] args) {
-		RemoteTagExample app = new RemoteTagExample();
-		app.run();
 	}
 	
 	public void run()
@@ -96,11 +92,14 @@ public class RemoteTagExample {
 
 		try {
 			// for each request, you need an SecurityToken and a Int64
-			_SecToken = _GraphDS_API.logOn("test", "test");
-			_TransToken = _GraphDS_API.beginTransaction(_SecToken);
+			ServiceUserPasswordCredentials cred = new ServiceUserPasswordCredentials();
+			cred.setLogin("test");
+			cred.setPasswordHash("test".hashCode());
+			_SecToken = _GraphDSService.logOn(cred);
+			_TransToken = _GraphDSService.beginTransaction(_SecToken);
 	
 			// clear the database
-			_GraphDS_API.clear(_SecToken, _TransToken);
+			_GraphDSService.clear(_SecToken, _TransToken);
 			
 			long startTime = System.currentTimeMillis();
 		
@@ -207,7 +206,7 @@ public class RemoteTagExample {
         ArrayOfServiceVertexTypePredefinition vertexTypePredefs = new ArrayOfServiceVertexTypePredefinition();
         vertexTypePredefs.getServiceVertexTypePredefinition().add(Tag_VertexTypePredefinition);
         vertexTypePredefs.getServiceVertexTypePredefinition().add(Website_VertexTypePredefinition);
-        ArrayOfServiceVertexType DBTypes = _GraphDS_API.createVertexTypes(_SecToken, _TransToken, vertexTypePredefs);
+        ArrayOfServiceVertexType DBTypes = _GraphDSService.createVertexTypes(_SecToken, _TransToken, vertexTypePredefs);
         System.out.println("CreateVertexTypes ('Websites', 'Tag') successful executed!");
 
         ServiceVertexType Tag = null, Website = null;
@@ -242,7 +241,7 @@ public class RemoteTagExample {
         structuredProperties.getStructuredProperty().add(Property2);
         Insert.setStructuredProperties(structuredProperties);
         // execute query
-        ServiceVertexInstance cnn = _GraphDS_API.insert(_SecToken, _TransToken, "Website", Insert);
+        ServiceVertexInstance cnn = _GraphDSService.insert(_SecToken, _TransToken, "Website", Insert);
         System.out.println("Insert CNN into 'Websites' successful executed!");
         
         Insert = new ServiceInsertPayload();
@@ -256,7 +255,7 @@ public class RemoteTagExample {
         structuredProperties.getStructuredProperty().add(Property1);
         structuredProperties.getStructuredProperty().add(Property2);
         Insert.setStructuredProperties(structuredProperties);
-        ServiceVertexInstance xkcd = _GraphDS_API.insert(_SecToken, _TransToken, "Website", Insert);
+        ServiceVertexInstance xkcd = _GraphDSService.insert(_SecToken, _TransToken, "Website", Insert);
         System.out.println("Insert xkcd into 'Websites' successful executed!");
         
         Insert = new ServiceInsertPayload();
@@ -270,7 +269,7 @@ public class RemoteTagExample {
         structuredProperties.getStructuredProperty().add(Property1);
         structuredProperties.getStructuredProperty().add(Property2);
         Insert.setStructuredProperties(structuredProperties);
-        ServiceVertexInstance onion = _GraphDS_API.insert(_SecToken, _TransToken, "Website", Insert);
+        ServiceVertexInstance onion = _GraphDSService.insert(_SecToken, _TransToken, "Website", Insert);
         System.out.println("Insert onion into 'Websites' successful executed!");
         
         Insert = new ServiceInsertPayload();
@@ -291,7 +290,7 @@ public class RemoteTagExample {
         ArrayOfUnstructuredProperty unstructuredProperties = new ArrayOfUnstructuredProperty();
         unstructuredProperties.getUnstructuredProperty().add(Property3);
         Insert.setUnstructuredProperties(unstructuredProperties);
-        ServiceVertexInstance test = _GraphDS_API.insert(_SecToken, _TransToken, "Website", Insert);
+        ServiceVertexInstance test = _GraphDSService.insert(_SecToken, _TransToken, "Website", Insert);
         System.out.println("Insert test into 'Websites' successful executed!");
         
         
@@ -318,20 +317,16 @@ public class RemoteTagExample {
         
         // add edges
         ServiceEdgePredefinition InnerEdge = new ServiceEdgePredefinition();
-        ArrayOfTupleOflonglong arrayOfTuples = new ArrayOfTupleOflonglong();
-        TupleOflonglong tupleOfIDs = new TupleOflonglong();
+        ArrayOfTupleOflongArrayOflongty7Ep6D1 arrayOfTuples = new ArrayOfTupleOflongArrayOflongty7Ep6D1();
+        
+        TupleOflongArrayOflongty7Ep6D1 tupleOfIDs = new TupleOflongArrayOflongty7Ep6D1();
+        ArrayOflong arrayOfIDs = new ArrayOflong();
+        arrayOfIDs.getLong().add(cnn.getVertexID());
+        arrayOfIDs.getLong().add(xkcd.getVertexID());
+        tupleOfIDs.setMItem2(arrayOfIDs);
         tupleOfIDs.setMItem1(Website.getID());
-        tupleOfIDs.setMItem2(cnn.getVertexID());
-        arrayOfTuples.getTupleOflonglong().add(tupleOfIDs);
-        InnerEdge.setVertexIDsByID(arrayOfTuples);
-        innerEdgePredefs.getServiceEdgePredefinition().add(InnerEdge);
-
-        InnerEdge = new ServiceEdgePredefinition();
-        arrayOfTuples = new ArrayOfTupleOflonglong();
-        tupleOfIDs = new TupleOflonglong();
-        tupleOfIDs.setMItem1(Website.getID());
-        tupleOfIDs.setMItem2(xkcd.getVertexID());
-        arrayOfTuples.getTupleOflonglong().add(tupleOfIDs);
+        
+        arrayOfTuples.getTupleOflongArrayOflongty7Ep6D1().add(tupleOfIDs);
         InnerEdge.setVertexIDsByID(arrayOfTuples);
         innerEdgePredefs.getServiceEdgePredefinition().add(InnerEdge);
 
@@ -341,7 +336,7 @@ public class RemoteTagExample {
         edgePredefs.getServiceEdgePredefinition().add(Edge);
         Insert.setEdges(edgePredefs);
 
-        ServiceVertexInstance good = _GraphDS_API.insert(_SecToken, _TransToken, "Tag", Insert);
+        ServiceVertexInstance good = _GraphDSService.insert(_SecToken, _TransToken, "Tag", Insert);
         System.out.println("Insert 'good' into 'Tag' successful executed!");
      
         /*
@@ -361,20 +356,16 @@ public class RemoteTagExample {
         
         // add edges
         InnerEdge = new ServiceEdgePredefinition();
-        arrayOfTuples = new ArrayOfTupleOflonglong();
-        tupleOfIDs = new TupleOflonglong();
-        tupleOfIDs.setMItem1(Website.getID());
-        tupleOfIDs.setMItem2(xkcd.getVertexID());
-        arrayOfTuples.getTupleOflonglong().add(tupleOfIDs);
-        InnerEdge.setVertexIDsByID(arrayOfTuples);
-        innerEdgePredefs.getServiceEdgePredefinition().add(InnerEdge);
+        arrayOfTuples = new ArrayOfTupleOflongArrayOflongty7Ep6D1();
         
-        InnerEdge = new ServiceEdgePredefinition();
-        arrayOfTuples = new ArrayOfTupleOflonglong();
-        tupleOfIDs = new TupleOflonglong();
+        tupleOfIDs = new TupleOflongArrayOflongty7Ep6D1();
+        arrayOfIDs = new ArrayOflong();
+        arrayOfIDs.getLong().add(xkcd.getVertexID());
+        arrayOfIDs.getLong().add(onion.getVertexID());
+        tupleOfIDs.setMItem2(arrayOfIDs);
         tupleOfIDs.setMItem1(Website.getID());
-        tupleOfIDs.setMItem2(onion.getVertexID());
-        arrayOfTuples.getTupleOflonglong().add(tupleOfIDs);
+        
+        arrayOfTuples.getTupleOflongArrayOflongty7Ep6D1().add(tupleOfIDs);
         InnerEdge.setVertexIDsByID(arrayOfTuples);
         innerEdgePredefs.getServiceEdgePredefinition().add(InnerEdge);
         
@@ -384,7 +375,7 @@ public class RemoteTagExample {
         edgePredefs.getServiceEdgePredefinition().add(Edge);
         Insert.setEdges(edgePredefs);
         
-        ServiceVertexInstance funny = _GraphDS_API.insert(_SecToken, _TransToken, "Tag", Insert);
+        ServiceVertexInstance funny = _GraphDSService.insert(_SecToken, _TransToken, "Tag", Insert);
         System.out.println("Insert 'funny' into 'Tag' successful executed!");
 	}
 	
@@ -395,8 +386,8 @@ public class RemoteTagExample {
 		 */
 		
 		//how to get a type from the DB
-        ServiceVertexType TagDBType = _GraphDS_API.getVertexType(_SecToken, _TransToken,"Tag");
-        ServiceVertexType WebsiteDBType = _GraphDS_API.getVertexType(_SecToken, _TransToken, "Website");
+        ServiceVertexType TagDBType = _GraphDSService.getVertexTypeByName(_SecToken, _TransToken,"Tag");
+        ServiceVertexType WebsiteDBType = _GraphDSService.getVertexTypeByName(_SecToken, _TransToken, "Website");
         
         
         
@@ -415,8 +406,8 @@ public class RemoteTagExample {
         System.out.println(WebsiteDBType.getName() + " HasChildTypes: " + hasChildTypes);
         
         // collect all Properties on VertexType "Tag" and "Website"
-        ArrayOfServicePropertyDefinition TagPropertyList = _VertexTypeService.getPropertyDefinitionsByVertexType(_SecToken, _TransToken,TagDBType, false);
-        ArrayOfServicePropertyDefinition WebsitePropertyList = _VertexTypeService.getPropertyDefinitionsByVertexType(_SecToken, _TransToken, WebsiteDBType, false);
+        ArrayOfServicePropertyDefinition TagPropertyList = _VertexTypeService.getPropertyDefinitionsByVertexType(_SecToken, _TransToken, TagDBType.getName(), false);
+        ArrayOfServicePropertyDefinition WebsitePropertyList = _VertexTypeService.getPropertyDefinitionsByVertexType(_SecToken, _TransToken, WebsiteDBType.getName(), false);
         
         System.out.println();
         System.out.println("Properties of VertexType 'Tag'");
@@ -446,10 +437,10 @@ public class RemoteTagExample {
          */
         
         //get a specific property definition
-        ServicePropertyDefinition TagPropName = _VertexTypeService.getPropertyDefinitionByVertexType(_SecToken, _TransToken, TagDBType, "Name");
-        ServicePropertyDefinition WebPropName = _VertexTypeService.getPropertyDefinitionByVertexType(_SecToken, _TransToken, WebsiteDBType, "Name");
+        ServicePropertyDefinition TagPropName = _VertexTypeService.getPropertyDefinitionByVertexType(_SecToken, _TransToken, TagDBType.getName(), "Name");
+        ServicePropertyDefinition WebPropName = _VertexTypeService.getPropertyDefinitionByVertexType(_SecToken, _TransToken, WebsiteDBType.getName(), "Name");
                   
-        ServicePropertyDefinition WebPropURL = _VertexTypeService.getPropertyDefinitionByVertexType(_SecToken, _TransToken, WebsiteDBType, "URL");
+        ServicePropertyDefinition WebPropURL = _VertexTypeService.getPropertyDefinitionByVertexType(_SecToken, _TransToken, WebsiteDBType.getName(), "URL");
         ServiceOutgoingEdgeDefinition TagWebsite = _VertexTypeService.getOutgoingEdgeDefinitionByVertexType(_SecToken, _TransToken, TagDBType, "TaggedWebsites");
 
         
@@ -459,8 +450,8 @@ public class RemoteTagExample {
          */
         
         //how to get all instances of a type  from the DB
-        ArrayOfServiceVertexInstance TagInstances = _GraphDS_API.getVerticesByType(_SecToken, _TransToken,TagDBType);
-        ArrayOfServiceVertexInstance WebsiteInstances = _GraphDS_API.getVerticesByType(_SecToken, _TransToken, WebsiteDBType);
+        ArrayOfServiceVertexInstance TagInstances = _GraphDSService.getVerticesByType(_SecToken, _TransToken,TagDBType);
+        ArrayOfServiceVertexInstance WebsiteInstances = _GraphDSService.getVerticesByType(_SecToken, _TransToken, WebsiteDBType);
 
         
         
@@ -513,7 +504,7 @@ public class RemoteTagExample {
         binExpression.setOperator(ServiceBinaryOperator.EQUALS);
         
         // In this case we query the Vertices "Where Name = 'CNN'". That's just one vertex ;)
-        ArrayOfServiceVertexInstance result =  _GraphDS_API.getVerticesByExpression(_SecToken, _TransToken, binExpression);
+        ArrayOfServiceVertexInstance result =  _GraphDSService.getVerticesByExpression(_SecToken, _TransToken, binExpression);
         ServiceVertexInstance cnn = result.getServiceVertexInstance().get(0);
         System.out.println("\r\nExpression was: Name(Property) = (Equals) 'CNN'");
         System.out.println("Expression Result: " + result.getServiceVertexInstance().size() + " affected Vertices");

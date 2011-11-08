@@ -19,6 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="Edition" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="VertexID" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
+ *         &lt;element name="VertexRevisionID" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/extension>
  *   &lt;/complexContent>
@@ -30,7 +31,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ServiceVertexInstance", propOrder = {
     "edition",
-    "vertexID"
+    "vertexID",
+    "vertexRevisionID"
 })
 public class ServiceVertexInstance
     extends AGraphElement
@@ -40,6 +42,8 @@ public class ServiceVertexInstance
     protected String edition;
     @XmlElement(name = "VertexID")
     protected Long vertexID;
+    @XmlElement(name = "VertexRevisionID")
+    protected Long vertexRevisionID;
 
     /**
      * Gets the value of the edition property.
@@ -87,6 +91,30 @@ public class ServiceVertexInstance
      */
     public void setVertexID(Long value) {
         this.vertexID = value;
+    }
+
+    /**
+     * Gets the value of the vertexRevisionID property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
+     */
+    public Long getVertexRevisionID() {
+        return vertexRevisionID;
+    }
+
+    /**
+     * Sets the value of the vertexRevisionID property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
+     */
+    public void setVertexRevisionID(Long value) {
+        this.vertexRevisionID = value;
     }
 
 }

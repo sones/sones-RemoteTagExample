@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfKeyValueOfstringanyType;
 import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
 
 
@@ -20,7 +21,7 @@ import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
  *       &lt;sequence>
  *         &lt;element name="Comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="Edition" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="IndexOptions" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="IndexOptions" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfKeyValueOfstringanyType" minOccurs="0"/>
  *         &lt;element name="IndexType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="Properties" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfstring" minOccurs="0"/>
@@ -52,7 +53,7 @@ public class ServiceIndexPredefinition {
     @XmlElement(name = "Edition", nillable = true)
     protected String edition;
     @XmlElement(name = "IndexOptions", nillable = true)
-    protected String indexOptions;
+    protected ArrayOfKeyValueOfstringanyType indexOptions;
     @XmlElement(name = "IndexType", nillable = true)
     protected String indexType;
     @XmlElement(name = "Name", nillable = true)
@@ -117,10 +118,10 @@ public class ServiceIndexPredefinition {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link ArrayOfKeyValueOfstringanyType }
      *     
      */
-    public String getIndexOptions() {
+    public ArrayOfKeyValueOfstringanyType getIndexOptions() {
         return indexOptions;
     }
 
@@ -129,10 +130,10 @@ public class ServiceIndexPredefinition {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link ArrayOfKeyValueOfstringanyType }
      *     
      */
-    public void setIndexOptions(String value) {
+    public void setIndexOptions(ArrayOfKeyValueOfstringanyType value) {
         this.indexOptions = value;
     }
 

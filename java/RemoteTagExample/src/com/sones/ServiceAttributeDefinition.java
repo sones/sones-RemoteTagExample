@@ -22,6 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="IsUserDefined" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="Kind" type="{http://www.sones.com}ServiceAttributeType" minOccurs="0"/>
  *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="RelatedType" type="{http://www.sones.com}ServiceBaseType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,10 +36,12 @@ import javax.xml.bind.annotation.XmlType;
     "id",
     "isUserDefined",
     "kind",
-    "name"
+    "name",
+    "relatedType"
 })
 @XmlSeeAlso({
     ServicePropertyDefinition.class,
+    ServiceBinaryPropertyDefinition.class,
     ServiceOutgoingEdgeDefinition.class,
     ServiceIncomingEdgeDefinition.class
 })
@@ -52,6 +55,8 @@ public class ServiceAttributeDefinition {
     protected ServiceAttributeType kind;
     @XmlElement(name = "Name", nillable = true)
     protected String name;
+    @XmlElement(name = "RelatedType", nillable = true)
+    protected ServiceBaseType relatedType;
 
     /**
      * Gets the value of the id property.
@@ -147,6 +152,30 @@ public class ServiceAttributeDefinition {
      */
     public void setName(String value) {
         this.name = value;
+    }
+
+    /**
+     * Gets the value of the relatedType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ServiceBaseType }
+     *     
+     */
+    public ServiceBaseType getRelatedType() {
+        return relatedType;
+    }
+
+    /**
+     * Sets the value of the relatedType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ServiceBaseType }
+     *     
+     */
+    public void setRelatedType(ServiceBaseType value) {
+        this.relatedType = value;
     }
 
 }

@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOflong;
+import org.datacontract.schemas._2004._07.system.TupleOfArrayOfanyTypeArrayOfanyType0DMmj3Sh;
 
 
 /**
@@ -19,7 +19,7 @@ import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOflong;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="DeleteResult" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOflong" minOccurs="0"/>
+ *         &lt;element name="DeleteResult" type="{http://schemas.datacontract.org/2004/07/System}TupleOfArrayOfanyTypeArrayOfanyType0dMmj3_Sh" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,17 +36,17 @@ import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOflong;
 public class DeleteResponse {
 
     @XmlElement(name = "DeleteResult", nillable = true)
-    protected ArrayOflong deleteResult;
+    protected TupleOfArrayOfanyTypeArrayOfanyType0DMmj3Sh deleteResult;
 
     /**
      * Gets the value of the deleteResult property.
      * 
      * @return
      *     possible object is
-     *     {@link ArrayOflong }
+     *     {@link TupleOfArrayOfanyTypeArrayOfanyType0DMmj3Sh }
      *     
      */
-    public ArrayOflong getDeleteResult() {
+    public TupleOfArrayOfanyTypeArrayOfanyType0DMmj3Sh getDeleteResult() {
         return deleteResult;
     }
 
@@ -55,10 +55,10 @@ public class DeleteResponse {
      * 
      * @param value
      *     allowed object is
-     *     {@link ArrayOflong }
+     *     {@link TupleOfArrayOfanyTypeArrayOfanyType0DMmj3Sh }
      *     
      */
-    public void setDeleteResult(ArrayOflong value) {
+    public void setDeleteResult(TupleOfArrayOfanyTypeArrayOfanyType0DMmj3Sh value) {
         this.deleteResult = value;
     }
 

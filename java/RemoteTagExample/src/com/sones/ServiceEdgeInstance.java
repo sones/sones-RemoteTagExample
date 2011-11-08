@@ -20,8 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="Comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="EdgePropertyID" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
- *         &lt;element name="SourceVertexID" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
- *         &lt;element name="SourceVertexTypeID" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
+ *         &lt;element name="SourceVertex" type="{http://www.sones.com}ServiceVertexInstance" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/extension>
  *   &lt;/complexContent>
@@ -34,8 +33,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ServiceEdgeInstance", propOrder = {
     "comment",
     "edgePropertyID",
-    "sourceVertexID",
-    "sourceVertexTypeID"
+    "sourceVertex"
 })
 @XmlSeeAlso({
     ServiceHyperEdgeInstance.class,
@@ -49,10 +47,8 @@ public class ServiceEdgeInstance
     protected String comment;
     @XmlElement(name = "EdgePropertyID", nillable = true)
     protected Long edgePropertyID;
-    @XmlElement(name = "SourceVertexID")
-    protected Long sourceVertexID;
-    @XmlElement(name = "SourceVertexTypeID")
-    protected Long sourceVertexTypeID;
+    @XmlElement(name = "SourceVertex", nillable = true)
+    protected ServiceVertexInstance sourceVertex;
 
     /**
      * Gets the value of the comment property.
@@ -103,51 +99,27 @@ public class ServiceEdgeInstance
     }
 
     /**
-     * Gets the value of the sourceVertexID property.
+     * Gets the value of the sourceVertex property.
      * 
      * @return
      *     possible object is
-     *     {@link Long }
+     *     {@link ServiceVertexInstance }
      *     
      */
-    public Long getSourceVertexID() {
-        return sourceVertexID;
+    public ServiceVertexInstance getSourceVertex() {
+        return sourceVertex;
     }
 
     /**
-     * Sets the value of the sourceVertexID property.
+     * Sets the value of the sourceVertex property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Long }
+     *     {@link ServiceVertexInstance }
      *     
      */
-    public void setSourceVertexID(Long value) {
-        this.sourceVertexID = value;
-    }
-
-    /**
-     * Gets the value of the sourceVertexTypeID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Long }
-     *     
-     */
-    public Long getSourceVertexTypeID() {
-        return sourceVertexTypeID;
-    }
-
-    /**
-     * Sets the value of the sourceVertexTypeID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Long }
-     *     
-     */
-    public void setSourceVertexTypeID(Long value) {
-        this.sourceVertexTypeID = value;
+    public void setSourceVertex(ServiceVertexInstance value) {
+        this.sourceVertex = value;
     }
 
 }

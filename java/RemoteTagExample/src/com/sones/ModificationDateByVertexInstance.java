@@ -21,7 +21,7 @@ import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
  *       &lt;sequence>
  *         &lt;element name="mySecurityToken" type="{http://schemas.datacontract.org/2004/07/sones.Library.Commons.Security}SecurityToken" minOccurs="0"/>
  *         &lt;element name="myTransToken" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
- *         &lt;element name="myGraphElement" type="{http://www.sones.com}ServiceVertexInstance" minOccurs="0"/>
+ *         &lt;element name="myVertex" type="{http://www.sones.com}ServiceVertexInstance" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -34,7 +34,7 @@ import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
 @XmlType(name = "", propOrder = {
     "mySecurityToken",
     "myTransToken",
-    "myGraphElement"
+    "myVertex"
 })
 @XmlRootElement(name = "ModificationDateByVertexInstance")
 public class ModificationDateByVertexInstance {
@@ -43,7 +43,7 @@ public class ModificationDateByVertexInstance {
     protected SecurityToken mySecurityToken;
     protected Long myTransToken;
     @XmlElement(nillable = true)
-    protected ServiceVertexInstance myGraphElement;
+    protected ServiceVertexInstance myVertex;
 
     /**
      * Gets the value of the mySecurityToken property.
@@ -94,27 +94,27 @@ public class ModificationDateByVertexInstance {
     }
 
     /**
-     * Gets the value of the myGraphElement property.
+     * Gets the value of the myVertex property.
      * 
      * @return
      *     possible object is
      *     {@link ServiceVertexInstance }
      *     
      */
-    public ServiceVertexInstance getMyGraphElement() {
-        return myGraphElement;
+    public ServiceVertexInstance getMyVertex() {
+        return myVertex;
     }
 
     /**
-     * Sets the value of the myGraphElement property.
+     * Sets the value of the myVertex property.
      * 
      * @param value
      *     allowed object is
      *     {@link ServiceVertexInstance }
      *     
      */
-    public void setMyGraphElement(ServiceVertexInstance value) {
-        this.myGraphElement = value;
+    public void setMyVertex(ServiceVertexInstance value) {
+        this.myVertex = value;
     }
 
 }

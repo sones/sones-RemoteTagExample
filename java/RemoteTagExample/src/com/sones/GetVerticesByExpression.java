@@ -20,8 +20,8 @@ import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="mySecurityToken" type="{http://schemas.datacontract.org/2004/07/sones.Library.Commons.Security}SecurityToken" minOccurs="0"/>
- *         &lt;element name="myTransToken" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
- *         &lt;element name="myVertexType" type="{http://www.sones.com}ServiceBaseExpression" minOccurs="0"/>
+ *         &lt;element name="myTransactionToken" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
+ *         &lt;element name="myExpression" type="{http://www.sones.com}ServiceBaseExpression" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -33,17 +33,17 @@ import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "mySecurityToken",
-    "myTransToken",
-    "myVertexType"
+    "myTransactionToken",
+    "myExpression"
 })
 @XmlRootElement(name = "GetVerticesByExpression")
 public class GetVerticesByExpression {
 
     @XmlElement(nillable = true)
     protected SecurityToken mySecurityToken;
-    protected Long myTransToken;
+    protected Long myTransactionToken;
     @XmlElement(nillable = true)
-    protected ServiceBaseExpression myVertexType;
+    protected ServiceBaseExpression myExpression;
 
     /**
      * Gets the value of the mySecurityToken property.
@@ -70,51 +70,51 @@ public class GetVerticesByExpression {
     }
 
     /**
-     * Gets the value of the myTransToken property.
+     * Gets the value of the myTransactionToken property.
      * 
      * @return
      *     possible object is
      *     {@link Long }
      *     
      */
-    public Long getMyTransToken() {
-        return myTransToken;
+    public Long getMyTransactionToken() {
+        return myTransactionToken;
     }
 
     /**
-     * Sets the value of the myTransToken property.
+     * Sets the value of the myTransactionToken property.
      * 
      * @param value
      *     allowed object is
      *     {@link Long }
      *     
      */
-    public void setMyTransToken(Long value) {
-        this.myTransToken = value;
+    public void setMyTransactionToken(Long value) {
+        this.myTransactionToken = value;
     }
 
     /**
-     * Gets the value of the myVertexType property.
+     * Gets the value of the myExpression property.
      * 
      * @return
      *     possible object is
      *     {@link ServiceBaseExpression }
      *     
      */
-    public ServiceBaseExpression getMyVertexType() {
-        return myVertexType;
+    public ServiceBaseExpression getMyExpression() {
+        return myExpression;
     }
 
     /**
-     * Sets the value of the myVertexType property.
+     * Sets the value of the myExpression property.
      * 
      * @param value
      *     allowed object is
      *     {@link ServiceBaseExpression }
      *     
      */
-    public void setMyVertexType(ServiceBaseExpression value) {
-        this.myVertexType = value;
+    public void setMyExpression(ServiceBaseExpression value) {
+        this.myExpression = value;
     }
 
 }

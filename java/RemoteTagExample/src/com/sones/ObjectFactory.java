@@ -5,6 +5,7 @@ import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
+import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
 
 
 /**
@@ -32,14 +33,18 @@ public class ObjectFactory {
     private final static QName _ServiceVertexView_QNAME = new QName("http://www.sones.com", "ServiceVertexView");
     private final static QName _ServiceEdgeType_QNAME = new QName("http://www.sones.com", "ServiceEdgeType");
     private final static QName _ArrayOfServicePropertyPredefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServicePropertyPredefinition");
+    private final static QName _ServiceVertexStatistics_QNAME = new QName("http://www.sones.com", "ServiceVertexStatistics");
     private final static QName _ServiceBinaryOperator_QNAME = new QName("http://www.sones.com", "ServiceBinaryOperator");
     private final static QName _ArrayOfStructuredProperty_QNAME = new QName("http://www.sones.com", "ArrayOfStructuredProperty");
+    private final static QName _SecurityToken_QNAME = new QName("http://www.sones.com", "SecurityToken");
     private final static QName _ArrayOfServiceIncomingEdgeDefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceIncomingEdgeDefinition");
     private final static QName _ServiceIndexPredefinition_QNAME = new QName("http://www.sones.com", "ServiceIndexPredefinition");
+    private final static QName _PropertyName_QNAME = new QName("http://www.sones.com", "PropertyName");
     private final static QName _ArrayOfServiceMandatoryPredefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceMandatoryPredefinition");
     private final static QName _ServiceAttributePredefinition_QNAME = new QName("http://www.sones.com", "ServiceAttributePredefinition");
     private final static QName _ServicePropertyMultiplicity_QNAME = new QName("http://www.sones.com", "ServicePropertyMultiplicity");
     private final static QName _ServicePropertyPredefinition_QNAME = new QName("http://www.sones.com", "ServicePropertyPredefinition");
+    private final static QName _ServiceSingleEdgeUpdateDefinitionServiceVertexInformation_QNAME = new QName("http://www.sones.com", "ServiceSingleEdgeUpdateDefinition.ServiceVertexInformation");
     private final static QName _ArrayOfServiceOutgoingEdgeDefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceOutgoingEdgeDefinition");
     private final static QName _ServiceEdgeInstance_QNAME = new QName("http://www.sones.com", "ServiceEdgeInstance");
     private final static QName _ArrayOfServiceVertexType_QNAME = new QName("http://www.sones.com", "ArrayOfServiceVertexType");
@@ -48,6 +53,7 @@ public class ObjectFactory {
     private final static QName _ServiceIncomingEdgePredefinition_QNAME = new QName("http://www.sones.com", "ServiceIncomingEdgePredefinition");
     private final static QName _ArrayOfServiceSingleEdgeInstance_QNAME = new QName("http://www.sones.com", "ArrayOfServiceSingleEdgeInstance");
     private final static QName _ArrayOfServiceEdgeType_QNAME = new QName("http://www.sones.com", "ArrayOfServiceEdgeType");
+    private final static QName _ServiceBinaryPropertyPredefinition_QNAME = new QName("http://www.sones.com", "ServiceBinaryPropertyPredefinition");
     private final static QName _ServiceAlterEdgeChangeset_QNAME = new QName("http://www.sones.com", "ServiceAlterEdgeChangeset");
     private final static QName _ArrayOfServiceSingleEdgeView_QNAME = new QName("http://www.sones.com", "ArrayOfServiceSingleEdgeView");
     private final static QName _ServiceIndexDefinition_QNAME = new QName("http://www.sones.com", "ServiceIndexDefinition");
@@ -58,37 +64,50 @@ public class ObjectFactory {
     private final static QName _ArrayOfUnstructuredProperty_QNAME = new QName("http://www.sones.com", "ArrayOfUnstructuredProperty");
     private final static QName _ServiceEdgeView_QNAME = new QName("http://www.sones.com", "ServiceEdgeView");
     private final static QName _ServiceOutgoingEdgeDefinition_QNAME = new QName("http://www.sones.com", "ServiceOutgoingEdgeDefinition");
+    private final static QName _VertexID_QNAME = new QName("http://www.sones.com", "VertexID");
+    private final static QName _ServiceBinaryPropertyDefinition_QNAME = new QName("http://www.sones.com", "ServiceBinaryPropertyDefinition");
     private final static QName _AGraphElement_QNAME = new QName("http://www.sones.com", "AGraphElement");
     private final static QName _ServiceAttributeDefinition_QNAME = new QName("http://www.sones.com", "ServiceAttributeDefinition");
+    private final static QName _ArrayOfServiceHyperEdgeInstance_QNAME = new QName("http://www.sones.com", "ArrayOfServiceHyperEdgeInstance");
     private final static QName _ServiceUpdateChangeset_QNAME = new QName("http://www.sones.com", "ServiceUpdateChangeset");
+    private final static QName _ArrayOfServiceSingleEdgeUpdateDefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceSingleEdgeUpdateDefinition");
     private final static QName _ServiceVertexType_QNAME = new QName("http://www.sones.com", "ServiceVertexType");
     private final static QName _ServicePropertyExpression_QNAME = new QName("http://www.sones.com", "ServicePropertyExpression");
     private final static QName _ArrayOfServiceVertexView_QNAME = new QName("http://www.sones.com", "ArrayOfServiceVertexView");
     private final static QName _ArrayOfServiceEdgePredefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceEdgePredefinition");
     private final static QName _StructuredProperty_QNAME = new QName("http://www.sones.com", "StructuredProperty");
+    private final static QName _ServiceUserPasswordCredentials_QNAME = new QName("http://www.sones.com", "ServiceUserPasswordCredentials");
+    private final static QName _ServiceSingleEdgeUpdateDefinition_QNAME = new QName("http://www.sones.com", "ServiceSingleEdgeUpdateDefinition");
     private final static QName _ServiceQueryResult_QNAME = new QName("http://www.sones.com", "ServiceQueryResult");
+    private final static QName _ArrayOfServiceBinaryPropertyDefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceBinaryPropertyDefinition");
     private final static QName _ServiceEdgePredefinition_QNAME = new QName("http://www.sones.com", "ServiceEdgePredefinition");
     private final static QName _ServiceUnaryExpression_QNAME = new QName("http://www.sones.com", "ServiceUnaryExpression");
     private final static QName _ServiceHyperEdgeInstance_QNAME = new QName("http://www.sones.com", "ServiceHyperEdgeInstance");
     private final static QName _ServiceOutgoingEdgePredefinition_QNAME = new QName("http://www.sones.com", "ServiceOutgoingEdgePredefinition");
     private final static QName _ArrayOfServiceUniqueDefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceUniqueDefinition");
     private final static QName _ArrayOfServiceOutgoingEdgePredefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceOutgoingEdgePredefinition");
+    private final static QName _ArrayOfServiceBinaryPropertyPredefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceBinaryPropertyPredefinition");
     private final static QName _ServiceAttributeType_QNAME = new QName("http://www.sones.com", "ServiceAttributeType");
+    private final static QName _ServiceGraphElementUpdateDefinition_QNAME = new QName("http://www.sones.com", "ServiceGraphElementUpdateDefinition");
     private final static QName _ServiceInsertPayload_QNAME = new QName("http://www.sones.com", "ServiceInsertPayload");
     private final static QName _ArrayOfServiceIndexDefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceIndexDefinition");
     private final static QName _ServicePropertyDefinition_QNAME = new QName("http://www.sones.com", "ServicePropertyDefinition");
     private final static QName _ServiceUniquePredefinition_QNAME = new QName("http://www.sones.com", "ServiceUniquePredefinition");
-    private final static QName _UnstructuredProperty_QNAME = new QName("http://www.sones.com", "UnstructuredProperty");
     private final static QName _ArrayOfServiceEdgeInstance_QNAME = new QName("http://www.sones.com", "ArrayOfServiceEdgeInstance");
+    private final static QName _UnstructuredProperty_QNAME = new QName("http://www.sones.com", "UnstructuredProperty");
     private final static QName _ArrayOfServiceVertexInstance_QNAME = new QName("http://www.sones.com", "ArrayOfServiceVertexInstance");
     private final static QName _ServiceMandatoryPredefinition_QNAME = new QName("http://www.sones.com", "ServiceMandatoryPredefinition");
     private final static QName _ArrayOfServicePropertyDefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServicePropertyDefinition");
     private final static QName _ServiceBaseExpression_QNAME = new QName("http://www.sones.com", "ServiceBaseExpression");
     private final static QName _ServiceSingleEdgeInstance_QNAME = new QName("http://www.sones.com", "ServiceSingleEdgeInstance");
+    private final static QName _VertexTypeID_QNAME = new QName("http://www.sones.com", "VertexTypeID");
     private final static QName _ServiceBaseType_QNAME = new QName("http://www.sones.com", "ServiceBaseType");
+    private final static QName _ArrayOfServiceEdgeTypePredefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceEdgeTypePredefinition");
+    private final static QName _ServiceQueryResultServiceResultType_QNAME = new QName("http://www.sones.com", "ServiceQueryResult.ServiceResultType");
     private final static QName _ServiceBinaryExpression_QNAME = new QName("http://www.sones.com", "ServiceBinaryExpression");
-    private final static QName _ServiceRangeLiteralExpression_QNAME = new QName("http://www.sones.com", "ServiceRangeLiteralExpression");
     private final static QName _ServiceVertexTypePredefinition_QNAME = new QName("http://www.sones.com", "ServiceVertexTypePredefinition");
+    private final static QName _ServiceRangeLiteralExpression_QNAME = new QName("http://www.sones.com", "ServiceRangeLiteralExpression");
+    private final static QName _TransToken_QNAME = new QName("http://www.sones.com", "TransToken");
     private final static QName _ArrayOfServiceIncomingEdgePredefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceIncomingEdgePredefinition");
     private final static QName _ServiceVertexInstance_QNAME = new QName("http://www.sones.com", "ServiceVertexInstance");
     private final static QName _ArrayOfServiceAttributeDefinition_QNAME = new QName("http://www.sones.com", "ArrayOfServiceAttributeDefinition");
@@ -109,14 +128,6 @@ public class ObjectFactory {
      */
     public GetPropertyDefinitionsByVertexType createGetPropertyDefinitionsByVertexType() {
         return new GetPropertyDefinitionsByVertexType();
-    }
-
-    /**
-     * Create an instance of {@link ServiceVertexType }
-     * 
-     */
-    public ServiceVertexType createServiceVertexType() {
-        return new ServiceVertexType();
     }
 
     /**
@@ -141,6 +152,14 @@ public class ObjectFactory {
      */
     public HasPropertiesByVertexTypeResponse createHasPropertiesByVertexTypeResponse() {
         return new HasPropertiesByVertexTypeResponse();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfServiceBinaryPropertyDefinition }
+     * 
+     */
+    public ArrayOfServiceBinaryPropertyDefinition createArrayOfServiceBinaryPropertyDefinition() {
+        return new ArrayOfServiceBinaryPropertyDefinition();
     }
 
     /**
@@ -173,6 +192,14 @@ public class ObjectFactory {
      */
     public ArrayOfServiceAttributeDefinition createArrayOfServiceAttributeDefinition() {
         return new ArrayOfServiceAttributeDefinition();
+    }
+
+    /**
+     * Create an instance of {@link SetBinaryPropertyMessage }
+     * 
+     */
+    public SetBinaryPropertyMessage createSetBinaryPropertyMessage() {
+        return new SetBinaryPropertyMessage();
     }
 
     /**
@@ -248,11 +275,35 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ServiceSingleEdgeUpdateDefinition }
+     * 
+     */
+    public ServiceSingleEdgeUpdateDefinition createServiceSingleEdgeUpdateDefinition() {
+        return new ServiceSingleEdgeUpdateDefinition();
+    }
+
+    /**
+     * Create an instance of {@link ServiceUserPasswordCredentials }
+     * 
+     */
+    public ServiceUserPasswordCredentials createServiceUserPasswordCredentials() {
+        return new ServiceUserPasswordCredentials();
+    }
+
+    /**
      * Create an instance of {@link IsDescendantByVertexType }
      * 
      */
     public IsDescendantByVertexType createIsDescendantByVertexType() {
         return new IsDescendantByVertexType();
+    }
+
+    /**
+     * Create an instance of {@link ServiceVertexType }
+     * 
+     */
+    public ServiceVertexType createServiceVertexType() {
+        return new ServiceVertexType();
     }
 
     /**
@@ -285,6 +336,14 @@ public class ObjectFactory {
      */
     public GetCountOfPropertiesByVertexInstance createGetCountOfPropertiesByVertexInstance() {
         return new GetCountOfPropertiesByVertexInstance();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfServiceHyperEdgeInstance }
+     * 
+     */
+    public ArrayOfServiceHyperEdgeInstance createArrayOfServiceHyperEdgeInstance() {
+        return new ArrayOfServiceHyperEdgeInstance();
     }
 
     /**
@@ -376,6 +435,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link DescribeIndicesByNames }
+     * 
+     */
+    public DescribeIndicesByNames createDescribeIndicesByNames() {
+        return new DescribeIndicesByNames();
+    }
+
+    /**
      * Create an instance of {@link GetIncomingEdgeDefinition }
      * 
      */
@@ -384,11 +451,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ArrayOfServiceSingleEdgeUpdateDefinition }
+     * 
+     */
+    public ArrayOfServiceSingleEdgeUpdateDefinition createArrayOfServiceSingleEdgeUpdateDefinition() {
+        return new ArrayOfServiceSingleEdgeUpdateDefinition();
+    }
+
+    /**
      * Create an instance of {@link ServiceEdgeView }
      * 
      */
     public ServiceEdgeView createServiceEdgeView() {
         return new ServiceEdgeView();
+    }
+
+    /**
+     * Create an instance of {@link GetPropertyDefinitionByVertexTypeResponse }
+     * 
+     */
+    public GetPropertyDefinitionByVertexTypeResponse createGetPropertyDefinitionByVertexTypeResponse() {
+        return new GetPropertyDefinitionByVertexTypeResponse();
     }
 
     /**
@@ -408,11 +491,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetPropertyDefinitionByVertexTypeResponse }
+     * Create an instance of {@link ServiceBinaryPropertyDefinition }
      * 
      */
-    public GetPropertyDefinitionByVertexTypeResponse createGetPropertyDefinitionByVertexTypeResponse() {
-        return new GetPropertyDefinitionByVertexTypeResponse();
+    public ServiceBinaryPropertyDefinition createServiceBinaryPropertyDefinition() {
+        return new ServiceBinaryPropertyDefinition();
     }
 
     /**
@@ -464,6 +547,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link PartitionID }
+     * 
+     */
+    public PartitionID createPartitionID() {
+        return new PartitionID();
+    }
+
+    /**
      * Create an instance of {@link HasParentTypeByVertexType }
      * 
      */
@@ -485,6 +576,14 @@ public class ObjectFactory {
      */
     public ArrayOfServiceIncomingEdgePredefinition createArrayOfServiceIncomingEdgePredefinition() {
         return new ArrayOfServiceIncomingEdgePredefinition();
+    }
+
+    /**
+     * Create an instance of {@link GetVertexTypeByName }
+     * 
+     */
+    public GetVertexTypeByName createGetVertexTypeByName() {
+        return new GetVertexTypeByName();
     }
 
     /**
@@ -520,11 +619,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetBinaryPropertyDefinitionsResponse }
+     * 
+     */
+    public GetBinaryPropertyDefinitionsResponse createGetBinaryPropertyDefinitionsResponse() {
+        return new GetBinaryPropertyDefinitionsResponse();
+    }
+
+    /**
      * Create an instance of {@link CommentByVertexInstanceResponse }
      * 
      */
     public CommentByVertexInstanceResponse createCommentByVertexInstanceResponse() {
         return new CommentByVertexInstanceResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetEdgeTypeByIDResponse }
+     * 
+     */
+    public GetEdgeTypeByIDResponse createGetEdgeTypeByIDResponse() {
+        return new GetEdgeTypeByIDResponse();
     }
 
     /**
@@ -573,14 +688,6 @@ public class ObjectFactory {
      */
     public HasAttributeByEdgeType createHasAttributeByEdgeType() {
         return new HasAttributeByEdgeType();
-    }
-
-    /**
-     * Create an instance of {@link GetVertexType }
-     * 
-     */
-    public GetVertexType createGetVertexType() {
-        return new GetVertexType();
     }
 
     /**
@@ -776,6 +883,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link PartitionIDResponse }
+     * 
+     */
+    public PartitionIDResponse createPartitionIDResponse() {
+        return new PartitionIDResponse();
+    }
+
+    /**
      * Create an instance of {@link CreationDateByEdgeInstance }
      * 
      */
@@ -789,6 +904,14 @@ public class ObjectFactory {
      */
     public GetIncomingVerticesResponse createGetIncomingVerticesResponse() {
         return new GetIncomingVerticesResponse();
+    }
+
+    /**
+     * Create an instance of {@link ServiceSingleEdgeUpdateDefinitionServiceVertexInformation }
+     * 
+     */
+    public ServiceSingleEdgeUpdateDefinitionServiceVertexInformation createServiceSingleEdgeUpdateDefinitionServiceVertexInformation() {
+        return new ServiceSingleEdgeUpdateDefinitionServiceVertexInformation();
     }
 
     /**
@@ -952,11 +1075,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetVertexTypeResponse }
+     * Create an instance of {@link VertexStatistics }
      * 
      */
-    public GetVertexTypeResponse createGetVertexTypeResponse() {
-        return new GetVertexTypeResponse();
+    public VertexStatistics createVertexStatistics() {
+        return new VertexStatistics();
     }
 
     /**
@@ -981,6 +1104,14 @@ public class ObjectFactory {
      */
     public GetAncestorEdgeTypes createGetAncestorEdgeTypes() {
         return new GetAncestorEdgeTypes();
+    }
+
+    /**
+     * Create an instance of {@link HasBinaryPropertiesResponse }
+     * 
+     */
+    public HasBinaryPropertiesResponse createHasBinaryPropertiesResponse() {
+        return new HasBinaryPropertiesResponse();
     }
 
     /**
@@ -1064,19 +1195,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetVerticesByExpression }
-     * 
-     */
-    public GetVerticesByExpression createGetVerticesByExpression() {
-        return new GetVerticesByExpression();
-    }
-
-    /**
      * Create an instance of {@link ArrayOfServicePropertyPredefinition }
      * 
      */
     public ArrayOfServicePropertyPredefinition createArrayOfServicePropertyPredefinition() {
         return new ArrayOfServicePropertyPredefinition();
+    }
+
+    /**
+     * Create an instance of {@link GetVerticesByExpression }
+     * 
+     */
+    public GetVerticesByExpression createGetVerticesByExpression() {
+        return new GetVerticesByExpression();
     }
 
     /**
@@ -1208,6 +1339,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetVertexTypeByIDResponse }
+     * 
+     */
+    public GetVertexTypeByIDResponse createGetVertexTypeByIDResponse() {
+        return new GetVertexTypeByIDResponse();
+    }
+
+    /**
      * Create an instance of {@link IsDescendantByVertexTypeResponse }
      * 
      */
@@ -1248,19 +1387,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ServiceBinaryPropertyPredefinition }
+     * 
+     */
+    public ServiceBinaryPropertyPredefinition createServiceBinaryPropertyPredefinition() {
+        return new ServiceBinaryPropertyPredefinition();
+    }
+
+    /**
      * Create an instance of {@link GetAttributeDefinitionByIDByVertexTypeResponse }
      * 
      */
     public GetAttributeDefinitionByIDByVertexTypeResponse createGetAttributeDefinitionByIDByVertexTypeResponse() {
         return new GetAttributeDefinitionByIDByVertexTypeResponse();
-    }
-
-    /**
-     * Create an instance of {@link ServiceEdgeTypePredefinition }
-     * 
-     */
-    public ServiceEdgeTypePredefinition createServiceEdgeTypePredefinition() {
-        return new ServiceEdgeTypePredefinition();
     }
 
     /**
@@ -1277,6 +1416,22 @@ public class ObjectFactory {
      */
     public ArrayOfServicePropertyDefinition createArrayOfServicePropertyDefinition() {
         return new ArrayOfServicePropertyDefinition();
+    }
+
+    /**
+     * Create an instance of {@link ServiceEdgeTypePredefinition }
+     * 
+     */
+    public ServiceEdgeTypePredefinition createServiceEdgeTypePredefinition() {
+        return new ServiceEdgeTypePredefinition();
+    }
+
+    /**
+     * Create an instance of {@link HasBinaryProperty }
+     * 
+     */
+    public HasBinaryProperty createHasBinaryProperty() {
+        return new HasBinaryProperty();
     }
 
     /**
@@ -1365,6 +1520,14 @@ public class ObjectFactory {
      */
     public CreationDateByVertexInstance createCreationDateByVertexInstance() {
         return new CreationDateByVertexInstance();
+    }
+
+    /**
+     * Create an instance of {@link HasBinaryPropertyResponse }
+     * 
+     */
+    public HasBinaryPropertyResponse createHasBinaryPropertyResponse() {
+        return new HasBinaryPropertyResponse();
     }
 
     /**
@@ -1464,6 +1627,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetEdgeTypeByID }
+     * 
+     */
+    public GetEdgeTypeByID createGetEdgeTypeByID() {
+        return new GetEdgeTypeByID();
+    }
+
+    /**
+     * Create an instance of {@link HasBinaryProperties }
+     * 
+     */
+    public HasBinaryProperties createHasBinaryProperties() {
+        return new HasBinaryProperties();
+    }
+
+    /**
      * Create an instance of {@link ServiceEdgePredefinition }
      * 
      */
@@ -1512,6 +1691,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link DescribeIndicesByNamesResponse }
+     * 
+     */
+    public DescribeIndicesByNamesResponse createDescribeIndicesByNamesResponse() {
+        return new DescribeIndicesByNamesResponse();
+    }
+
+    /**
      * Create an instance of {@link HasPropertyByEdgeInstance }
      * 
      */
@@ -1552,6 +1739,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link VertexStatisticsResponse }
+     * 
+     */
+    public VertexStatisticsResponse createVertexStatisticsResponse() {
+        return new VertexStatisticsResponse();
+    }
+
+    /**
+     * Create an instance of {@link ServiceVertexStatistics }
+     * 
+     */
+    public ServiceVertexStatistics createServiceVertexStatistics() {
+        return new ServiceVertexStatistics();
+    }
+
+    /**
      * Create an instance of {@link HasUnstructuredPropertyByEdgeInstance }
      * 
      */
@@ -1560,19 +1763,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ServicePropertyExpression }
-     * 
-     */
-    public ServicePropertyExpression createServicePropertyExpression() {
-        return new ServicePropertyExpression();
-    }
-
-    /**
      * Create an instance of {@link CommitTransactionResponse }
      * 
      */
     public CommitTransactionResponse createCommitTransactionResponse() {
         return new CommitTransactionResponse();
+    }
+
+    /**
+     * Create an instance of {@link ServicePropertyExpression }
+     * 
+     */
+    public ServicePropertyExpression createServicePropertyExpression() {
+        return new ServicePropertyExpression();
     }
 
     /**
@@ -1632,6 +1835,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetVertexTypeByID }
+     * 
+     */
+    public GetVertexTypeByID createGetVertexTypeByID() {
+        return new GetVertexTypeByID();
+    }
+
+    /**
      * Create an instance of {@link IsDescendantOrSelfByVertexTypeResponse }
      * 
      */
@@ -1656,19 +1867,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetAttributeDefinitionByVertexTypeResponse }
-     * 
-     */
-    public GetAttributeDefinitionByVertexTypeResponse createGetAttributeDefinitionByVertexTypeResponse() {
-        return new GetAttributeDefinitionByVertexTypeResponse();
-    }
-
-    /**
      * Create an instance of {@link HasIncomingEdgesResponse }
      * 
      */
     public HasIncomingEdgesResponse createHasIncomingEdgesResponse() {
         return new HasIncomingEdgesResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetAttributeDefinitionByVertexTypeResponse }
+     * 
+     */
+    public GetAttributeDefinitionByVertexTypeResponse createGetAttributeDefinitionByVertexTypeResponse() {
+        return new GetAttributeDefinitionByVertexTypeResponse();
     }
 
     /**
@@ -1744,6 +1955,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetBinaryPropertyDefinitionResponse }
+     * 
+     */
+    public GetBinaryPropertyDefinitionResponse createGetBinaryPropertyDefinitionResponse() {
+        return new GetBinaryPropertyDefinitionResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetBinaryPropertyDefinition }
+     * 
+     */
+    public GetBinaryPropertyDefinition createGetBinaryPropertyDefinition() {
+        return new GetBinaryPropertyDefinition();
+    }
+
+    /**
      * Create an instance of {@link ArrayOfServiceUniquePredefinition }
      * 
      */
@@ -1760,14 +1987,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetEdgeType }
-     * 
-     */
-    public GetEdgeType createGetEdgeType() {
-        return new GetEdgeType();
-    }
-
-    /**
      * Create an instance of {@link HasUnstructuredPropertyByVertexInstance }
      * 
      */
@@ -1776,19 +1995,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetVerticesByType }
-     * 
-     */
-    public GetVerticesByType createGetVerticesByType() {
-        return new GetVerticesByType();
-    }
-
-    /**
      * Create an instance of {@link CreateEdgeTypeResponse }
      * 
      */
     public CreateEdgeTypeResponse createCreateEdgeTypeResponse() {
         return new CreateEdgeTypeResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetVerticesByType }
+     * 
+     */
+    public GetVerticesByType createGetVerticesByType() {
+        return new GetVerticesByType();
     }
 
     /**
@@ -1813,6 +2032,14 @@ public class ObjectFactory {
      */
     public GetAllOutgoingEdges createGetAllOutgoingEdges() {
         return new GetAllOutgoingEdges();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfServiceEdgeTypePredefinition }
+     * 
+     */
+    public ArrayOfServiceEdgeTypePredefinition createArrayOfServiceEdgeTypePredefinition() {
+        return new ArrayOfServiceEdgeTypePredefinition();
     }
 
     /**
@@ -1896,6 +2123,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link CreateEdgeTypes }
+     * 
+     */
+    public CreateEdgeTypes createCreateEdgeTypes() {
+        return new CreateEdgeTypes();
+    }
+
+    /**
      * Create an instance of {@link HasAttributeByVertexTypeResponse }
      * 
      */
@@ -1904,19 +2139,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UnstructuredProperty }
-     * 
-     */
-    public UnstructuredProperty createUnstructuredProperty() {
-        return new UnstructuredProperty();
-    }
-
-    /**
      * Create an instance of {@link ArrayOfServiceEdgeInstance }
      * 
      */
     public ArrayOfServiceEdgeInstance createArrayOfServiceEdgeInstance() {
         return new ArrayOfServiceEdgeInstance();
+    }
+
+    /**
+     * Create an instance of {@link UnstructuredProperty }
+     * 
+     */
+    public UnstructuredProperty createUnstructuredProperty() {
+        return new UnstructuredProperty();
     }
 
     /**
@@ -1936,14 +2171,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetAllBinaryProperties }
-     * 
-     */
-    public GetAllBinaryProperties createGetAllBinaryProperties() {
-        return new GetAllBinaryProperties();
-    }
-
-    /**
      * Create an instance of {@link ArrayOfServiceUniqueDefinition }
      * 
      */
@@ -1952,11 +2179,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetEdgeTypeResponse }
+     * Create an instance of {@link GetAllBinaryProperties }
      * 
      */
-    public GetEdgeTypeResponse createGetEdgeTypeResponse() {
-        return new GetEdgeTypeResponse();
+    public GetAllBinaryProperties createGetAllBinaryProperties() {
+        return new GetAllBinaryProperties();
     }
 
     /**
@@ -1965,6 +2192,14 @@ public class ObjectFactory {
      */
     public HasAttributeByEdgeTypeResponse createHasAttributeByEdgeTypeResponse() {
         return new HasAttributeByEdgeTypeResponse();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfServiceBinaryPropertyPredefinition }
+     * 
+     */
+    public ArrayOfServiceBinaryPropertyPredefinition createArrayOfServiceBinaryPropertyPredefinition() {
+        return new ArrayOfServiceBinaryPropertyPredefinition();
     }
 
     /**
@@ -1981,6 +2216,14 @@ public class ObjectFactory {
      */
     public GetAttributeDefinitionByEdgeType createGetAttributeDefinitionByEdgeType() {
         return new GetAttributeDefinitionByEdgeType();
+    }
+
+    /**
+     * Create an instance of {@link GetEdgeTypeByName }
+     * 
+     */
+    public GetEdgeTypeByName createGetEdgeTypeByName() {
+        return new GetEdgeTypeByName();
     }
 
     /**
@@ -2032,11 +2275,35 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ServiceGraphElementUpdateDefinition }
+     * 
+     */
+    public ServiceGraphElementUpdateDefinition createServiceGraphElementUpdateDefinition() {
+        return new ServiceGraphElementUpdateDefinition();
+    }
+
+    /**
+     * Create an instance of {@link GetVertexTypeByNameResponse }
+     * 
+     */
+    public GetVertexTypeByNameResponse createGetVertexTypeByNameResponse() {
+        return new GetVertexTypeByNameResponse();
+    }
+
+    /**
      * Create an instance of {@link ServicePropertyPredefinition }
      * 
      */
     public ServicePropertyPredefinition createServicePropertyPredefinition() {
         return new ServicePropertyPredefinition();
+    }
+
+    /**
+     * Create an instance of {@link CreateEdgeTypesResponse }
+     * 
+     */
+    public CreateEdgeTypesResponse createCreateEdgeTypesResponse() {
+        return new CreateEdgeTypesResponse();
     }
 
     /**
@@ -2336,19 +2603,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RollbackTransaction }
-     * 
-     */
-    public RollbackTransaction createRollbackTransaction() {
-        return new RollbackTransaction();
-    }
-
-    /**
      * Create an instance of {@link HasIncomingEdgeResponse }
      * 
      */
     public HasIncomingEdgeResponse createHasIncomingEdgeResponse() {
         return new HasIncomingEdgeResponse();
+    }
+
+    /**
+     * Create an instance of {@link RollbackTransaction }
+     * 
+     */
+    public RollbackTransaction createRollbackTransaction() {
+        return new RollbackTransaction();
     }
 
     /**
@@ -2432,19 +2699,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RollbackTransactionResponse }
-     * 
-     */
-    public RollbackTransactionResponse createRollbackTransactionResponse() {
-        return new RollbackTransactionResponse();
-    }
-
-    /**
      * Create an instance of {@link GetIncomingEdgeDefinitions }
      * 
      */
     public GetIncomingEdgeDefinitions createGetIncomingEdgeDefinitions() {
         return new GetIncomingEdgeDefinitions();
+    }
+
+    /**
+     * Create an instance of {@link RollbackTransactionResponse }
+     * 
+     */
+    public RollbackTransactionResponse createRollbackTransactionResponse() {
+        return new RollbackTransactionResponse();
     }
 
     /**
@@ -2480,19 +2747,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ServiceIncomingEdgePredefinition }
-     * 
-     */
-    public ServiceIncomingEdgePredefinition createServiceIncomingEdgePredefinition() {
-        return new ServiceIncomingEdgePredefinition();
-    }
-
-    /**
      * Create an instance of {@link HasPropertiesByVertexType }
      * 
      */
     public HasPropertiesByVertexType createHasPropertiesByVertexType() {
         return new HasPropertiesByVertexType();
+    }
+
+    /**
+     * Create an instance of {@link ServiceIncomingEdgePredefinition }
+     * 
+     */
+    public ServiceIncomingEdgePredefinition createServiceIncomingEdgePredefinition() {
+        return new ServiceIncomingEdgePredefinition();
     }
 
     /**
@@ -2525,6 +2792,14 @@ public class ObjectFactory {
      */
     public IsAncestorOrSelfByEdgeType createIsAncestorOrSelfByEdgeType() {
         return new IsAncestorOrSelfByEdgeType();
+    }
+
+    /**
+     * Create an instance of {@link GetEdgeTypeByNameResponse }
+     * 
+     */
+    public GetEdgeTypeByNameResponse createGetEdgeTypeByNameResponse() {
+        return new GetEdgeTypeByNameResponse();
     }
 
     /**
@@ -2712,6 +2987,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetBinaryPropertyDefinitions }
+     * 
+     */
+    public GetBinaryPropertyDefinitions createGetBinaryPropertyDefinitions() {
+        return new GetBinaryPropertyDefinitions();
+    }
+
+    /**
      * Create an instance of {@link GetAllBinaryPropertiesResponse }
      * 
      */
@@ -2848,6 +3131,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceVertexStatistics }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceVertexStatistics")
+    public JAXBElement<ServiceVertexStatistics> createServiceVertexStatistics(ServiceVertexStatistics value) {
+        return new JAXBElement<ServiceVertexStatistics>(_ServiceVertexStatistics_QNAME, ServiceVertexStatistics.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ServiceBinaryOperator }{@code >}}
      * 
      */
@@ -2866,6 +3158,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SecurityToken }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "SecurityToken")
+    public JAXBElement<SecurityToken> createSecurityToken(SecurityToken value) {
+        return new JAXBElement<SecurityToken>(_SecurityToken_QNAME, SecurityToken.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfServiceIncomingEdgeDefinition }{@code >}}
      * 
      */
@@ -2881,6 +3182,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceIndexPredefinition")
     public JAXBElement<ServiceIndexPredefinition> createServiceIndexPredefinition(ServiceIndexPredefinition value) {
         return new JAXBElement<ServiceIndexPredefinition>(_ServiceIndexPredefinition_QNAME, ServiceIndexPredefinition.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "PropertyName")
+    public JAXBElement<String> createPropertyName(String value) {
+        return new JAXBElement<String>(_PropertyName_QNAME, String.class, null, value);
     }
 
     /**
@@ -2917,6 +3227,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.sones.com", name = "ServicePropertyPredefinition")
     public JAXBElement<ServicePropertyPredefinition> createServicePropertyPredefinition(ServicePropertyPredefinition value) {
         return new JAXBElement<ServicePropertyPredefinition>(_ServicePropertyPredefinition_QNAME, ServicePropertyPredefinition.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceSingleEdgeUpdateDefinitionServiceVertexInformation }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceSingleEdgeUpdateDefinition.ServiceVertexInformation")
+    public JAXBElement<ServiceSingleEdgeUpdateDefinitionServiceVertexInformation> createServiceSingleEdgeUpdateDefinitionServiceVertexInformation(ServiceSingleEdgeUpdateDefinitionServiceVertexInformation value) {
+        return new JAXBElement<ServiceSingleEdgeUpdateDefinitionServiceVertexInformation>(_ServiceSingleEdgeUpdateDefinitionServiceVertexInformation_QNAME, ServiceSingleEdgeUpdateDefinitionServiceVertexInformation.class, null, value);
     }
 
     /**
@@ -2989,6 +3308,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.sones.com", name = "ArrayOfServiceEdgeType")
     public JAXBElement<ArrayOfServiceEdgeType> createArrayOfServiceEdgeType(ArrayOfServiceEdgeType value) {
         return new JAXBElement<ArrayOfServiceEdgeType>(_ArrayOfServiceEdgeType_QNAME, ArrayOfServiceEdgeType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceBinaryPropertyPredefinition }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceBinaryPropertyPredefinition")
+    public JAXBElement<ServiceBinaryPropertyPredefinition> createServiceBinaryPropertyPredefinition(ServiceBinaryPropertyPredefinition value) {
+        return new JAXBElement<ServiceBinaryPropertyPredefinition>(_ServiceBinaryPropertyPredefinition_QNAME, ServiceBinaryPropertyPredefinition.class, null, value);
     }
 
     /**
@@ -3082,6 +3410,24 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "VertexID")
+    public JAXBElement<Long> createVertexID(Long value) {
+        return new JAXBElement<Long>(_VertexID_QNAME, Long.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceBinaryPropertyDefinition }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceBinaryPropertyDefinition")
+    public JAXBElement<ServiceBinaryPropertyDefinition> createServiceBinaryPropertyDefinition(ServiceBinaryPropertyDefinition value) {
+        return new JAXBElement<ServiceBinaryPropertyDefinition>(_ServiceBinaryPropertyDefinition_QNAME, ServiceBinaryPropertyDefinition.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AGraphElement }{@code >}}
      * 
      */
@@ -3100,12 +3446,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfServiceHyperEdgeInstance }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ArrayOfServiceHyperEdgeInstance")
+    public JAXBElement<ArrayOfServiceHyperEdgeInstance> createArrayOfServiceHyperEdgeInstance(ArrayOfServiceHyperEdgeInstance value) {
+        return new JAXBElement<ArrayOfServiceHyperEdgeInstance>(_ArrayOfServiceHyperEdgeInstance_QNAME, ArrayOfServiceHyperEdgeInstance.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ServiceUpdateChangeset }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceUpdateChangeset")
     public JAXBElement<ServiceUpdateChangeset> createServiceUpdateChangeset(ServiceUpdateChangeset value) {
         return new JAXBElement<ServiceUpdateChangeset>(_ServiceUpdateChangeset_QNAME, ServiceUpdateChangeset.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfServiceSingleEdgeUpdateDefinition }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ArrayOfServiceSingleEdgeUpdateDefinition")
+    public JAXBElement<ArrayOfServiceSingleEdgeUpdateDefinition> createArrayOfServiceSingleEdgeUpdateDefinition(ArrayOfServiceSingleEdgeUpdateDefinition value) {
+        return new JAXBElement<ArrayOfServiceSingleEdgeUpdateDefinition>(_ArrayOfServiceSingleEdgeUpdateDefinition_QNAME, ArrayOfServiceSingleEdgeUpdateDefinition.class, null, value);
     }
 
     /**
@@ -3154,12 +3518,39 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceUserPasswordCredentials }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceUserPasswordCredentials")
+    public JAXBElement<ServiceUserPasswordCredentials> createServiceUserPasswordCredentials(ServiceUserPasswordCredentials value) {
+        return new JAXBElement<ServiceUserPasswordCredentials>(_ServiceUserPasswordCredentials_QNAME, ServiceUserPasswordCredentials.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceSingleEdgeUpdateDefinition }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceSingleEdgeUpdateDefinition")
+    public JAXBElement<ServiceSingleEdgeUpdateDefinition> createServiceSingleEdgeUpdateDefinition(ServiceSingleEdgeUpdateDefinition value) {
+        return new JAXBElement<ServiceSingleEdgeUpdateDefinition>(_ServiceSingleEdgeUpdateDefinition_QNAME, ServiceSingleEdgeUpdateDefinition.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ServiceQueryResult }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceQueryResult")
     public JAXBElement<ServiceQueryResult> createServiceQueryResult(ServiceQueryResult value) {
         return new JAXBElement<ServiceQueryResult>(_ServiceQueryResult_QNAME, ServiceQueryResult.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfServiceBinaryPropertyDefinition }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ArrayOfServiceBinaryPropertyDefinition")
+    public JAXBElement<ArrayOfServiceBinaryPropertyDefinition> createArrayOfServiceBinaryPropertyDefinition(ArrayOfServiceBinaryPropertyDefinition value) {
+        return new JAXBElement<ArrayOfServiceBinaryPropertyDefinition>(_ArrayOfServiceBinaryPropertyDefinition_QNAME, ArrayOfServiceBinaryPropertyDefinition.class, null, value);
     }
 
     /**
@@ -3217,12 +3608,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfServiceBinaryPropertyPredefinition }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ArrayOfServiceBinaryPropertyPredefinition")
+    public JAXBElement<ArrayOfServiceBinaryPropertyPredefinition> createArrayOfServiceBinaryPropertyPredefinition(ArrayOfServiceBinaryPropertyPredefinition value) {
+        return new JAXBElement<ArrayOfServiceBinaryPropertyPredefinition>(_ArrayOfServiceBinaryPropertyPredefinition_QNAME, ArrayOfServiceBinaryPropertyPredefinition.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ServiceAttributeType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceAttributeType")
     public JAXBElement<ServiceAttributeType> createServiceAttributeType(ServiceAttributeType value) {
         return new JAXBElement<ServiceAttributeType>(_ServiceAttributeType_QNAME, ServiceAttributeType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceGraphElementUpdateDefinition }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceGraphElementUpdateDefinition")
+    public JAXBElement<ServiceGraphElementUpdateDefinition> createServiceGraphElementUpdateDefinition(ServiceGraphElementUpdateDefinition value) {
+        return new JAXBElement<ServiceGraphElementUpdateDefinition>(_ServiceGraphElementUpdateDefinition_QNAME, ServiceGraphElementUpdateDefinition.class, null, value);
     }
 
     /**
@@ -3262,21 +3671,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UnstructuredProperty }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sones.com", name = "UnstructuredProperty")
-    public JAXBElement<UnstructuredProperty> createUnstructuredProperty(UnstructuredProperty value) {
-        return new JAXBElement<UnstructuredProperty>(_UnstructuredProperty_QNAME, UnstructuredProperty.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfServiceEdgeInstance }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.sones.com", name = "ArrayOfServiceEdgeInstance")
     public JAXBElement<ArrayOfServiceEdgeInstance> createArrayOfServiceEdgeInstance(ArrayOfServiceEdgeInstance value) {
         return new JAXBElement<ArrayOfServiceEdgeInstance>(_ArrayOfServiceEdgeInstance_QNAME, ArrayOfServiceEdgeInstance.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UnstructuredProperty }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "UnstructuredProperty")
+    public JAXBElement<UnstructuredProperty> createUnstructuredProperty(UnstructuredProperty value) {
+        return new JAXBElement<UnstructuredProperty>(_UnstructuredProperty_QNAME, UnstructuredProperty.class, null, value);
     }
 
     /**
@@ -3325,12 +3734,39 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "VertexTypeID")
+    public JAXBElement<Long> createVertexTypeID(Long value) {
+        return new JAXBElement<Long>(_VertexTypeID_QNAME, Long.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ServiceBaseType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceBaseType")
     public JAXBElement<ServiceBaseType> createServiceBaseType(ServiceBaseType value) {
         return new JAXBElement<ServiceBaseType>(_ServiceBaseType_QNAME, ServiceBaseType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfServiceEdgeTypePredefinition }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ArrayOfServiceEdgeTypePredefinition")
+    public JAXBElement<ArrayOfServiceEdgeTypePredefinition> createArrayOfServiceEdgeTypePredefinition(ArrayOfServiceEdgeTypePredefinition value) {
+        return new JAXBElement<ArrayOfServiceEdgeTypePredefinition>(_ArrayOfServiceEdgeTypePredefinition_QNAME, ArrayOfServiceEdgeTypePredefinition.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceQueryResultServiceResultType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceQueryResult.ServiceResultType")
+    public JAXBElement<ServiceQueryResultServiceResultType> createServiceQueryResultServiceResultType(ServiceQueryResultServiceResultType value) {
+        return new JAXBElement<ServiceQueryResultServiceResultType>(_ServiceQueryResultServiceResultType_QNAME, ServiceQueryResultServiceResultType.class, null, value);
     }
 
     /**
@@ -3343,6 +3779,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceVertexTypePredefinition }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceVertexTypePredefinition")
+    public JAXBElement<ServiceVertexTypePredefinition> createServiceVertexTypePredefinition(ServiceVertexTypePredefinition value) {
+        return new JAXBElement<ServiceVertexTypePredefinition>(_ServiceVertexTypePredefinition_QNAME, ServiceVertexTypePredefinition.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ServiceRangeLiteralExpression }{@code >}}
      * 
      */
@@ -3352,12 +3797,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceVertexTypePredefinition }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sones.com", name = "ServiceVertexTypePredefinition")
-    public JAXBElement<ServiceVertexTypePredefinition> createServiceVertexTypePredefinition(ServiceVertexTypePredefinition value) {
-        return new JAXBElement<ServiceVertexTypePredefinition>(_ServiceVertexTypePredefinition_QNAME, ServiceVertexTypePredefinition.class, null, value);
+    @XmlElementDecl(namespace = "http://www.sones.com", name = "TransToken")
+    public JAXBElement<Long> createTransToken(Long value) {
+        return new JAXBElement<Long>(_TransToken_QNAME, Long.class, null, value);
     }
 
     /**

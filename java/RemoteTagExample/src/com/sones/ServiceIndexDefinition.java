@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
 
 
 /**
@@ -20,7 +21,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="Edition" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="ID" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="IndexTypeName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="IndexedProperties" type="{http://www.sones.com}ArrayOfServicePropertyDefinition" minOccurs="0"/>
+ *         &lt;element name="IndexedProperties" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfstring" minOccurs="0"/>
  *         &lt;element name="IsRange" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="IsUserdefined" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="IsVersioned" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
@@ -57,7 +58,7 @@ public class ServiceIndexDefinition {
     @XmlElement(name = "IndexTypeName", nillable = true)
     protected String indexTypeName;
     @XmlElement(name = "IndexedProperties", nillable = true)
-    protected ArrayOfServicePropertyDefinition indexedProperties;
+    protected ArrayOfstring indexedProperties;
     @XmlElement(name = "IsRange")
     protected Boolean isRange;
     @XmlElement(name = "IsUserdefined")
@@ -148,10 +149,10 @@ public class ServiceIndexDefinition {
      * 
      * @return
      *     possible object is
-     *     {@link ArrayOfServicePropertyDefinition }
+     *     {@link ArrayOfstring }
      *     
      */
-    public ArrayOfServicePropertyDefinition getIndexedProperties() {
+    public ArrayOfstring getIndexedProperties() {
         return indexedProperties;
     }
 
@@ -160,10 +161,10 @@ public class ServiceIndexDefinition {
      * 
      * @param value
      *     allowed object is
-     *     {@link ArrayOfServicePropertyDefinition }
+     *     {@link ArrayOfstring }
      *     
      */
-    public void setIndexedProperties(ArrayOfServicePropertyDefinition value) {
+    public void setIndexedProperties(ArrayOfstring value) {
         this.indexedProperties = value;
     }
 

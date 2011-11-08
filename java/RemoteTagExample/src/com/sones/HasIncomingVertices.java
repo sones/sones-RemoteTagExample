@@ -21,8 +21,8 @@ import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
  *       &lt;sequence>
  *         &lt;element name="mySecurityToken" type="{http://schemas.datacontract.org/2004/07/sones.Library.Commons.Security}SecurityToken" minOccurs="0"/>
  *         &lt;element name="myTransToken" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
- *         &lt;element name="myVertexTypeID" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="myVertex" type="{http://www.sones.com}ServiceVertexInstance" minOccurs="0"/>
+ *         &lt;element name="myVertexTypeID" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="myEdgePropertyID" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -36,8 +36,8 @@ import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
 @XmlType(name = "", propOrder = {
     "mySecurityToken",
     "myTransToken",
-    "myVertexTypeID",
     "myVertex",
+    "myVertexTypeID",
     "myEdgePropertyID"
 })
 @XmlRootElement(name = "HasIncomingVertices")
@@ -46,9 +46,9 @@ public class HasIncomingVertices {
     @XmlElement(nillable = true)
     protected SecurityToken mySecurityToken;
     protected Long myTransToken;
-    protected Long myVertexTypeID;
     @XmlElement(nillable = true)
     protected ServiceVertexInstance myVertex;
+    protected Long myVertexTypeID;
     protected Long myEdgePropertyID;
 
     /**
@@ -100,30 +100,6 @@ public class HasIncomingVertices {
     }
 
     /**
-     * Gets the value of the myVertexTypeID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Long }
-     *     
-     */
-    public Long getMyVertexTypeID() {
-        return myVertexTypeID;
-    }
-
-    /**
-     * Sets the value of the myVertexTypeID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Long }
-     *     
-     */
-    public void setMyVertexTypeID(Long value) {
-        this.myVertexTypeID = value;
-    }
-
-    /**
      * Gets the value of the myVertex property.
      * 
      * @return
@@ -145,6 +121,30 @@ public class HasIncomingVertices {
      */
     public void setMyVertex(ServiceVertexInstance value) {
         this.myVertex = value;
+    }
+
+    /**
+     * Gets the value of the myVertexTypeID property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
+     */
+    public Long getMyVertexTypeID() {
+        return myVertexTypeID;
+    }
+
+    /**
+     * Sets the value of the myVertexTypeID property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
+     */
+    public void setMyVertexTypeID(Long value) {
+        this.myVertexTypeID = value;
     }
 
     /**

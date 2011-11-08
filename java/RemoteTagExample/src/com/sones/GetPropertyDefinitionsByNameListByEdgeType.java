@@ -22,7 +22,7 @@ import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
  *       &lt;sequence>
  *         &lt;element name="mySecurityToken" type="{http://schemas.datacontract.org/2004/07/sones.Library.Commons.Security}SecurityToken" minOccurs="0"/>
  *         &lt;element name="myTransToken" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
- *         &lt;element name="myServiceEdgeType" type="{http://www.sones.com}ServiceEdgeType" minOccurs="0"/>
+ *         &lt;element name="myServiceEdgeTypeName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="myPropertyNames" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfstring" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -36,7 +36,7 @@ import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
 @XmlType(name = "", propOrder = {
     "mySecurityToken",
     "myTransToken",
-    "myServiceEdgeType",
+    "myServiceEdgeTypeName",
     "myPropertyNames"
 })
 @XmlRootElement(name = "GetPropertyDefinitionsByNameListByEdgeType")
@@ -46,7 +46,7 @@ public class GetPropertyDefinitionsByNameListByEdgeType {
     protected SecurityToken mySecurityToken;
     protected Long myTransToken;
     @XmlElement(nillable = true)
-    protected ServiceEdgeType myServiceEdgeType;
+    protected String myServiceEdgeTypeName;
     @XmlElement(nillable = true)
     protected ArrayOfstring myPropertyNames;
 
@@ -99,27 +99,27 @@ public class GetPropertyDefinitionsByNameListByEdgeType {
     }
 
     /**
-     * Gets the value of the myServiceEdgeType property.
+     * Gets the value of the myServiceEdgeTypeName property.
      * 
      * @return
      *     possible object is
-     *     {@link ServiceEdgeType }
+     *     {@link String }
      *     
      */
-    public ServiceEdgeType getMyServiceEdgeType() {
-        return myServiceEdgeType;
+    public String getMyServiceEdgeTypeName() {
+        return myServiceEdgeTypeName;
     }
 
     /**
-     * Sets the value of the myServiceEdgeType property.
+     * Sets the value of the myServiceEdgeTypeName property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ServiceEdgeType }
+     *     {@link String }
      *     
      */
-    public void setMyServiceEdgeType(ServiceEdgeType value) {
-        this.myServiceEdgeType = value;
+    public void setMyServiceEdgeTypeName(String value) {
+        this.myServiceEdgeTypeName = value;
     }
 
     /**

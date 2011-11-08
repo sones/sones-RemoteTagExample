@@ -17,6 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="BinaryProperties" type="{http://www.sones.com}ArrayOfServiceBinaryPropertyPredefinition" minOccurs="0"/>
  *         &lt;element name="Comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="IncomingEdges" type="{http://www.sones.com}ArrayOfServiceIncomingEdgePredefinition" minOccurs="0"/>
  *         &lt;element name="Indices" type="{http://www.sones.com}ArrayOfServiceIndexPredefinition" minOccurs="0"/>
@@ -37,6 +38,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ServiceVertexTypePredefinition", propOrder = {
+    "binaryProperties",
     "comment",
     "incomingEdges",
     "indices",
@@ -50,6 +52,8 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class ServiceVertexTypePredefinition {
 
+    @XmlElement(name = "BinaryProperties", nillable = true)
+    protected ArrayOfServiceBinaryPropertyPredefinition binaryProperties;
     @XmlElement(name = "Comment", nillable = true)
     protected String comment;
     @XmlElement(name = "IncomingEdges", nillable = true)
@@ -70,6 +74,30 @@ public class ServiceVertexTypePredefinition {
     protected ArrayOfServiceUniquePredefinition uniques;
     @XmlElement(name = "VertexTypeName", required = true, nillable = true)
     protected String vertexTypeName;
+
+    /**
+     * Gets the value of the binaryProperties property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ArrayOfServiceBinaryPropertyPredefinition }
+     *     
+     */
+    public ArrayOfServiceBinaryPropertyPredefinition getBinaryProperties() {
+        return binaryProperties;
+    }
+
+    /**
+     * Sets the value of the binaryProperties property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ArrayOfServiceBinaryPropertyPredefinition }
+     *     
+     */
+    public void setBinaryProperties(ArrayOfServiceBinaryPropertyPredefinition value) {
+        this.binaryProperties = value;
+    }
 
     /**
      * Gets the value of the comment property.

@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfKeyValueOfstringstring;
+import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
 
 
 /**
@@ -21,7 +22,7 @@ import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfKeyValueOfstr
  *         &lt;element name="Comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="NewTypeName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="ToBeAddedProperties" type="{http://www.sones.com}ArrayOfServicePropertyPredefinition" minOccurs="0"/>
- *         &lt;element name="ToBeRemovedProperties" type="{http://www.sones.com}ArrayOfServicePropertyPredefinition" minOccurs="0"/>
+ *         &lt;element name="ToBeRemovedProperties" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfstring" minOccurs="0"/>
  *         &lt;element name="ToBeRenamedProperties" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfKeyValueOfstringstring" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -48,7 +49,7 @@ public class ServiceAlterEdgeChangeset {
     @XmlElement(name = "ToBeAddedProperties", nillable = true)
     protected ArrayOfServicePropertyPredefinition toBeAddedProperties;
     @XmlElement(name = "ToBeRemovedProperties", nillable = true)
-    protected ArrayOfServicePropertyPredefinition toBeRemovedProperties;
+    protected ArrayOfstring toBeRemovedProperties;
     @XmlElement(name = "ToBeRenamedProperties", nillable = true)
     protected ArrayOfKeyValueOfstringstring toBeRenamedProperties;
 
@@ -129,10 +130,10 @@ public class ServiceAlterEdgeChangeset {
      * 
      * @return
      *     possible object is
-     *     {@link ArrayOfServicePropertyPredefinition }
+     *     {@link ArrayOfstring }
      *     
      */
-    public ArrayOfServicePropertyPredefinition getToBeRemovedProperties() {
+    public ArrayOfstring getToBeRemovedProperties() {
         return toBeRemovedProperties;
     }
 
@@ -141,10 +142,10 @@ public class ServiceAlterEdgeChangeset {
      * 
      * @param value
      *     allowed object is
-     *     {@link ArrayOfServicePropertyPredefinition }
+     *     {@link ArrayOfstring }
      *     
      */
-    public void setToBeRemovedProperties(ArrayOfServicePropertyPredefinition value) {
+    public void setToBeRemovedProperties(ArrayOfstring value) {
         this.toBeRemovedProperties = value;
     }
 

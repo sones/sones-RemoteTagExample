@@ -20,7 +20,7 @@ import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="mySecurityToken" type="{http://schemas.datacontract.org/2004/07/sones.Library.Commons.Security}SecurityToken" minOccurs="0"/>
- *         &lt;element name="myTransToken" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
+ *         &lt;element name="myTransactionToken" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="myVertexType" type="{http://www.sones.com}ServiceVertexType" minOccurs="0"/>
  *         &lt;element name="myChangeset" type="{http://www.sones.com}ServiceAlterVertexChangeset" minOccurs="0"/>
  *       &lt;/sequence>
@@ -34,7 +34,7 @@ import org.datacontract.schemas._2004._07.sones_library_commons.SecurityToken;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "mySecurityToken",
-    "myTransToken",
+    "myTransactionToken",
     "myVertexType",
     "myChangeset"
 })
@@ -43,7 +43,7 @@ public class AlterVertexType {
 
     @XmlElement(nillable = true)
     protected SecurityToken mySecurityToken;
-    protected Long myTransToken;
+    protected Long myTransactionToken;
     @XmlElement(nillable = true)
     protected ServiceVertexType myVertexType;
     @XmlElement(nillable = true)
@@ -74,27 +74,27 @@ public class AlterVertexType {
     }
 
     /**
-     * Gets the value of the myTransToken property.
+     * Gets the value of the myTransactionToken property.
      * 
      * @return
      *     possible object is
      *     {@link Long }
      *     
      */
-    public Long getMyTransToken() {
-        return myTransToken;
+    public Long getMyTransactionToken() {
+        return myTransactionToken;
     }
 
     /**
-     * Sets the value of the myTransToken property.
+     * Sets the value of the myTransactionToken property.
      * 
      * @param value
      *     allowed object is
      *     {@link Long }
      *     
      */
-    public void setMyTransToken(Long value) {
-        this.myTransToken = value;
+    public void setMyTransactionToken(Long value) {
+        this.myTransactionToken = value;
     }
 
     /**

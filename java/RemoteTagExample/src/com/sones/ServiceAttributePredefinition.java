@@ -37,6 +37,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 @XmlSeeAlso({
     ServiceOutgoingEdgePredefinition.class,
+    ServiceBinaryPropertyPredefinition.class,
     ServicePropertyPredefinition.class,
     ServiceIncomingEdgePredefinition.class
 })

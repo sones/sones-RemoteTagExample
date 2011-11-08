@@ -18,8 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="myLogin" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="myPassword" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="myUserCredentials" type="{http://www.sones.com}ServiceUserPasswordCredentials" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,63 +29,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "myLogin",
-    "myPassword"
+    "myUserCredentials"
 })
 @XmlRootElement(name = "LogOn")
 public class LogOn {
 
     @XmlElement(nillable = true)
-    protected String myLogin;
-    @XmlElement(nillable = true)
-    protected String myPassword;
+    protected ServiceUserPasswordCredentials myUserCredentials;
 
     /**
-     * Gets the value of the myLogin property.
+     * Gets the value of the myUserCredentials property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link ServiceUserPasswordCredentials }
      *     
      */
-    public String getMyLogin() {
-        return myLogin;
+    public ServiceUserPasswordCredentials getMyUserCredentials() {
+        return myUserCredentials;
     }
 
     /**
-     * Sets the value of the myLogin property.
+     * Sets the value of the myUserCredentials property.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link ServiceUserPasswordCredentials }
      *     
      */
-    public void setMyLogin(String value) {
-        this.myLogin = value;
-    }
-
-    /**
-     * Gets the value of the myPassword property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getMyPassword() {
-        return myPassword;
-    }
-
-    /**
-     * Sets the value of the myPassword property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setMyPassword(String value) {
-        this.myPassword = value;
+    public void setMyUserCredentials(ServiceUserPasswordCredentials value) {
+        this.myUserCredentials = value;
     }
 
 }

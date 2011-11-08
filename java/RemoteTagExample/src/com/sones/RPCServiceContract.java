@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "RPCServiceContract", targetNamespace = "http://www.sones.com", wsdlLocation = "http://127.0.0.1:9970/wsdl")
+@WebServiceClient(name = "RPCServiceContract", targetNamespace = "http://www.sones.com", wsdlLocation = "http://127.0.0.1:9971/rpc/wsdl")
 public class RPCServiceContract
     extends Service
 {
@@ -30,7 +30,7 @@ public class RPCServiceContract
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://127.0.0.1:9970/wsdl");
+            url = new URL("http://127.0.0.1:9971/rpc/wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
@@ -65,11 +65,11 @@ public class RPCServiceContract
     /**
      * 
      * @return
-     *     returns GraphDS
+     *     returns StreamedService
      */
-    @WebEndpoint(name = "sonesBasic_GraphDS")
-    public GraphDS getSonesBasicGraphDS() {
-        return super.getPort(new QName("http://www.sones.com", "sonesBasic_GraphDS"), GraphDS.class);
+    @WebEndpoint(name = "sonesStreamed_StreamedService")
+    public StreamedService getSonesStreamedStreamedService() {
+        return super.getPort(new QName("http://www.sones.com", "sonesStreamed_StreamedService"), StreamedService.class);
     }
 
     /**
@@ -77,11 +77,33 @@ public class RPCServiceContract
      * @param features
      *     A list of {@link javax.xml.ws.WebServiceFeature} to configure on the proxy.  Supported features not in the <code>features</code> parameter will have their default values.
      * @return
-     *     returns GraphDS
+     *     returns StreamedService
      */
-    @WebEndpoint(name = "sonesBasic_GraphDS")
-    public GraphDS getSonesBasicGraphDS(WebServiceFeature... features) {
-        return super.getPort(new QName("http://www.sones.com", "sonesBasic_GraphDS"), GraphDS.class, features);
+    @WebEndpoint(name = "sonesStreamed_StreamedService")
+    public StreamedService getSonesStreamedStreamedService(WebServiceFeature... features) {
+        return super.getPort(new QName("http://www.sones.com", "sonesStreamed_StreamedService"), StreamedService.class, features);
+    }
+
+    /**
+     * 
+     * @return
+     *     returns GraphDSService
+     */
+    @WebEndpoint(name = "sonesBasic_GraphDSService")
+    public GraphDSService getSonesBasicGraphDSService() {
+        return super.getPort(new QName("http://www.sones.com", "sonesBasic_GraphDSService"), GraphDSService.class);
+    }
+
+    /**
+     * 
+     * @param features
+     *     A list of {@link javax.xml.ws.WebServiceFeature} to configure on the proxy.  Supported features not in the <code>features</code> parameter will have their default values.
+     * @return
+     *     returns GraphDSService
+     */
+    @WebEndpoint(name = "sonesBasic_GraphDSService")
+    public GraphDSService getSonesBasicGraphDSService(WebServiceFeature... features) {
+        return super.getPort(new QName("http://www.sones.com", "sonesBasic_GraphDSService"), GraphDSService.class, features);
     }
 
     /**

@@ -50,7 +50,7 @@ public class ServiceInsertPayload {
     protected String edition;
     @XmlElement(name = "StructuredProperties", nillable = true)
     protected ArrayOfStructuredProperty structuredProperties;
-    @XmlElement(name = "UUID")
+    @XmlElement(name = "UUID", nillable = true)
     protected Long uuid;
     @XmlElement(name = "UnstructuredProperties", nillable = true)
     protected ArrayOfUnstructuredProperty unstructuredProperties;

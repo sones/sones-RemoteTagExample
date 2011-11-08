@@ -38,8 +38,8 @@ import javax.xml.bind.annotation.XmlType;
     "name"
 })
 @XmlSeeAlso({
-    ServiceVertexType.class,
-    ServiceEdgeType.class
+    ServiceEdgeType.class,
+    ServiceVertexType.class
 })
 public class ServiceBaseType {
 

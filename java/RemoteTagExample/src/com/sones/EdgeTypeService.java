@@ -483,7 +483,7 @@ public interface EdgeTypeService {
      * 
      * @param myTransToken
      * @param mySecurityToken
-     * @param myServiceEdgeType
+     * @param myServiceEdgeTypeName
      * @param myPropertyName
      * @return
      *     returns com.sones.ServicePropertyDefinition
@@ -497,8 +497,8 @@ public interface EdgeTypeService {
         SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
-        @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
-        ServiceEdgeType myServiceEdgeType,
+        @WebParam(name = "myServiceEdgeTypeName", targetNamespace = "http://www.sones.com")
+        String myServiceEdgeTypeName,
         @WebParam(name = "myPropertyName", targetNamespace = "http://www.sones.com")
         String myPropertyName);
 
@@ -506,7 +506,7 @@ public interface EdgeTypeService {
      * 
      * @param myTransToken
      * @param mySecurityToken
-     * @param myServiceEdgeType
+     * @param myServiceEdgeTypeName
      * @param myPropertyID
      * @return
      *     returns com.sones.ServicePropertyDefinition
@@ -520,8 +520,8 @@ public interface EdgeTypeService {
         SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
-        @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
-        ServiceEdgeType myServiceEdgeType,
+        @WebParam(name = "myServiceEdgeTypeName", targetNamespace = "http://www.sones.com")
+        String myServiceEdgeTypeName,
         @WebParam(name = "myPropertyID", targetNamespace = "http://www.sones.com")
         Long myPropertyID);
 
@@ -552,7 +552,7 @@ public interface EdgeTypeService {
      * 
      * @param myTransToken
      * @param mySecurityToken
-     * @param myServiceEdgeType
+     * @param myServiceEdgeTypeName
      * @param myIncludeAncestorDefinitions
      * @return
      *     returns com.sones.ArrayOfServicePropertyDefinition
@@ -566,8 +566,8 @@ public interface EdgeTypeService {
         SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
-        @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
-        ServiceEdgeType myServiceEdgeType,
+        @WebParam(name = "myServiceEdgeTypeName", targetNamespace = "http://www.sones.com")
+        String myServiceEdgeTypeName,
         @WebParam(name = "myIncludeAncestorDefinitions", targetNamespace = "http://www.sones.com")
         Boolean myIncludeAncestorDefinitions);
 
@@ -575,7 +575,7 @@ public interface EdgeTypeService {
      * 
      * @param myTransToken
      * @param mySecurityToken
-     * @param myServiceEdgeType
+     * @param myServiceEdgeTypeName
      * @param myPropertyNames
      * @return
      *     returns com.sones.ArrayOfServicePropertyDefinition
@@ -589,8 +589,8 @@ public interface EdgeTypeService {
         SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
-        @WebParam(name = "myServiceEdgeType", targetNamespace = "http://www.sones.com")
-        ServiceEdgeType myServiceEdgeType,
+        @WebParam(name = "myServiceEdgeTypeName", targetNamespace = "http://www.sones.com")
+        String myServiceEdgeTypeName,
         @WebParam(name = "myPropertyNames", targetNamespace = "http://www.sones.com")
         ArrayOfstring myPropertyNames);
 

@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import org.datacontract.schemas._2004._07.system.ArrayOfTupleOflonglong;
+import org.datacontract.schemas._2004._07.system.ArrayOfTupleOflongArrayOflongty7Ep6D1;
 
 
 /**
@@ -23,7 +23,7 @@ import org.datacontract.schemas._2004._07.system.ArrayOfTupleOflonglong;
  *         &lt;element name="EdgeName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="StructuredProperties" type="{http://www.sones.com}ArrayOfStructuredProperty" minOccurs="0"/>
  *         &lt;element name="UnstructuredProperties" type="{http://www.sones.com}ArrayOfUnstructuredProperty" minOccurs="0"/>
- *         &lt;element name="VertexIDsByID" type="{http://schemas.datacontract.org/2004/07/System}ArrayOfTupleOflonglong" minOccurs="0"/>
+ *         &lt;element name="VertexIDsByID" type="{http://schemas.datacontract.org/2004/07/System}ArrayOfTupleOflongArrayOflongty7Ep6D1" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -54,7 +54,7 @@ public class ServiceEdgePredefinition {
     @XmlElement(name = "UnstructuredProperties", nillable = true)
     protected ArrayOfUnstructuredProperty unstructuredProperties;
     @XmlElement(name = "VertexIDsByID", nillable = true)
-    protected ArrayOfTupleOflonglong vertexIDsByID;
+    protected ArrayOfTupleOflongArrayOflongty7Ep6D1 vertexIDsByID;
 
     /**
      * Gets the value of the comment property.
@@ -181,10 +181,10 @@ public class ServiceEdgePredefinition {
      * 
      * @return
      *     possible object is
-     *     {@link ArrayOfTupleOflonglong }
+     *     {@link ArrayOfTupleOflongArrayOflongty7Ep6D1 }
      *     
      */
-    public ArrayOfTupleOflonglong getVertexIDsByID() {
+    public ArrayOfTupleOflongArrayOflongty7Ep6D1 getVertexIDsByID() {
         return vertexIDsByID;
     }
 
@@ -193,10 +193,10 @@ public class ServiceEdgePredefinition {
      * 
      * @param value
      *     allowed object is
-     *     {@link ArrayOfTupleOflonglong }
+     *     {@link ArrayOfTupleOflongArrayOflongty7Ep6D1 }
      *     
      */
-    public void setVertexIDsByID(ArrayOfTupleOflonglong value) {
+    public void setVertexIDsByID(ArrayOfTupleOflongArrayOflongty7Ep6D1 value) {
         this.vertexIDsByID = value;
     }
 

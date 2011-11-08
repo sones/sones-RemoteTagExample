@@ -483,8 +483,8 @@ public interface VertexTypeService {
      * 
      * @param myTransToken
      * @param mySecurityToken
+     * @param myServiceVertexTypeName
      * @param myPropertyName
-     * @param myServiceVertexType
      * @return
      *     returns com.sones.ServicePropertyDefinition
      */
@@ -497,8 +497,8 @@ public interface VertexTypeService {
         SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
-        @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
-        ServiceVertexType myServiceVertexType,
+        @WebParam(name = "myServiceVertexTypeName", targetNamespace = "http://www.sones.com")
+        String myServiceVertexTypeName,
         @WebParam(name = "myPropertyName", targetNamespace = "http://www.sones.com")
         String myPropertyName);
 
@@ -506,8 +506,8 @@ public interface VertexTypeService {
      * 
      * @param myTransToken
      * @param mySecurityToken
+     * @param myServiceVertexTypeName
      * @param myPropertyID
-     * @param myServiceVertexType
      * @return
      *     returns com.sones.ServicePropertyDefinition
      */
@@ -520,8 +520,8 @@ public interface VertexTypeService {
         SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
-        @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
-        ServiceVertexType myServiceVertexType,
+        @WebParam(name = "myServiceVertexTypeName", targetNamespace = "http://www.sones.com")
+        String myServiceVertexTypeName,
         @WebParam(name = "myPropertyID", targetNamespace = "http://www.sones.com")
         Long myPropertyID);
 
@@ -552,7 +552,7 @@ public interface VertexTypeService {
      * 
      * @param myTransToken
      * @param mySecurityToken
-     * @param myServiceVertexType
+     * @param myServiceVertexTypeName
      * @param myIncludeAncestorDefinitions
      * @return
      *     returns com.sones.ArrayOfServicePropertyDefinition
@@ -566,8 +566,8 @@ public interface VertexTypeService {
         SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
-        @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
-        ServiceVertexType myServiceVertexType,
+        @WebParam(name = "myServiceVertexTypeName", targetNamespace = "http://www.sones.com")
+        String myServiceVertexTypeName,
         @WebParam(name = "myIncludeAncestorDefinitions", targetNamespace = "http://www.sones.com")
         Boolean myIncludeAncestorDefinitions);
 
@@ -575,8 +575,8 @@ public interface VertexTypeService {
      * 
      * @param myTransToken
      * @param mySecurityToken
+     * @param myServiceVertexTypeName
      * @param myPropertyNames
-     * @param myServiceVertexType
      * @return
      *     returns com.sones.ArrayOfServicePropertyDefinition
      */
@@ -589,10 +589,102 @@ public interface VertexTypeService {
         SecurityToken mySecurityToken,
         @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
         Long myTransToken,
-        @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
-        ServiceVertexType myServiceVertexType,
+        @WebParam(name = "myServiceVertexTypeName", targetNamespace = "http://www.sones.com")
+        String myServiceVertexTypeName,
         @WebParam(name = "myPropertyNames", targetNamespace = "http://www.sones.com")
         ArrayOfstring myPropertyNames);
+
+    /**
+     * 
+     * @param myTransToken
+     * @param mySecurityToken
+     * @param myPropertyName
+     * @param myServiceVertexType
+     * @return
+     *     returns java.lang.Boolean
+     */
+    @WebMethod(operationName = "HasBinaryProperty", action = "http://www.sones.com/VertexTypeService/HasBinaryProperty")
+    @WebResult(name = "HasBinaryPropertyResult", targetNamespace = "http://www.sones.com")
+    @RequestWrapper(localName = "HasBinaryProperty", targetNamespace = "http://www.sones.com", className = "com.sones.HasBinaryProperty")
+    @ResponseWrapper(localName = "HasBinaryPropertyResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasBinaryPropertyResponse")
+    public Boolean hasBinaryProperty(
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
+        @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
+        Long myTransToken,
+        @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
+        ServiceVertexType myServiceVertexType,
+        @WebParam(name = "myPropertyName", targetNamespace = "http://www.sones.com")
+        String myPropertyName);
+
+    /**
+     * 
+     * @param myTransToken
+     * @param mySecurityToken
+     * @param myPropertyName
+     * @param myServiceVertexType
+     * @return
+     *     returns com.sones.ServiceBinaryPropertyDefinition
+     */
+    @WebMethod(operationName = "GetBinaryPropertyDefinition", action = "http://www.sones.com/VertexTypeService/GetBinaryPropertyDefinition")
+    @WebResult(name = "GetBinaryPropertyDefinitionResult", targetNamespace = "http://www.sones.com")
+    @RequestWrapper(localName = "GetBinaryPropertyDefinition", targetNamespace = "http://www.sones.com", className = "com.sones.GetBinaryPropertyDefinition")
+    @ResponseWrapper(localName = "GetBinaryPropertyDefinitionResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetBinaryPropertyDefinitionResponse")
+    public ServiceBinaryPropertyDefinition getBinaryPropertyDefinition(
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
+        @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
+        Long myTransToken,
+        @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
+        ServiceVertexType myServiceVertexType,
+        @WebParam(name = "myPropertyName", targetNamespace = "http://www.sones.com")
+        String myPropertyName);
+
+    /**
+     * 
+     * @param myTransToken
+     * @param mySecurityToken
+     * @param myServiceVertexType
+     * @param myIncludeAncestorDefinitions
+     * @return
+     *     returns java.lang.Boolean
+     */
+    @WebMethod(operationName = "HasBinaryProperties", action = "http://www.sones.com/VertexTypeService/HasBinaryProperties")
+    @WebResult(name = "HasBinaryPropertiesResult", targetNamespace = "http://www.sones.com")
+    @RequestWrapper(localName = "HasBinaryProperties", targetNamespace = "http://www.sones.com", className = "com.sones.HasBinaryProperties")
+    @ResponseWrapper(localName = "HasBinaryPropertiesResponse", targetNamespace = "http://www.sones.com", className = "com.sones.HasBinaryPropertiesResponse")
+    public Boolean hasBinaryProperties(
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
+        @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
+        Long myTransToken,
+        @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
+        ServiceVertexType myServiceVertexType,
+        @WebParam(name = "myIncludeAncestorDefinitions", targetNamespace = "http://www.sones.com")
+        Boolean myIncludeAncestorDefinitions);
+
+    /**
+     * 
+     * @param myTransToken
+     * @param mySecurityToken
+     * @param myServiceVertexType
+     * @param myIncludeAncestorDefinitions
+     * @return
+     *     returns com.sones.ArrayOfServiceBinaryPropertyDefinition
+     */
+    @WebMethod(operationName = "GetBinaryPropertyDefinitions", action = "http://www.sones.com/VertexTypeService/GetBinaryPropertyDefinitions")
+    @WebResult(name = "GetBinaryPropertyDefinitionsResult", targetNamespace = "http://www.sones.com")
+    @RequestWrapper(localName = "GetBinaryPropertyDefinitions", targetNamespace = "http://www.sones.com", className = "com.sones.GetBinaryPropertyDefinitions")
+    @ResponseWrapper(localName = "GetBinaryPropertyDefinitionsResponse", targetNamespace = "http://www.sones.com", className = "com.sones.GetBinaryPropertyDefinitionsResponse")
+    public ArrayOfServiceBinaryPropertyDefinition getBinaryPropertyDefinitions(
+        @WebParam(name = "mySecurityToken", targetNamespace = "http://www.sones.com")
+        SecurityToken mySecurityToken,
+        @WebParam(name = "myTransToken", targetNamespace = "http://www.sones.com")
+        Long myTransToken,
+        @WebParam(name = "myServiceVertexType", targetNamespace = "http://www.sones.com")
+        ServiceVertexType myServiceVertexType,
+        @WebParam(name = "myIncludeAncestorDefinitions", targetNamespace = "http://www.sones.com")
+        Boolean myIncludeAncestorDefinitions);
 
     /**
      * 

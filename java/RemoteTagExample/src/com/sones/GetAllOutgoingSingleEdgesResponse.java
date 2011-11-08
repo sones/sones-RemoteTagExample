@@ -6,7 +6,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import org.datacontract.schemas._2004._07.system.ArrayOfTupleOflongServiceSingleEdgeInstance7AF3F8R2;
 
 
 /**
@@ -19,7 +18,7 @@ import org.datacontract.schemas._2004._07.system.ArrayOfTupleOflongServiceSingle
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="GetAllOutgoingSingleEdgesResult" type="{http://schemas.datacontract.org/2004/07/System}ArrayOfTupleOflongServiceSingleEdgeInstance7AF3f8r2" minOccurs="0"/>
+ *         &lt;element name="GetAllOutgoingSingleEdgesResult" type="{http://www.sones.com}ArrayOfServiceSingleEdgeInstance" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,17 +35,17 @@ import org.datacontract.schemas._2004._07.system.ArrayOfTupleOflongServiceSingle
 public class GetAllOutgoingSingleEdgesResponse {
 
     @XmlElement(name = "GetAllOutgoingSingleEdgesResult", nillable = true)
-    protected ArrayOfTupleOflongServiceSingleEdgeInstance7AF3F8R2 getAllOutgoingSingleEdgesResult;
+    protected ArrayOfServiceSingleEdgeInstance getAllOutgoingSingleEdgesResult;
 
     /**
      * Gets the value of the getAllOutgoingSingleEdgesResult property.
      * 
      * @return
      *     possible object is
-     *     {@link ArrayOfTupleOflongServiceSingleEdgeInstance7AF3F8R2 }
+     *     {@link ArrayOfServiceSingleEdgeInstance }
      *     
      */
-    public ArrayOfTupleOflongServiceSingleEdgeInstance7AF3F8R2 getGetAllOutgoingSingleEdgesResult() {
+    public ArrayOfServiceSingleEdgeInstance getGetAllOutgoingSingleEdgesResult() {
         return getAllOutgoingSingleEdgesResult;
     }
 
@@ -55,10 +54,10 @@ public class GetAllOutgoingSingleEdgesResponse {
      * 
      * @param value
      *     allowed object is
-     *     {@link ArrayOfTupleOflongServiceSingleEdgeInstance7AF3F8R2 }
+     *     {@link ArrayOfServiceSingleEdgeInstance }
      *     
      */
-    public void setGetAllOutgoingSingleEdgesResult(ArrayOfTupleOflongServiceSingleEdgeInstance7AF3F8R2 value) {
+    public void setGetAllOutgoingSingleEdgesResult(ArrayOfServiceSingleEdgeInstance value) {
         this.getAllOutgoingSingleEdgesResult = value;
     }
 

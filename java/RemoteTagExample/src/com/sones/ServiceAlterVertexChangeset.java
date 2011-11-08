@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfKeyValueOfstringstring;
+import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
 
 
 /**
@@ -26,12 +27,12 @@ import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfKeyValueOfstr
  *         &lt;element name="ToBeAddedOutgoingEdges" type="{http://www.sones.com}ArrayOfServiceOutgoingEdgePredefinition" minOccurs="0"/>
  *         &lt;element name="ToBeAddedProperties" type="{http://www.sones.com}ArrayOfServicePropertyPredefinition" minOccurs="0"/>
  *         &lt;element name="ToBeAddedUniques" type="{http://www.sones.com}ArrayOfServiceUniquePredefinition" minOccurs="0"/>
- *         &lt;element name="ToBeRemovedIncomingEdges" type="{http://www.sones.com}ArrayOfServiceIncomingEdgePredefinition" minOccurs="0"/>
- *         &lt;element name="ToBeRemovedIndices" type="{http://www.sones.com}ArrayOfServiceIndexPredefinition" minOccurs="0"/>
- *         &lt;element name="ToBeRemovedMandatories" type="{http://www.sones.com}ArrayOfServiceMandatoryPredefinition" minOccurs="0"/>
- *         &lt;element name="ToBeRemovedOutgoingEdges" type="{http://www.sones.com}ArrayOfServiceOutgoingEdgePredefinition" minOccurs="0"/>
- *         &lt;element name="ToBeRemovedProperties" type="{http://www.sones.com}ArrayOfServicePropertyPredefinition" minOccurs="0"/>
- *         &lt;element name="ToBeRemovedUniques" type="{http://www.sones.com}ArrayOfServiceUniquePredefinition" minOccurs="0"/>
+ *         &lt;element name="ToBeRemovedIncomingEdges" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfstring" minOccurs="0"/>
+ *         &lt;element name="ToBeRemovedIndices" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfKeyValueOfstringstring" minOccurs="0"/>
+ *         &lt;element name="ToBeRemovedMandatories" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfstring" minOccurs="0"/>
+ *         &lt;element name="ToBeRemovedOutgoingEdges" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfstring" minOccurs="0"/>
+ *         &lt;element name="ToBeRemovedProperties" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfstring" minOccurs="0"/>
+ *         &lt;element name="ToBeRemovedUniques" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfstring" minOccurs="0"/>
  *         &lt;element name="ToBeRenamedProperties" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfKeyValueOfstringstring" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -78,17 +79,17 @@ public class ServiceAlterVertexChangeset {
     @XmlElement(name = "ToBeAddedUniques", nillable = true)
     protected ArrayOfServiceUniquePredefinition toBeAddedUniques;
     @XmlElement(name = "ToBeRemovedIncomingEdges", nillable = true)
-    protected ArrayOfServiceIncomingEdgePredefinition toBeRemovedIncomingEdges;
+    protected ArrayOfstring toBeRemovedIncomingEdges;
     @XmlElement(name = "ToBeRemovedIndices", nillable = true)
-    protected ArrayOfServiceIndexPredefinition toBeRemovedIndices;
+    protected ArrayOfKeyValueOfstringstring toBeRemovedIndices;
     @XmlElement(name = "ToBeRemovedMandatories", nillable = true)
-    protected ArrayOfServiceMandatoryPredefinition toBeRemovedMandatories;
+    protected ArrayOfstring toBeRemovedMandatories;
     @XmlElement(name = "ToBeRemovedOutgoingEdges", nillable = true)
-    protected ArrayOfServiceOutgoingEdgePredefinition toBeRemovedOutgoingEdges;
+    protected ArrayOfstring toBeRemovedOutgoingEdges;
     @XmlElement(name = "ToBeRemovedProperties", nillable = true)
-    protected ArrayOfServicePropertyPredefinition toBeRemovedProperties;
+    protected ArrayOfstring toBeRemovedProperties;
     @XmlElement(name = "ToBeRemovedUniques", nillable = true)
-    protected ArrayOfServiceUniquePredefinition toBeRemovedUniques;
+    protected ArrayOfstring toBeRemovedUniques;
     @XmlElement(name = "ToBeRenamedProperties", nillable = true)
     protected ArrayOfKeyValueOfstringstring toBeRenamedProperties;
 
@@ -289,10 +290,10 @@ public class ServiceAlterVertexChangeset {
      * 
      * @return
      *     possible object is
-     *     {@link ArrayOfServiceIncomingEdgePredefinition }
+     *     {@link ArrayOfstring }
      *     
      */
-    public ArrayOfServiceIncomingEdgePredefinition getToBeRemovedIncomingEdges() {
+    public ArrayOfstring getToBeRemovedIncomingEdges() {
         return toBeRemovedIncomingEdges;
     }
 
@@ -301,10 +302,10 @@ public class ServiceAlterVertexChangeset {
      * 
      * @param value
      *     allowed object is
-     *     {@link ArrayOfServiceIncomingEdgePredefinition }
+     *     {@link ArrayOfstring }
      *     
      */
-    public void setToBeRemovedIncomingEdges(ArrayOfServiceIncomingEdgePredefinition value) {
+    public void setToBeRemovedIncomingEdges(ArrayOfstring value) {
         this.toBeRemovedIncomingEdges = value;
     }
 
@@ -313,10 +314,10 @@ public class ServiceAlterVertexChangeset {
      * 
      * @return
      *     possible object is
-     *     {@link ArrayOfServiceIndexPredefinition }
+     *     {@link ArrayOfKeyValueOfstringstring }
      *     
      */
-    public ArrayOfServiceIndexPredefinition getToBeRemovedIndices() {
+    public ArrayOfKeyValueOfstringstring getToBeRemovedIndices() {
         return toBeRemovedIndices;
     }
 
@@ -325,10 +326,10 @@ public class ServiceAlterVertexChangeset {
      * 
      * @param value
      *     allowed object is
-     *     {@link ArrayOfServiceIndexPredefinition }
+     *     {@link ArrayOfKeyValueOfstringstring }
      *     
      */
-    public void setToBeRemovedIndices(ArrayOfServiceIndexPredefinition value) {
+    public void setToBeRemovedIndices(ArrayOfKeyValueOfstringstring value) {
         this.toBeRemovedIndices = value;
     }
 
@@ -337,10 +338,10 @@ public class ServiceAlterVertexChangeset {
      * 
      * @return
      *     possible object is
-     *     {@link ArrayOfServiceMandatoryPredefinition }
+     *     {@link ArrayOfstring }
      *     
      */
-    public ArrayOfServiceMandatoryPredefinition getToBeRemovedMandatories() {
+    public ArrayOfstring getToBeRemovedMandatories() {
         return toBeRemovedMandatories;
     }
 
@@ -349,10 +350,10 @@ public class ServiceAlterVertexChangeset {
      * 
      * @param value
      *     allowed object is
-     *     {@link ArrayOfServiceMandatoryPredefinition }
+     *     {@link ArrayOfstring }
      *     
      */
-    public void setToBeRemovedMandatories(ArrayOfServiceMandatoryPredefinition value) {
+    public void setToBeRemovedMandatories(ArrayOfstring value) {
         this.toBeRemovedMandatories = value;
     }
 
@@ -361,10 +362,10 @@ public class ServiceAlterVertexChangeset {
      * 
      * @return
      *     possible object is
-     *     {@link ArrayOfServiceOutgoingEdgePredefinition }
+     *     {@link ArrayOfstring }
      *     
      */
-    public ArrayOfServiceOutgoingEdgePredefinition getToBeRemovedOutgoingEdges() {
+    public ArrayOfstring getToBeRemovedOutgoingEdges() {
         return toBeRemovedOutgoingEdges;
     }
 
@@ -373,10 +374,10 @@ public class ServiceAlterVertexChangeset {
      * 
      * @param value
      *     allowed object is
-     *     {@link ArrayOfServiceOutgoingEdgePredefinition }
+     *     {@link ArrayOfstring }
      *     
      */
-    public void setToBeRemovedOutgoingEdges(ArrayOfServiceOutgoingEdgePredefinition value) {
+    public void setToBeRemovedOutgoingEdges(ArrayOfstring value) {
         this.toBeRemovedOutgoingEdges = value;
     }
 
@@ -385,10 +386,10 @@ public class ServiceAlterVertexChangeset {
      * 
      * @return
      *     possible object is
-     *     {@link ArrayOfServicePropertyPredefinition }
+     *     {@link ArrayOfstring }
      *     
      */
-    public ArrayOfServicePropertyPredefinition getToBeRemovedProperties() {
+    public ArrayOfstring getToBeRemovedProperties() {
         return toBeRemovedProperties;
     }
 
@@ -397,10 +398,10 @@ public class ServiceAlterVertexChangeset {
      * 
      * @param value
      *     allowed object is
-     *     {@link ArrayOfServicePropertyPredefinition }
+     *     {@link ArrayOfstring }
      *     
      */
-    public void setToBeRemovedProperties(ArrayOfServicePropertyPredefinition value) {
+    public void setToBeRemovedProperties(ArrayOfstring value) {
         this.toBeRemovedProperties = value;
     }
 
@@ -409,10 +410,10 @@ public class ServiceAlterVertexChangeset {
      * 
      * @return
      *     possible object is
-     *     {@link ArrayOfServiceUniquePredefinition }
+     *     {@link ArrayOfstring }
      *     
      */
-    public ArrayOfServiceUniquePredefinition getToBeRemovedUniques() {
+    public ArrayOfstring getToBeRemovedUniques() {
         return toBeRemovedUniques;
     }
 
@@ -421,10 +422,10 @@ public class ServiceAlterVertexChangeset {
      * 
      * @param value
      *     allowed object is
-     *     {@link ArrayOfServiceUniquePredefinition }
+     *     {@link ArrayOfstring }
      *     
      */
-    public void setToBeRemovedUniques(ArrayOfServiceUniquePredefinition value) {
+    public void setToBeRemovedUniques(ArrayOfstring value) {
         this.toBeRemovedUniques = value;
     }
 
